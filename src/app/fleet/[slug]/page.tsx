@@ -388,24 +388,21 @@ export default async function FleetClassPage({
                     </div>
 
                     {/* Book Buttons */}
-                    <div className="flex gap-3 mt-auto">
-                      <a
-                        href={`https://wa.me/971509200818?text=Hi,%20I%20want%20to%20book%20the%20${encodeURIComponent(name)}%20in%20Dubai`}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex-1 flex items-center justify-center gap-2 text-white font-bold text-sm py-3 rounded-xl hover:opacity-90 transition-all"
-                        style={{ background: roseGoldGradient }}
-                      >
-                        <MessageCircle size={15} />
-                        Book Now
-                      </a>
-                      <a
-                        href="tel:+971509200818"
-                        className="flex items-center justify-center gap-2 border border-rose-200 text-rose-400 hover:bg-rose-50 font-semibold text-sm px-4 py-3 rounded-xl transition-all"
-                      >
-                        <Phone size={15} />
-                      </a>
-                    </div>
+<div className="flex gap-3 mt-auto">
+  <Link
+    href={`/fleet/${slug}/${vSlug}`}
+    className="flex-1 flex items-center justify-center gap-2 text-white font-bold text-sm py-3 rounded-xl hover:opacity-90 transition-all"
+    style={{ background: roseGoldGradient }}
+  >
+    View & Book
+  </Link>
+  <a
+    href="tel:+971509200818"
+    className="flex items-center justify-center gap-2 border border-rose-200 text-rose-400 hover:bg-rose-50 font-semibold text-sm px-4 py-3 rounded-xl transition-all"
+  >
+    <Phone size={15} />
+  </a>
+</div>
                   </div>
                 </div>
               )

@@ -3,13 +3,13 @@ import Image from "next/image";
 import Link from "next/link";
 import {
   Plane, Briefcase, MapPin, Clock, Star, Car,
-  UserRound, ChevronRight, Phone, MessageCircle, CheckCircle,
+  UserRound, ChevronRight, Phone, MessageCircle, CheckCircle, PartyPopper,
 } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Chauffeur Services Dubai | Airport Transfer, Corporate, Wedding Limo",
   description:
-    "Explore all luxury chauffeur services in Dubai — airport transfers, corporate chauffeur, wedding limo, VIP sightseeing, monthly driver, and chauffeur service Dubai to Abu Dhabi. Available 24/7.",
+    "Explore all luxury chauffeur services in Dubai - airport transfers, corporate chauffeur, wedding limo, VIP sightseeing, monthly car with driver service, and event transport Dubai. Available 24/7.",
   alternates: { canonical: "https://chauffeurdubai.ae/services" },
 };
 
@@ -24,16 +24,16 @@ const services = [
     keyword: "dubai airport transfer",
     image: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=700&q=80",
     description:
-      "The most reliable dubai airport transfer service covering DXB, DWC, Abu Dhabi, and Sharjah airports. VIP meet & greet, real-time flight tracking, and fixed pricing — no surprises.",
+      "The most reliable dubai airport transfer service covering DXB, DWC, Abu Dhabi, and Sharjah airports. VIP meet & greet, real-time flight tracking, and fixed pricing - no surprises.",
     features: [
       "Meet & greet with name board at arrivals",
-      "Real-time flight tracking — we wait for delays",
+      "Real-time flight tracking - we wait for delays",
       "All UAE airports: DXB, DWC, AUH, SHJ",
-      "Luxury fleet — Mercedes S-Class, BMW 7 Series",
+      "Luxury fleet - Mercedes S-Class, BMW 7 Series",
       "Fixed transparent pricing, no surge fees",
       "24/7 availability, 365 days a year",
     ],
-    price: "From AED 350",
+    price: "Starting from AED 350",
   },
   {
     icon: Briefcase,
@@ -51,7 +51,7 @@ const services = [
       "Full-day chauffeur service Dubai available",
       "Serving all business districts across Dubai",
     ],
-    price: "From AED 350",
+    price: "Starting from AED 350",
   },
   {
     icon: Star,
@@ -60,16 +60,16 @@ const services = [
     keyword: "wedding limo dubai",
     image: "https://images.unsplash.com/photo-1519741347686-c1e331ec5e89?w=700&q=80",
     description:
-      "Make your wedding day unforgettable with our wedding limo Dubai service. From Rolls-Royce rental with driver Dubai to stretch limousines — arrive in absolute style.",
+      "Make your wedding day unforgettable with our wedding limo Dubai service. From Rolls-Royce rental with driver Dubai to stretch limousines - arrive in absolute style.",
     features: [
       "Rolls-Royce, stretch limos & luxury sedans available",
       "Decorated vehicle options for weddings",
       "Professional, discreet chauffeurs",
-      "Punctual — we work around your wedding timeline",
+      "Punctual - we work around your wedding timeline",
       "Hotel, venue & event transfers covered",
       "Available across Dubai and the UAE",
     ],
-    price: "From AED 850",
+    price: "Starting from AED 850",
   },
   {
     icon: MapPin,
@@ -78,7 +78,7 @@ const services = [
     keyword: "private driver for sightseeing dubai",
     image: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=700&q=80",
     description:
-      "Explore Dubai's most iconic landmarks with a private driver for sightseeing Dubai. Burj Khalifa, Palm Jumeirah, Dubai Marina, and more — at your own pace.",
+      "Explore Dubai's most iconic landmarks with a private driver for sightseeing Dubai. Burj Khalifa, Palm Jumeirah, Dubai Marina, and more - at your own pace.",
     features: [
       "Customised sightseeing routes across Dubai",
       "Burj Khalifa, Palm Jumeirah, Dubai Marina & more",
@@ -87,7 +87,7 @@ const services = [
       "Comfortable luxury vehicles with privacy",
       "Perfect for tourists, VIP guests, and families",
     ],
-    price: "From AED 350",
+    price: "Starting from AED 350",
   },
   {
     icon: Clock,
@@ -96,28 +96,28 @@ const services = [
     keyword: "full day chauffeur service dubai",
     image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=700&q=80",
     description:
-      "Maximum flexibility — book a full day chauffeur service Dubai or hire by the hour. Perfect for shopping, meetings, events, or anything in between.",
+      "Maximum flexibility - book a full day chauffeur service Dubai or hire by the hour. Perfect for shopping, meetings, events, or anything in between.",
     features: [
       "Half-day, full-day, and hourly packages",
-      "No hidden extras — fixed hourly rates",
+      "No hidden extras - fixed hourly rates",
       "Wait-and-return available at any location",
       "Available across Dubai, Abu Dhabi & UAE",
       "Same professional luxury fleet",
       "Ideal for shopping trips, meetings & events",
     ],
-    price: "From AED 900 / 5 Hr",
+    price: "Starting from AED 900 / 5 Hr",
   },
   {
     icon: Car,
     slug: "monthly",
-    title: "Monthly Driver Dubai Service",
-    keyword: "monthly driver dubai service",
+    title: "Monthly Car with Driver Service Dubai",
+    keyword: "monthly car with driver service",
     image: "https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=700&q=80",
     description:
-      "Our monthly driver Dubai service gives you a dedicated professional chauffeur for daily commutes, school runs, and errands — all at a fixed monthly rate.",
+      "Our monthly car with driver service gives you a dedicated professional chauffeur for daily commutes, school runs, and errands - all at a fixed monthly rate.",
     features: [
       "Dedicated assigned chauffeur each month",
-      "Fixed monthly pricing — no surprises",
+      "Fixed monthly pricing - no surprises",
       "Daily commutes, school runs & errands",
       "Available mornings, evenings or full-day",
       "Trusted, background-checked drivers",
@@ -125,23 +125,22 @@ const services = [
     ],
     price: "Custom Monthly Rates",
   },
-  {
-    icon: Plane,
-    slug: "intercity",
-    title: "Chauffeur Service Dubai to Abu Dhabi",
-    keyword: "chauffeur service dubai to abu dhabi",
-    image: "https://images.unsplash.com/photo-1570125909517-53cb21c89ff2?w=700&q=80",
+    {
+    icon: PartyPopper,
+    slug: "event-transport",
+    title: "Event Transport Dubai",
+    keyword: "event transport dubai",
+    image: "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=700&q=80",
     description:
-      "Seamless intercity transfers with our chauffeur service Dubai to Abu Dhabi, Sharjah, Al Ain, Ras Al Khaimah, and all UAE emirates — in luxury and comfort.",
+      "Professional event transport Dubai for corporate events, exhibitions, trade shows, conferences, and private functions. We handle all logistics so your guests arrive on time, comfortably, and in style.",
     features: [
-      "Dubai to Abu Dhabi, Sharjah, RAK & beyond",
-      "Fixed intercity rates — no metered surprises",
-      "Luxury sedans, vans & SUVs available",
-      "Door-to-door service across all emirates",
-      "Business and leisure transfers",
-      "Available 24/7 for all intercity routes",
+      "Corporate events, conferences & trade shows (GITEX, Arab Health & more)",
+      "Exhibitions & business summits",
+      "Private functions, galas & corporate dinners",
+      "Group transport with luxury vans, SUVs & coaches",
+      "Multi-vehicle coordination for large-scale events",
     ],
-    price: "Custom Intercity Rates",
+    price: "Starting from AED 350",
   },
   {
     icon: UserRound,
@@ -159,7 +158,7 @@ const services = [
       "Luxury limousine service for events & galas",
       "Available across Dubai and the UAE",
     ],
-    price: "From AED 850",
+    price: "Starting from AED 850",
   },
 ];
 
@@ -170,7 +169,7 @@ export default function ServicesPage() {
       <section className="relative h-72 sm:h-96 flex items-end overflow-hidden pt-16">
         <Image
           src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1600&q=85"
-          alt="Chauffeur services Dubai — luxury car service"
+          alt="Chauffeur services Dubai - luxury car service"
           fill
           className="object-cover object-center"
           priority
@@ -204,7 +203,7 @@ export default function ServicesPage() {
           </h1>
           <p className="text-white/70 max-w-2xl text-sm sm:text-base">
             Airport transfers, corporate chauffeur, wedding limo, sightseeing,
-            monthly driver, and more — all across Dubai and the UAE.
+            event transport, and more - all across Dubai and the UAE.
           </p>
         </div>
       </section>
@@ -231,7 +230,7 @@ export default function ServicesPage() {
                 >
                   <Image
                     src={image}
-                    alt={`${title} — ${keyword}`}
+                    alt={`${title} - ${keyword}`}
                     fill
                     className="object-cover"
                   />

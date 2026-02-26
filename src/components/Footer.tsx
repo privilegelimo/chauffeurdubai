@@ -72,7 +72,7 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-zinc-800 pt-6 flex flex-col sm:flex-row justify-between items-center gap-3 text-xs text-zinc-600">
-          <p>© {new Date().getFullYear()} ChauffeurDubai.ae — All rights reserved.</p>
+          <p>© {new Date().getFullYear()} ChauffeurDubai.ae - All rights reserved.</p>
           <p>Luxury Chauffeur Service Dubai | Private Driver Dubai | Airport Transfer Dubai</p>
         </div>
       </div>

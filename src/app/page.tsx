@@ -1,4 +1,6 @@
-import type { Metadata } from "next";
+"use client";
+
+import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import {
@@ -18,74 +20,9 @@ import {
   ThumbsUp,
   UserRound,
   Luggage,
+  CalendarDays,
 } from "lucide-react";
-
-export const metadata: Metadata = {
-  title: "Chauffeur Service Dubai | Luxury Chauffeur & Limo Rental Dubai UAE",
-  description:
-    "Book the best luxury chauffeur service in Dubai. Mercedes S-Class, BMW 7 Series, Rolls-Royce, Tesla & more with professional drivers. Airport transfers, corporate, wedding & VIP chauffeur service Dubai — available 24/7.",
-  keywords: [
-    "chauffeur service dubai",
-    "limo rental dubai",
-    "dubai airport transfer",
-    "luxury chauffeur dubai",
-    "rolls royce rental with driver dubai",
-    "mercedes s class chauffeur dubai",
-    "tesla chauffeur service dubai",
-    "wedding limo dubai",
-    "corporate chauffeur service dubai",
-    "private driver dubai",
-    "vip airport pick-up dubai",
-    "monthly driver dubai",
-    "mercedes sprinter rent with driver",
-    "mercedes v class with driver dubai",
-    "bmw 7 series with driver dubai",
-    "chauffeur service dubai to abu dhabi",
-  ],
-  alternates: { canonical: "https://chauffeurdubai.ae" },
-};
-
-// ─── JSON-LD ───────────────────────────────────────────────────────────────
-const jsonLd = {
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "@id": "https://chauffeurdubai.ae",
-  name: "Chauffeur Dubai — Privilege Luxury Travel",
-  description:
-    "Premium chauffeur service in Dubai. Luxury airport transfers, corporate chauffeur, wedding limo, VIP transportation across Dubai and UAE.",
-  url: "https://chauffeurdubai.ae",
-  telephone: "+971509200818",
-  priceRange: "AED 350 - AED 7000",
-  image: "https://chauffeurdubai.ae/og-image.jpg",
-  address: {
-    "@type": "PostalAddress",
-    streetAddress: "Shraifi One Building Suite 32 - Zaa'beel St",
-    addressLocality: "Dubai",
-    addressRegion: "Dubai",
-    addressCountry: "AE",
-  },
-  geo: { "@type": "GeoCoordinates", latitude: 25.2048, longitude: 55.2708 },
-  openingHoursSpecification: {
-    "@type": "OpeningHoursSpecification",
-    dayOfWeek: [
-      "Monday","Tuesday","Wednesday",
-      "Thursday","Friday","Saturday","Sunday",
-    ],
-    opens: "00:00",
-    closes: "23:59",
-  },
-  hasOfferCatalog: {
-    "@type": "OfferCatalog",
-    name: "Chauffeur Services Dubai",
-    itemListElement: [
-      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Airport Transfer Dubai" } },
-      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Corporate Chauffeur Service Dubai" } },
-      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Wedding Limo Dubai" } },
-      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Rolls Royce Rental with Driver Dubai" } },
-      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Mercedes Sprinter Rent with Driver Dubai" } },
-    ],
-  },
-};
+import HeroBookingModal from "@/components/HeroBookingModal";
 
 // ─── Constants ─────────────────────────────────────────────────────────────
 const roseGoldGradient = "linear-gradient(135deg, #b76e79, #e8a4a0, #c9956c)";
@@ -98,84 +35,108 @@ const vehicleClasses = [
     label: "Business Class",
     tagline: "Executive comfort for every journey",
     image: "https://images.unsplash.com/photo-1555215695-3004980ad54e?w=800&q=80",
-    vehicles: "BMW 7 Series with driver, Mercedes S 450, or similar",
-    passengers: 3,
-    luggage: "3 bags",
+    vehicles: "Lexus ES 300, Audi A6, BYD Han EV, Citroën Space Tourer, Toyota Granvia",
+    passengers: 7,
+    luggage: "6 bags",
     priceFrom: "AED 350",
     description:
-      "Elegant executive sedans for corporate chauffeur service Dubai, airport transfers, and business meetings.",
+      "Executive sedans and MPVs for corporate chauffeur service Dubai, airport transfers, and business meetings.",
   },
   {
     slug: "first-class",
     label: "First Class",
     tagline: "The pinnacle of luxury travel",
     image: "https://images.unsplash.com/photo-1563720360172-67b8f3dce741?w=800&q=80",
-    vehicles: "Mercedes S 500, Mercedes S-Class chauffeur Dubai, or similar",
+    vehicles: "Mercedes S 500, BMW 7 Series - the finest executive saloons in Dubai",
     passengers: 3,
     luggage: "3 bags",
-    priceFrom: "AED 900",
+    priceFrom: "AED 550",
     description:
-      "The most prestigious sedans in our fleet. Ideal for VIP airport pick-up Dubai, executives, and special occasions.",
+      "The most prestigious saloons in our fleet. Ideal for VIP airport pick-up Dubai, executives, and special occasions.",
   },
   {
     slug: "business-van",
     label: "Business Van",
     tagline: "Space and luxury for groups",
     image: "https://images.unsplash.com/photo-1617469955246-19b0e89ce0d3?w=800&q=80",
-    vehicles: "Mercedes V-Class with driver, Vito with driver, VIP Trend 250",
+    vehicles: "Mercedes Vito Tourer, V 300 Tiffany, VIP Trend 250",
     passengers: 7,
     luggage: "7 bags",
     priceFrom: "AED 350",
     description:
-      "Luxury van rental with driver Dubai — perfect for families, groups, or anyone travelling with extra luggage.",
+      "Luxury van rental with driver Dubai - perfect for families, groups, or anyone travelling with extra luggage.",
   },
   {
-    slug: "vip-sprinter",
-    label: "VIP Sprinter",
-    tagline: "First class on wheels for large groups",
+    slug: "mercedes-sprinter-luxury-van",
+    label: "Mercedes Sprinter Luxury Van",
+    tagline: "Large group luxury on every road",
     image: "https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=800&q=80",
-    vehicles: "Mercedes Sprinter rent with driver — Avant Garde VIP, Ultra Luxury",
-    passengers: 16,
+    vehicles: "Mercedes Sprinter Ultra Luxury Van, Mercedes Sprinter 19 Seater",
+    passengers: 19,
     luggage: "9 bags",
     priceFrom: "AED 1,000",
     description:
-      "Ultra-luxury Mercedes Sprinter rent with driver. Lavish interiors for large group airport transfers and events.",
+      "Premium Mercedes Sprinter rent with driver for large group airport transfers, corporate events, and tours.",
+  },
+  {
+    slug: "mercedes-sprinter-luxury-vip",
+    label: "Mercedes Sprinter Luxury VIP",
+    tagline: "Bespoke VIP interiors for discerning groups",
+    image: "https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=800&q=80",
+    vehicles: "Mercedes Sprinter Avant Garde VIP, Mercedes Sprinter Business Class VIP",
+    passengers: 13,
+    luggage: "7 bags",
+    priceFrom: "AED 1,000",
+    description:
+      "Handcrafted VIP Sprinter interiors with starlight ceilings, champagne fridges and executive seating.",
   },
   {
     slug: "luxury-suv",
     label: "Luxury SUV",
     tagline: "Commanding presence on every road",
     image: "https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?w=800&q=80",
-    vehicles: "GMC Yukon Denali, Cadillac Escalade limo Dubai, SUV rent with driver",
+    vehicles: "GMC Yukon Denali, Cadillac Escalade 7 Seater, Range Rover Sport",
     passengers: 7,
     luggage: "7 bags",
     priceFrom: "AED 350",
     description:
-      "Bold, spacious SUVs — Cadillac Escalade limo Dubai and GMC Yukon Denali for families and executive groups.",
+      "Bold, spacious SUVs - GMC Yukon Denali, Cadillac Escalade, and Range Rover Sport for families and VIP groups.",
   },
   {
-    slug: "limousine",
-    label: "Limousine",
+    slug: "rolls-royce",
+    label: "Rolls-Royce",
+    tagline: "The ultimate automotive luxury",
+    image: "https://images.unsplash.com/photo-1563720360172-67b8f3dce741?w=800&q=80",
+    vehicles: "Rolls-Royce Ghost, Rolls-Royce Cullinan",
+    passengers: 4,
+    luggage: "4 bags",
+    priceFrom: "AED 2,500",
+    description:
+      "Experience the pinnacle of automotive prestige - Rolls-Royce Ghost and Cullinan with professional chauffeur.",
+  },
+  {
+    slug: "stretch-limousine",
+    label: "Stretch Limousine",
     tagline: "Make your grandest entrance",
     image: "https://images.unsplash.com/photo-1631295868223-63265b40d9e4?w=800&q=80",
-    vehicles: "GMC Yukon Limousine, best luxury limousine service Dubai",
+    vehicles: "GMC Yukon Limousine, GMC Yukon Diamond, Chevy Suburban Titanium, Chrysler Emerald",
     passengers: 18,
     luggage: "2 bags",
-    priceFrom: "AED 850",
-    description:
-      "Wedding limo Dubai, VIP nights out, and celebrations. The best luxury limousine service Dubai has to offer.",
-  },
-  {
-    slug: "luxury-bus",
-    label: "Luxury Bus",
-    tagline: "Premium group travel, no compromise",
-    image: "https://images.unsplash.com/photo-1570125909232-eb263c188f7e?w=800&q=80",
-    vehicles: "50 Seater Luxury Coach — bus rental Dubai",
-    passengers: 50,
-    luggage: "50 bags",
     priceFrom: "AED 800",
     description:
-      "Bus rental Dubai for corporate events, airport group transfers, and sightseeing tours across the UAE.",
+      "Wedding limo Dubai, VIP nights out, and celebrations. The best stretch limousine service Dubai has to offer.",
+  },
+  {
+    slug: "standard-bus",
+    label: "Standard Bus",
+    tagline: "Reliable group travel, no compromise",
+    image: "https://images.unsplash.com/photo-1570125909232-eb263c188f7e?w=800&q=80",
+    vehicles: "Toyota Coaster 21 Seater, Toyota Hiace 11 Seater, 50 Seater Luxury Coach",
+    passengers: 50,
+    luggage: "50 bags",
+    priceFrom: "AED 350",
+    description:
+      "Bus rental Dubai for corporate events, airport group transfers, school runs and sightseeing tours across the UAE.",
   },
 ];
 
@@ -186,7 +147,7 @@ const services = [
     title: "Airport Transfers in Dubai",
     href: "/services/airport-transfer",
     description:
-      "VIP airport pick-up Dubai — punctual luxury transfers at DXB, DWC, Abu Dhabi & Sharjah airports. Real-time flight tracking included.",
+      "VIP airport pick-up Dubai - punctual luxury transfers at DXB, DWC, Abu Dhabi & Sharjah airports. Real-time flight tracking included.",
   },
   {
     icon: Briefcase,
@@ -200,7 +161,7 @@ const services = [
     title: "Private Driver for Sightseeing Dubai",
     href: "/services/city-tour",
     description:
-      "Explore Burj Khalifa, Palm Jumeirah, and Dubai's landmarks with a private driver for sightseeing Dubai — at your own pace.",
+      "Explore Burj Khalifa, Palm Jumeirah, and Dubai's landmarks with a private driver for sightseeing Dubai - at your own pace.",
   },
   {
     icon: Clock,
@@ -221,19 +182,19 @@ const services = [
     title: "Monthly Driver Dubai Service",
     href: "/services/monthly",
     description:
-      "Monthly driver Dubai service — dedicated private chauffeur for daily commutes, school runs, and regular travel needs.",
+      "Monthly driver Dubai service - dedicated private chauffeur for daily commutes, school runs, and regular travel needs.",
   },
   {
     icon: Plane,
     title: "Chauffeur Service Dubai to Abu Dhabi",
     href: "/services/intercity",
     description:
-      "Seamless intercity transfers — chauffeur service Dubai to Abu Dhabi, Sharjah, and all UAE emirates in premium comfort.",
+      "Seamless intercity transfers - chauffeur service Dubai to Abu Dhabi, Sharjah, and all UAE emirates in premium comfort.",
   },
   {
     icon: UserRound,
     title: "Rolls-Royce Rental with Driver Dubai",
-    href: "/fleet/first-class",
+    href: "/fleet/rolls-royce",
     description:
       "Experience the ultimate in luxury with Rolls-Royce rental with driver Dubai. Available for events, airport transfers, and city tours.",
   },
@@ -248,10 +209,10 @@ const services = [
 
 // ─── Stats ──────────────────────────────────────────────────────────────────
 const stats = [
-  { icon: Users,    value: "10,000+",  label: "Happy Clients"    },
-  { icon: Car,      value: "20+ Cars", label: "Luxury Vehicles"  },
-  { icon: Award,    value: "20 Years", label: "Experience"       },
-  { icon: ThumbsUp, value: "4.9★",     label: "Average Rating"   },
+  { icon: Users,    value: "10,000+",  label: "Happy Clients"   },
+  { icon: Car,      value: "80+ Cars", label: "Luxury Vehicles" },
+  { icon: Award,    value: "20 Years", label: "Experience"      },
+  { icon: ThumbsUp, value: "4.9★",     label: "Average Rating"  },
 ];
 
 // ─── FAQs ────────────────────────────────────────────────────────────────────
@@ -262,15 +223,15 @@ const faqs = [
   },
   {
     q: "Do you offer VIP airport pick-up in Dubai?",
-    a: "Yes — our VIP airport pick-up Dubai service covers DXB, DWC, Abu Dhabi, and Sharjah airports with meet & greet and real-time flight tracking.",
+    a: "Yes - our VIP airport pick-up Dubai service covers DXB, DWC, Abu Dhabi, and Sharjah airports with meet & greet and real-time flight tracking.",
   },
   {
     q: "What vehicles are available for chauffeur hire in Dubai?",
-    a: "Our fleet includes Mercedes S-Class, BMW 7 Series with driver, Rolls-Royce rental with driver Dubai, Tesla chauffeur service Dubai, GMC Yukon Denali, Cadillac Escalade, Mercedes Sprinter rent with driver, and a 50-seater luxury bus.",
+    a: "Our fleet includes Mercedes S 500, BMW 7 Series, Rolls-Royce Ghost & Cullinan, Lexus ES 300, Audi A6, GMC Yukon Denali, Cadillac Escalade, Range Rover Sport, Mercedes Sprinter, and a full range of stretch limousines and buses.",
   },
   {
     q: "Do you offer a chauffeur service from Dubai to Abu Dhabi?",
-    a: "Yes — we provide intercity chauffeur service Dubai to Abu Dhabi, Sharjah, Al Ain, and all UAE emirates at fixed rates.",
+    a: "Yes - we provide intercity chauffeur service Dubai to Abu Dhabi, Sharjah, Al Ain, and all UAE emirates at fixed rates.",
   },
   {
     q: "Can I hire a monthly driver in Dubai?",
@@ -278,7 +239,7 @@ const faqs = [
   },
   {
     q: "Do you offer Mercedes Sprinter rent with driver in Dubai?",
-    a: "Yes — we offer Mercedes Sprinter rent with driver for group transfers, corporate events, and airport runs across Dubai and the UAE.",
+    a: "Yes - we offer Mercedes Sprinter rent with driver for group transfers, corporate events, and airport runs across Dubai and the UAE.",
   },
   {
     q: "Is your luxury chauffeur service available 24/7 in Dubai?",
@@ -286,8 +247,53 @@ const faqs = [
   },
 ];
 
+// ─── JSON-LD ───────────────────────────────────────────────────────────────
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "@id": "https://chauffeurdubai.ae",
+  name: "Chauffeur Dubai - Privilege Luxury Travel",
+  description:
+    "Premium chauffeur service in Dubai. Luxury airport transfers, corporate chauffeur, wedding limo, VIP transportation across Dubai and UAE.",
+  url: "https://chauffeurdubai.ae",
+  telephone: "+971509200818",
+  priceRange: "AED 350 - AED 11000",
+  image: "https://chauffeurdubai.ae/og-image.jpg",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "Shraifi One Building Suite 45 - Zaa'beel St",
+    addressLocality: "Dubai",
+    addressRegion: "Dubai",
+    addressCountry: "AE",
+  },
+  geo: { "@type": "GeoCoordinates", latitude: 25.2048, longitude: 55.2708 },
+  openingHoursSpecification: {
+    "@type": "OpeningHoursSpecification",
+    dayOfWeek: [
+      "Monday","Tuesday","Wednesday",
+      "Thursday","Friday","Saturday","Sunday",
+    ],
+    opens: "00:00",
+    closes: "23:59",
+  },
+  hasOfferCatalog: {
+    "@type": "OfferCatalog",
+    name: "Chauffeur Services Dubai",
+    itemListElement: [
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Airport Transfer Dubai"                    } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Full Day Chauffeur Service Dubai"          } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Corporate Chauffeur Service Dubai"        } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Wedding Limo Dubai"                       } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Rolls Royce Rental with Driver Dubai"     } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Mercedes Sprinter Rent with Driver Dubai" } },
+    ],
+  },
+};
+
 // ────────────────────────────────────────────────────────────────────────────
 export default function HomePage() {
+  const [modalOpen, setModalOpen] = useState(false);
+
   return (
     <>
       <script
@@ -299,7 +305,7 @@ export default function HomePage() {
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
         <Image
           src="https://images.unsplash.com/photo-1647200527435-cc6b0e91e120?w=1800&q=90"
-          alt="Luxury chauffeur service Dubai — professional private driver"
+          alt="Luxury chauffeur service Dubai - professional private driver"
           fill
           className="object-cover object-center"
           priority
@@ -342,22 +348,21 @@ export default function HomePage() {
             <strong className="text-white">limo rental Dubai</strong>,{" "}
             <strong className="text-white">Dubai airport transfers</strong>,{" "}
             <strong className="text-white">corporate chauffeur service Dubai</strong>,
-            and <strong className="text-white">wedding limo Dubai</strong> —
+            and <strong className="text-white">wedding limo Dubai</strong> -
             available 24/7 with professional licensed drivers.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
-            <a
-              href="https://wa.me/971509200818?text=Hi,%20I%20want%20to%20book%20a%20chauffeur%20service%20in%20Dubai"
-              target="_blank"
-              rel="noopener noreferrer"
+            <button
+              onClick={() => setModalOpen(true)}
               className="flex items-center gap-2 text-white font-bold text-base px-9 py-4 rounded-full shadow-2xl hover:opacity-90 transition-all duration-200"
               style={{ background: roseGoldGradient }}
             >
               <MessageCircle size={18} />
               Book via WhatsApp
               <ChevronRight size={18} />
-            </a>
+            </button>
+
             <a
               href="tel:+971509200818"
               className="flex items-center gap-2 border-2 border-white/70 text-white hover:border-white hover:bg-white/10 font-semibold text-base px-9 py-4 rounded-full transition-all duration-200 backdrop-blur-sm"
@@ -370,7 +375,7 @@ export default function HomePage() {
           <div className="flex flex-wrap items-center justify-center gap-6 text-sm">
             {[
               "✓ Licensed Professional Drivers",
-              "✓ Luxury Fleet — Mercedes, BMW, Rolls-Royce",
+              "✓ Luxury Fleet - Mercedes, BMW, Rolls-Royce",
               "✓ 24/7 Availability",
               "✓ Fixed Transparent Rates",
             ].map((b) => (
@@ -431,10 +436,11 @@ export default function HomePage() {
               Luxury Chauffeur Fleet Dubai
             </h2>
             <p className="text-zinc-500 max-w-2xl mx-auto">
-              From <strong className="text-zinc-700">Mercedes S-Class chauffeur Dubai</strong> to{" "}
-              <strong className="text-zinc-700">luxury van rental with driver Dubai</strong>,{" "}
-              <strong className="text-zinc-700">limo rental Dubai</strong>, and{" "}
-              <strong className="text-zinc-700">bus rental</strong> — choose your class below.
+              From{" "}
+              <strong className="text-zinc-700">Mercedes S-Class chauffeur Dubai</strong> to{" "}
+              <strong className="text-zinc-700">Rolls-Royce rental with driver</strong>,{" "}
+              <strong className="text-zinc-700">stretch limousines</strong>, and{" "}
+              <strong className="text-zinc-700">luxury bus rental Dubai</strong> - choose your class below.
             </p>
           </div>
 
@@ -446,11 +452,10 @@ export default function HomePage() {
                   href={`/fleet/${slug}`}
                   className="group bg-white rounded-2xl overflow-hidden border border-rose-100 hover:border-rose-300 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col"
                 >
-                  {/* Image */}
                   <div className="relative h-48 overflow-hidden">
                     <Image
                       src={image}
-                      alt={`${label} chauffeur Dubai — ${vehicles}`}
+                      alt={`${label} chauffeur Dubai - ${vehicles}`}
                       fill
                       className="object-cover group-hover:scale-105 transition-transform duration-500"
                     />
@@ -460,17 +465,13 @@ export default function HomePage() {
                         className="text-white text-xs font-bold px-3 py-1.5 rounded-full"
                         style={{ background: roseGoldGradient }}
                       >
-                        From {priceFrom}
+                        Starting From {priceFrom}
                       </span>
                     </div>
                     <div className="absolute top-3 left-3">
-                      <span className="bg-black/60 backdrop-blur-sm text-white text-xs font-bold px-3 py-1.5 rounded-full uppercase tracking-wider">
-                        {label}
-                      </span>
                     </div>
                   </div>
 
-                  {/* Content */}
                   <div className="p-6 flex flex-col flex-1">
                     <p
                       className="text-xs font-semibold uppercase tracking-widest mb-1"
@@ -529,8 +530,9 @@ export default function HomePage() {
               Our Chauffeur Services in Dubai
             </h2>
             <p className="text-zinc-500 max-w-2xl mx-auto">
-              From <strong className="text-zinc-700">airport transfers in Dubai</strong> to{" "}
-              <strong className="text-zinc-700">chauffeur service near me</strong> searches —
+              From{" "}
+              <strong className="text-zinc-700">airport transfers in Dubai</strong> to{" "}
+              <strong className="text-zinc-700">chauffeur service near me</strong> searches -
               we cover every journey across Dubai and the UAE.
             </p>
           </div>
@@ -592,7 +594,7 @@ export default function HomePage() {
               </span>
             </h2>
             <p className="text-zinc-500 leading-relaxed mb-8">
-              With 20 years serving Dubai's elite, Privilege Luxury Travel is the
+              With 20 years serving Dubai&apos;s elite, Privilege Luxury Travel is the
               most trusted name in{" "}
               <strong className="text-zinc-700">luxury chauffeur Dubai</strong>.
               Whether you need a{" "}
@@ -600,17 +602,17 @@ export default function HomePage() {
               a <strong className="text-zinc-700">monthly driver Dubai</strong>{" "}
               service, or a one-time{" "}
               <strong className="text-zinc-700">VIP airport pick-up Dubai</strong>{" "}
-              — we handle every journey with precision and care.
+              - we handle every journey with precision and care.
             </p>
             <ul className="space-y-4">
               {[
                 "Fully licensed, insured & background-checked chauffeurs",
                 "Real-time flight tracking for all airport transfers in Dubai",
-                "Immaculately maintained premium vehicles — Mercedes, BMW, Rolls-Royce",
-                "Transparent fixed pricing — no hidden fees, no surge pricing",
+                "Immaculately maintained premium vehicles - Mercedes, BMW, Rolls-Royce",
+                "Transparent fixed pricing - no hidden fees, no surge pricing",
                 "Corporate accounts available with priority service",
                 "Serving DXB, DWC, Abu Dhabi, Sharjah airports 24/7",
-                "Intercity transfers — chauffeur service Dubai to Abu Dhabi & beyond",
+                "Intercity transfers - chauffeur service Dubai to Abu Dhabi & beyond",
               ].map((item) => (
                 <li key={item} className="flex items-start gap-3 text-zinc-600 text-sm">
                   <CheckCircle size={18} className="shrink-0 mt-0.5" style={{ color: "#b76e79" }} />
@@ -628,7 +630,7 @@ export default function HomePage() {
             <h3 className="text-2xl font-bold mb-3">Your Safety & Comfort First</h3>
             <p className="opacity-80 leading-relaxed mb-6">
               Every chauffeur at Privilege Luxury Travel undergoes rigorous background
-              checks, defensive driving certification, and ongoing training — so
+              checks, defensive driving certification, and ongoing training - so
               every ride is safe, smooth, and truly luxurious.
             </p>
             <div className="grid grid-cols-2 gap-4">
@@ -648,18 +650,17 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── AIRPORT TRANSFER ──────────────────────────────────────────── */}
+      {/* ── FULL DAY CHAUFFEUR SERVICE ─────────────────────────────── */}
       <section
-        id="airport-transfer"
+        id="full-day-chauffeur"
         className="py-24 px-4 sm:px-6 lg:px-8 bg-white"
-        aria-label="Airport Transfer Dubai — VIP Airport Pick-up Dubai"
+        aria-label="Full Day Chauffeur Service Dubai"
       >
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-
           <div className="relative rounded-3xl overflow-hidden shadow-2xl aspect-[4/3]">
             <Image
-              src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=900&q=85"
-              alt="Dubai airport transfer service — VIP airport pick-up Dubai at DXB"
+              src="https://images.unsplash.com/photo-1563720360172-67b8f3dce741?w=900&q=85"
+              alt="Full day chauffeur service Dubai - dedicated private driver for the day"
               fill
               className="object-cover"
             />
@@ -667,10 +668,10 @@ export default function HomePage() {
             <div className="absolute bottom-6 left-6 right-6">
               <div className="bg-white/90 backdrop-blur-md rounded-2xl px-5 py-4 shadow-lg">
                 <p className="font-bold text-zinc-900 text-sm">
-                  ✈ DXB, DWC, Abu Dhabi & Sharjah Coverage
+                  🕐 5 Hour & 10 Hour Packages Available
                 </p>
                 <p className="text-zinc-500 text-xs mt-1">
-                  All UAE airports covered 24/7 with VIP meet & greet
+                  Your chauffeur, your schedule - across Dubai and the UAE
                 </p>
               </div>
             </div>
@@ -684,31 +685,32 @@ export default function HomePage() {
               Most Booked Service
             </p>
             <h2 className="text-3xl sm:text-4xl font-bold text-zinc-900 mb-5">
-              Airport Transfers in Dubai
+              Full Day Chauffeur Service Dubai
             </h2>
             <p className="text-zinc-500 text-lg leading-relaxed mb-8">
-              The most trusted{" "}
-              <strong className="text-zinc-700">dubai airport transfer</strong> service
-              in the UAE. We cover Dubai International (DXB), Al Maktoum (DWC),
-              Abu Dhabi, and Sharjah airports. Your chauffeur tracks your flight live —
-              if it's delayed, we adjust. Our{" "}
-              <strong className="text-zinc-700">VIP airport pick-up Dubai</strong>{" "}
-              service includes meet & greet, name board, and luggage assistance.
-              No waiting, no surge pricing, no stress.
+              Our most popular service -{" "}
+              <strong className="text-zinc-700">full day chauffeur service Dubai</strong>{" "}
+              gives you a dedicated professional driver for as long as you need. Whether
+              it&apos;s a packed corporate schedule, a leisurely city tour, or a day of
+              meetings across the UAE, your chauffeur is at your disposal from morning
+              to night. Choose from our{" "}
+              <strong className="text-zinc-700">5 Hour</strong> or{" "}
+              <strong className="text-zinc-700">10 Hour packages</strong> - all with
+              fixed transparent pricing and no hidden charges.
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
               {[
                 {
-                  title: "Meet & Greet",
-                  desc: "Your chauffeur meets you at arrivals with a name board.",
+                  title: "Dedicated Driver",
+                  desc: "Your chauffeur stays with you for the entire booking - no shared rides.",
                 },
                 {
-                  title: "Flight Tracking",
-                  desc: "Real-time flight monitoring — we adjust to every delay.",
+                  title: "5 & 10 Hr Packages",
+                  desc: "Flexible half-day and full-day rates across our entire luxury fleet.",
                 },
                 {
                   title: "Fixed Pricing",
-                  desc: "No surge pricing. Transparent rates across all airports.",
+                  desc: "No surge charges. One transparent rate for the full duration.",
                 },
               ].map(({ title, desc }) => (
                 <div
@@ -722,14 +724,14 @@ export default function HomePage() {
               ))}
             </div>
             <a
-              href="https://wa.me/971509200818?text=Hi,%20I%20need%20an%20airport%20transfer%20in%20Dubai"
+              href="https://wa.me/971509200818?text=Hi,%20I%20need%20a%20full%20day%20chauffeur%20service%20in%20Dubai"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 text-white font-bold text-base px-9 py-4 rounded-full shadow-xl hover:opacity-90 transition-all duration-200"
               style={{ background: roseGoldGradient }}
             >
-              <Plane size={18} />
-              Book Airport Transfer
+              <CalendarDays size={18} />
+              Book Full Day Chauffeur
             </a>
           </div>
         </div>
@@ -739,7 +741,7 @@ export default function HomePage() {
       <section
         className="py-24 px-4 sm:px-6 lg:px-8"
         style={{ background: "linear-gradient(180deg, #fdf0ef 0%, #fff 100%)" }}
-        aria-label="FAQ — Chauffeur Service Dubai"
+        aria-label="FAQ - Chauffeur Service Dubai"
       >
         <div className="max-w-3xl mx-auto">
           <div className="text-center mb-14">
@@ -786,23 +788,21 @@ export default function HomePage() {
             <strong className="text-white">limo rental Dubai</strong>, a{" "}
             <strong className="text-white">monthly driver Dubai</strong> service,
             or a last-minute{" "}
-            <strong className="text-white">chauffeur service near me</strong> — we're
+            <strong className="text-white">chauffeur service near me</strong> - we are
             available 24/7.
           </p>
           <p className="opacity-70 text-sm mb-10">
-            📍 Shraifi One Building, Suite 32, Zaa'beel St, Dubai, UAE
+            Shraifi One Building, Suite 45, Zaa&apos;beel St, Dubai, UAE
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a
-              href="https://wa.me/971509200818?text=Hi,%20I%20want%20to%20book%20a%20chauffeur%20service%20in%20Dubai"
-              target="_blank"
-              rel="noopener noreferrer"
+            <button
+              onClick={() => setModalOpen(true)}
               className="flex items-center gap-3 bg-white font-bold text-base px-9 py-4 rounded-full shadow-xl hover:shadow-2xl transition-all duration-200"
               style={{ color: "#b76e79" }}
             >
               <MessageCircle size={20} />
-              WhatsApp Us
-            </a>
+              Book via WhatsApp
+            </button>
             <a
               href="tel:+971509200818"
               className="flex items-center gap-3 border-2 border-white text-white hover:bg-white hover:text-rose-400 font-bold text-base px-9 py-4 rounded-full transition-all duration-200"
@@ -819,6 +819,12 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* Booking Modal */}
+      <HeroBookingModal
+        isOpen={modalOpen}
+        onClose={() => setModalOpen(false)}
+      />
     </>
   );
 }

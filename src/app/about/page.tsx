@@ -3,9 +3,9 @@ import Image from "next/image";
 import { CheckCircle, Shield, Award, Users, Car, ThumbsUp, Phone, MessageCircle } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "About Us | Privilege Luxury Travel — Chauffeur Service Dubai",
+  title: "About Us | Privilege Luxury Travel - Chauffeur Service Dubai",
   description:
-    "20 years of luxury chauffeur service in Dubai. Privilege Luxury Travel is Dubai's most trusted private driver and limousine company — serving airports, corporates, and VIP clients across the UAE.",
+    "20 years of luxury chauffeur service in Dubai. Privilege Luxury Travel is Dubai's most trusted private driver and limousine company - serving airports, corporates, and VIP clients across the UAE.",
   alternates: { canonical: "https://chauffeurdubai.ae/about" },
 };
 
@@ -40,7 +40,7 @@ const values = [
   {
     icon: Car,
     title: "Premium Fleet",
-    desc: "Our vehicles are immaculately maintained — Mercedes, BMW, Rolls-Royce, GMC, and more. Always clean, always luxury.",
+    desc: "Our vehicles are immaculately maintained - Mercedes, BMW, Rolls-Royce, GMC, and more. Always clean, always luxury.",
   },
   {
     icon: ThumbsUp,
@@ -50,7 +50,7 @@ const values = [
   {
     icon: CheckCircle,
     title: "24/7 Availability",
-    desc: "Day or night, weekday or holiday — our team and fleet are always ready. We never sleep so you never wait.",
+    desc: "Day or night, weekday or holiday - our team and fleet are always ready. We never sleep so you never wait.",
   },
 ];
 
@@ -61,7 +61,7 @@ export default function AboutPage() {
       <section className="relative h-72 sm:h-96 flex items-end overflow-hidden pt-16">
         <Image
           src="https://images.unsplash.com/photo-1563720360172-67b8f3dce741?w=1600&q=85"
-          alt="About Privilege Luxury Travel — luxury chauffeur service Dubai"
+          alt="About Privilege Luxury Travel - luxury chauffeur service Dubai"
           fill
           className="object-cover object-center"
           priority
@@ -75,7 +75,7 @@ export default function AboutPage() {
         />
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-12 w-full">
           <p className="text-xs font-semibold uppercase tracking-widest mb-2" style={{ color: "#e8a4a0" }}>
-            Est. 2004 — Dubai, UAE
+            Est. 2004 - Dubai, UAE
           </p>
           <h1 className="text-3xl sm:text-5xl font-bold text-white mb-2">
             About{" "}
@@ -90,7 +90,7 @@ export default function AboutPage() {
             </span>
           </h1>
           <p className="text-white/70 max-w-2xl text-sm sm:text-base">
-            Dubai's most trusted luxury chauffeur service — 20 years of premium
+            Dubai's most trusted luxury chauffeur service - 20 years of premium
             private driver and limousine services across the UAE.
           </p>
         </div>
@@ -123,7 +123,7 @@ export default function AboutPage() {
               <p>
                 Founded in 2004, <strong className="text-zinc-700">Privilege Luxury Travel</strong> has
                 grown from a small fleet of executive sedans to Dubai's most comprehensive
-                luxury chauffeur service — operating at <strong className="text-zinc-700">chauffeurdubai.ae</strong>.
+                luxury chauffeur service - operating at <strong className="text-zinc-700">chauffeurdubai.ae</strong>.
               </p>
               <p>
                 We serve corporate executives, international visitors, families, and VIP
@@ -135,7 +135,7 @@ export default function AboutPage() {
               </p>
               <p>
                 Our fleet spans luxury sedans, VIP vans, Mercedes Sprinters, stretch
-                limousines, and a 50-seater luxury coach — all driven by professionally
+                limousines, and a 50-seater luxury coach - all driven by professionally
                 trained, background-checked chauffeurs available 24/7 across the UAE.
               </p>
               <p>
@@ -156,7 +156,7 @@ export default function AboutPage() {
               {[
                 { val: "20+",      label: "Years in Dubai"          },
                 { val: "10,000+",  label: "Happy Clients"           },
-                { val: "20+",      label: "Luxury Vehicles"         },
+                { val: "80+",      label: "Luxury Vehicles"         },
                 { val: "4.9★",     label: "Average Client Rating"   },
                 { val: "24/7",     label: "Availability"            },
                 { val: "4",        label: "UAE Airports Covered"    },

@@ -3,7 +3,7 @@ import Image from "next/image";
 import { Phone, Mail, MapPin, Clock, MessageCircle, Instagram, Facebook, Youtube } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Contact Us | Book Chauffeur Service Dubai — Privilege Luxury Travel",
+  title: "Contact Us | Book Chauffeur Service Dubai - Privilege Luxury Travel",
   description:
     "Contact Privilege Luxury Travel to book your luxury chauffeur service in Dubai. Call, WhatsApp, or email us 24/7. Airport transfers, corporate chauffeur, wedding limo, and more.",
   alternates: { canonical: "https://chauffeurdubai.ae/contact" },
@@ -37,7 +37,7 @@ const contactDetails = [
   {
     icon: MapPin,
     label: "Office",
-    value: "Shraifi One Building, Suite 32",
+    value: "Shraifi One Building, Suite 45",
     sub: "Zaa'beel St, Dubai, UAE",
     href: "https://goo.gl/maps/21XXcACyGnB7fVXe7",
   },
@@ -72,7 +72,7 @@ export default function ContactPage() {
       <section className="relative h-64 sm:h-80 flex items-end overflow-hidden pt-16">
         <Image
           src="https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=1600&q=85"
-          alt="Contact Privilege Luxury Travel — book chauffeur service Dubai"
+          alt="Contact Privilege Luxury Travel - book chauffeur service Dubai"
           fill
           className="object-cover object-center"
           priority
@@ -98,7 +98,7 @@ export default function ContactPage() {
             </span>
           </h1>
           <p className="text-white/70 max-w-xl text-sm sm:text-base">
-            Book your luxury chauffeur service in Dubai — we're available
+            Book your luxury chauffeur service in Dubai - we're available
             24/7 via WhatsApp, phone, or email.
           </p>
         </div>
@@ -189,7 +189,7 @@ export default function ContactPage() {
           {/* Quick Booking Panel */}
           <div className="lg:col-span-2 space-y-6">
 
-            {/* WhatsApp CTA — big prominent block */}
+            {/* WhatsApp CTA - big prominent block */}
             <div
               className="rounded-3xl p-8 text-white shadow-xl"
               style={{ background: roseGoldGradient }}
@@ -198,8 +198,8 @@ export default function ContactPage() {
                 Fastest Way to Book
               </h3>
               <p className="opacity-80 mb-6 text-sm leading-relaxed">
-                WhatsApp us your journey details — date, pickup, destination,
-                and number of passengers — and we'll confirm your{" "}
+                WhatsApp us your journey details - date, pickup, destination,
+                and number of passengers - and we'll confirm your{" "}
                 <strong>luxury chauffeur service Dubai</strong> booking within
                 minutes.
               </p>
@@ -253,7 +253,7 @@ export default function ContactPage() {
                   Privilege Luxury Travel
                 </p>
                 <p className="text-zinc-500 text-xs mt-1">
-                  Shraifi One Building, Suite 32, Zaa'beel St, Dubai, UAE
+                  Shraifi One Building, Suite 45, Zaa'beel St, Dubai, UAE
                 </p>
               </div>
             </div>
@@ -265,7 +265,7 @@ export default function ContactPage() {
       <section className="py-16 px-4 text-center bg-white border-t border-rose-100">
         <p className="text-zinc-500 text-sm mb-4">
           Looking for a <strong className="text-zinc-700">chauffeur service near me</strong> in Dubai?
-          We cover all areas — Downtown, JBR, Business Bay, DIFC, Palm Jumeirah, and more.
+          We cover all areas - Downtown, JBR, Business Bay, DIFC, Palm Jumeirah, and more.
         </p>
         <div className="flex flex-col sm:flex-row justify-center gap-4">
           <a

@@ -3,9 +3,9 @@ import Image from "next/image";
 import { Phone, Mail, MapPin, Clock, MessageCircle, Instagram, Facebook, Youtube } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Contact Us | Book Chauffeur Service Dubai - Privilege Luxury Travel",
+  title: "Contact Us | Book Chauffeur Service Dubai - Chauffeur Dubai Luxury Travel",
   description:
-    "Contact Privilege Luxury Travel to book your luxury chauffeur service in Dubai. Call, WhatsApp, or email us 24/7. Airport transfers, corporate chauffeur, wedding limo, and more.",
+    "Contact Chauffeur Dubai Luxury Travel to book your luxury chauffeur service in Dubai. Call, WhatsApp, or email us 24/7. Airport transfers, corporate chauffeur, wedding limo, and more.",
   alternates: { canonical: "https://chauffeurdubai.ae/contact" },
 };
 
@@ -16,23 +16,23 @@ const contactDetails = [
   {
     icon: Phone,
     label: "Phone",
-    value: "+971 50 920 0818",
+    value: "+971 50 985 2818",
     sub: "+971 50 985 2818",
-    href: "tel:+971509200818",
+    href: "tel:+971509852818",
   },
   {
     icon: MessageCircle,
     label: "WhatsApp",
-    value: "+971 50 920 0818",
+    value: "+971 50 985 2818",
     sub: "Available 24/7",
-    href: "https://wa.me/971509200818",
+    href: "https://wa.me/971509852818",
   },
   {
     icon: Mail,
     label: "Email",
-    value: "booking@privilegelimo.com",
+    value: "booking@chauffeurdubai.ae.com",
     sub: "We reply within the hour",
-    href: "mailto:booking@privilegelimo.com",
+    href: "mailto:booking@chauffeurdubai.ae.com",
   },
   {
     icon: MapPin,
@@ -72,7 +72,7 @@ export default function ContactPage() {
       <section className="relative h-64 sm:h-80 flex items-end overflow-hidden pt-16">
         <Image
           src="https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=1600&q=85"
-          alt="Contact Privilege Luxury Travel - book chauffeur service Dubai"
+          alt="Contact Chauffeur Dubai Luxury Travel - book chauffeur service Dubai"
           fill
           className="object-cover object-center"
           priority
@@ -168,7 +168,7 @@ export default function ContactPage() {
               <div className="flex gap-3">
                 {[
                   { icon: Instagram, href: "https://www.instagram.com/privilegeluxurylimo/", label: "Instagram" },
-                  { icon: Facebook, href: "https://www.facebook.com/privilegelimo", label: "Facebook" },
+                  { icon: Facebook, href: "https://www.facebook.com/chauffeurdubai.ae", label: "Facebook" },
                   { icon: Youtube, href: "https://www.youtube.com/@privilegechauffeurandlimousine", label: "YouTube" },
                 ].map(({ icon: SocialIcon, href, label }) => (
                   <a
@@ -204,7 +204,7 @@ export default function ContactPage() {
                 minutes.
               </p>
               <a
-                href="https://wa.me/971509200818?text=Hi,%20I%20want%20to%20book%20a%20chauffeur%20service%20in%20Dubai.%20Here%20are%20my%20details:"
+                href="https://wa.me/971509852818?text=Hi,%20I%20want%20to%20book%20a%20chauffeur%20service%20in%20Dubai.%20Here%20are%20my%20details:"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 bg-white font-bold text-base px-8 py-4 rounded-full shadow-lg hover:shadow-xl transition-all"
@@ -246,11 +246,11 @@ export default function ContactPage() {
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="Privilege Luxury Travel Dubai Office Location"
+                title="Chauffeur Luxury Travel Dubai Office Location"
               />
               <div className="p-5">
                 <p className="font-bold text-zinc-900 text-sm">
-                  Privilege Luxury Travel
+                  Chauffeur Luxury Travel
                 </p>
                 <p className="text-zinc-500 text-xs mt-1">
                   Shraifi One Building, Suite 45, Zaa'beel St, Dubai, UAE
@@ -269,12 +269,12 @@ export default function ContactPage() {
         </p>
         <div className="flex flex-col sm:flex-row justify-center gap-4">
           <a
-            href="tel:+971509200818"
+            href="tel:+971509852818"
             className="inline-flex items-center justify-center gap-2 font-bold text-white px-8 py-4 rounded-full shadow-lg hover:opacity-90 transition-all"
             style={{ background: roseGoldGradient }}
           >
             <Phone size={18} />
-            +971 50 920 0818
+            +971 50 985 2818
           </a>
           <a
             href="tel:+971509852818"

@@ -167,12 +167,12 @@
     "desc": "The Mercedes Vito Tourer is the ideal group chauffeur vehicle - spacious, comfortable and effortlessly professional.",
     "features": ["7 passenger seating", "Captain-style seats", "USB charging", "Dual-zone climate"],
     "specs": [
-      { "label": "Passengers",   "value": "Up to 7"   },
-      { "label": "Luggage",      "value": "7 bags"    },
-      { "label": "Class",        "value": "Business Van" },
-      { "label": "Fuel Type",    "value": "Diesel"    },
-      { "label": "Transmission", "value": "Automatic" },
-      { "label": "A/C",          "value": "Dual Zone" }
+      { "label": "Passengers",   "value": "Up to 7"      },
+      { "label": "Luggage",      "value": "7 bags"        },
+      { "label": "Class",        "value": "Business Van"  },
+      { "label": "Fuel Type",    "value": "Diesel"        },
+      { "label": "Transmission", "value": "Automatic"     },
+      { "label": "A/C",          "value": "Dual Zone"     }
     ]
   },
   {
@@ -189,12 +189,12 @@
     "desc": "The Mercedes V 300 Tiffany Edition elevates group travel to an art form with its bespoke interior and whisper-quiet ride.",
     "features": ["Custom Tiffany interior", "Starlight ceiling", "Refrigerator", "Privacy blinds"],
     "specs": [
-      { "label": "Passengers",   "value": "Up to 7"    },
-      { "label": "Luggage",      "value": "7 bags"     },
-      { "label": "Class",        "value": "Business Van" },
-      { "label": "Fuel Type",    "value": "Diesel"     },
-      { "label": "Transmission", "value": "Automatic 9G" },
-      { "label": "A/C",          "value": "Multi-Zone" }
+      { "label": "Passengers",   "value": "Up to 7"      },
+      { "label": "Luggage",      "value": "7 bags"        },
+      { "label": "Class",        "value": "Business Van"  },
+      { "label": "Fuel Type",    "value": "Diesel"        },
+      { "label": "Transmission", "value": "Automatic 9G"  },
+      { "label": "A/C",          "value": "Multi-Zone"    }
     ]
   },
   {
@@ -212,11 +212,11 @@
     "features": ["Nappa leather seating", "4-zone climate", "Mini-bar", "42-inch rear display"],
     "specs": [
       { "label": "Passengers",   "value": "Up to 7"      },
-      { "label": "Luggage",      "value": "7 bags"       },
-      { "label": "Class",        "value": "Business Van" },
-      { "label": "Fuel Type",    "value": "Diesel"       },
-      { "label": "Transmission", "value": "Automatic"    },
-      { "label": "A/C",          "value": "4-Zone VIP"   }
+      { "label": "Luggage",      "value": "7 bags"        },
+      { "label": "Class",        "value": "Business Van"  },
+      { "label": "Fuel Type",    "value": "Diesel"        },
+      { "label": "Transmission", "value": "Automatic"     },
+      { "label": "A/C",          "value": "4-Zone VIP"    }
     ]
   },
   {
@@ -233,12 +233,12 @@
     "desc": "The Mercedes Sprinter Ultra Luxury Van sets the benchmark for large group transport with its lavish custom interior and state-of-the-art facilities.",
     "features": ["16 captain seats", "Individual screens", "Onboard Wi-Fi", "Premium sound system"],
     "specs": [
-      { "label": "Passengers",   "value": "Up to 16"                       },
-      { "label": "Luggage",      "value": "9 bags"                         },
-      { "label": "Class",        "value": "Mercedes Sprinter Luxury Van"   },
-      { "label": "Fuel Type",    "value": "Diesel"                         },
-      { "label": "Transmission", "value": "Automatic"                      },
-      { "label": "A/C",          "value": "Full Van A/C"                   }
+      { "label": "Passengers",   "value": "Up to 16"                      },
+      { "label": "Luggage",      "value": "9 bags"                        },
+      { "label": "Class",        "value": "Mercedes Sprinter Luxury Van"  },
+      { "label": "Fuel Type",    "value": "Diesel"                        },
+      { "label": "Transmission", "value": "Automatic"                     },
+      { "label": "A/C",          "value": "Full Van A/C"                  }
     ]
   },
   {
@@ -255,12 +255,12 @@
     "desc": "The Mercedes Sprinter 19 Seater is the perfect solution for large group airport transfers and corporate events across Dubai.",
     "features": ["19 premium seats", "Overhead racks", "USB charging at every seat", "PA system"],
     "specs": [
-      { "label": "Passengers",   "value": "Up to 19"                       },
-      { "label": "Luggage",      "value": "9 bags"                         },
-      { "label": "Class",        "value": "Mercedes Sprinter Luxury Van"   },
-      { "label": "Fuel Type",    "value": "Diesel"                         },
-      { "label": "Transmission", "value": "Automatic"                      },
-      { "label": "A/C",          "value": "Full Van A/C"                   }
+      { "label": "Passengers",   "value": "Up to 19"                      },
+      { "label": "Luggage",      "value": "9 bags"                        },
+      { "label": "Class",        "value": "Mercedes Sprinter Luxury Van"  },
+      { "label": "Fuel Type",    "value": "Diesel"                        },
+      { "label": "Transmission", "value": "Automatic"                     },
+      { "label": "A/C",          "value": "Full Van A/C"                  }
     ]
   },
   {
@@ -277,12 +277,12 @@
     "desc": "The Mercedes Sprinter Avant Garde VIP is the gold standard in luxury group transport - handcrafted interiors, starlight ceiling and champagne fridge included.",
     "features": ["Handcrafted interior", "Starlight ceiling", "Electric recline seats", "Champagne fridge"],
     "specs": [
-      { "label": "Passengers",   "value": "Up to 11"                       },
-      { "label": "Luggage",      "value": "6 bags"                         },
-      { "label": "Class",        "value": "Mercedes Sprinter Luxury VIP"   },
-      { "label": "Fuel Type",    "value": "Diesel"                         },
-      { "label": "Transmission", "value": "Automatic"                      },
-      { "label": "A/C",          "value": "Multi-Zone VIP"                 }
+      { "label": "Passengers",   "value": "Up to 11"                      },
+      { "label": "Luggage",      "value": "6 bags"                        },
+      { "label": "Class",        "value": "Mercedes Sprinter Luxury VIP"  },
+      { "label": "Fuel Type",    "value": "Diesel"                        },
+      { "label": "Transmission", "value": "Automatic"                     },
+      { "label": "A/C",          "value": "Multi-Zone VIP"                }
     ]
   },
   {
@@ -299,12 +299,12 @@
     "desc": "The Mercedes Sprinter Business Class VIP delivers an elevated group travel experience with premium leather seating and executive amenities.",
     "features": ["Business class seating", "Individual fold-out tables", "Rear entertainment", "Wi-Fi"],
     "specs": [
-      { "label": "Passengers",   "value": "Up to 13"                       },
-      { "label": "Luggage",      "value": "7 bags"                         },
-      { "label": "Class",        "value": "Mercedes Sprinter Luxury VIP"   },
-      { "label": "Fuel Type",    "value": "Diesel"                         },
-      { "label": "Transmission", "value": "Automatic"                      },
-      { "label": "A/C",          "value": "Full Van VIP A/C"               }
+      { "label": "Passengers",   "value": "Up to 13"                      },
+      { "label": "Luggage",      "value": "7 bags"                        },
+      { "label": "Class",        "value": "Mercedes Sprinter Luxury VIP"  },
+      { "label": "Fuel Type",    "value": "Diesel"                        },
+      { "label": "Transmission", "value": "Automatic"                     },
+      { "label": "A/C",          "value": "Full Van VIP A/C"              }
     ]
   },
   {
@@ -321,12 +321,12 @@
     "desc": "The GMC Yukon Denali commands every road in Dubai - bold, powerful and packed with premium features for the discerning traveller.",
     "features": ["Denali leather interior", "Tri-zone climate", "Bose audio", "Rear entertainment screens"],
     "specs": [
-      { "label": "Passengers",   "value": "Up to 7"          },
-      { "label": "Luggage",      "value": "7 bags"            },
-      { "label": "Class",        "value": "Luxury SUV"        },
-      { "label": "Fuel Type",    "value": "Petrol V8"         },
-      { "label": "Transmission", "value": "Automatic 10-Spd"  },
-      { "label": "A/C",          "value": "Tri-Zone Climate"  }
+      { "label": "Passengers",   "value": "Up to 7"         },
+      { "label": "Luggage",      "value": "7 bags"           },
+      { "label": "Class",        "value": "Luxury SUV"       },
+      { "label": "Fuel Type",    "value": "Petrol V8"        },
+      { "label": "Transmission", "value": "Automatic 10-Spd" },
+      { "label": "A/C",          "value": "Tri-Zone Climate" }
     ]
   },
   {
@@ -343,12 +343,12 @@
     "desc": "The Cadillac Escalade is the ultimate American luxury SUV - imposing, spacious and loaded with technology for a truly first-class road experience.",
     "features": ["Semi-aniline leather", "AKG Studio Reference audio", "38-inch curved OLED display", "Super Cruise driver assist"],
     "specs": [
-      { "label": "Passengers",   "value": "Up to 7"          },
-      { "label": "Luggage",      "value": "7 bags"            },
-      { "label": "Class",        "value": "Luxury SUV"        },
-      { "label": "Fuel Type",    "value": "Petrol V8"         },
-      { "label": "Transmission", "value": "Automatic 10G"     },
-      { "label": "A/C",          "value": "4-Zone Climate"    }
+      { "label": "Passengers",   "value": "Up to 7"       },
+      { "label": "Luggage",      "value": "7 bags"         },
+      { "label": "Class",        "value": "Luxury SUV"     },
+      { "label": "Fuel Type",    "value": "Petrol V8"      },
+      { "label": "Transmission", "value": "Automatic 10G"  },
+      { "label": "A/C",          "value": "4-Zone Climate" }
     ]
   },
   {
@@ -365,166 +365,12 @@
     "desc": "The Range Rover Sport is the definitive luxury performance SUV - combining iconic British design with unmatched on-road refinement.",
     "features": ["Windsor leather seats", "Meridian surround sound", "Pivi Pro infotainment", "Configurable terrain response"],
     "specs": [
-      { "label": "Passengers",   "value": "Up to 5"          },
-      { "label": "Luggage",      "value": "4 bags"            },
-      { "label": "Class",        "value": "Luxury SUV"        },
-      { "label": "Fuel Type",    "value": "Petrol/Mild Hybrid"},
-      { "label": "Transmission", "value": "Automatic 8G"      },
-      { "label": "A/C",          "value": "4-Zone Climate"    }
-    ]
-  },
-  {
-    "slug": "gmc-yukon-limousine",
-    "classSlug": "stretch-limousine",
-    "name": "GMC Yukon Limousine",
-    "category": "Stretch Limousine",
-    "passengers": 18,
-    "luggage": 2,
-    "transferPrice": "AED 850",
-    "price5hr": "AED 4,000 / 5 Hr",
-    "price10hr": "AED 7,000 / 10 Hr",
-    "images": ["https://images.unsplash.com/photo-1631295868223-63265b40d9e4?w=1200&q=85"],
-    "desc": "The GMC Yukon Stretch Limousine is the ultimate party and event vehicle in Dubai - seating up to 18 with a fully equipped entertainment bar.",
-    "features": ["Seating for 18", "Entertainment bar", "LED mood lighting", "Starlight ceiling"],
-    "specs": [
-      { "label": "Passengers",   "value": "Up to 18"              },
-      { "label": "Luggage",      "value": "2 bags"                 },
-      { "label": "Class",        "value": "Stretch Limousine"      },
-      { "label": "Fuel Type",    "value": "Petrol V8"              },
-      { "label": "Transmission", "value": "Automatic"              },
-      { "label": "A/C",          "value": "Full Limo Climate"      }
-    ]
-  },
-  {
-    "slug": "chevy-suburban-titanium-limousine",
-    "classSlug": "stretch-limousine",
-    "name": "Chevy Suburban Titanium Limousine",
-    "category": "Stretch Limousine",
-    "passengers": 16,
-    "luggage": 2,
-    "transferPrice": "AED 900",
-    "price5hr": "AED 4,200 / 5 Hr",
-    "price10hr": "AED 7,500 / 10 Hr",
-    "images": ["https://images.unsplash.com/photo-1631295868223-63265b40d9e4?w=1200&q=85"],
-    "desc": "The Chevy Suburban Titanium Limousine delivers bold American stretch luxury - perfect for weddings, VIP events and unforgettable nights out in Dubai.",
-    "features": ["Titanium interior trim", "Premium bar setup", "Privacy partition", "Neon mood lighting"],
-    "specs": [
-      { "label": "Passengers",   "value": "Up to 16"         },
-      { "label": "Luggage",      "value": "2 bags"            },
-      { "label": "Class",        "value": "Stretch Limousine" },
-      { "label": "Fuel Type",    "value": "Petrol V8"         },
-      { "label": "Transmission", "value": "Automatic"         },
-      { "label": "A/C",          "value": "Full Limo Climate" }
-    ]
-  },
-  {
-    "slug": "gmc-yukon-diamond-limousine",
-    "classSlug": "stretch-limousine",
-    "name": "GMC Yukon Diamond Limousine",
-    "category": "Stretch Limousine",
-    "passengers": 18,
-    "luggage": 2,
-    "transferPrice": "AED 950",
-    "price5hr": "AED 4,500 / 5 Hr",
-    "price10hr": "AED 8,000 / 10 Hr",
-    "images": ["https://images.unsplash.com/photo-1631295868223-63265b40d9e4?w=1200&q=85"],
-    "desc": "The GMC Yukon Diamond Limousine is the crown jewel of our stretch fleet - opulent diamond-stitched interiors and a full entertainment suite for the most exclusive occasions.",
-    "features": ["Diamond-stitched leather", "Full bar lounge", "Crystal glassware", "Starlight ceiling"],
-    "specs": [
-      { "label": "Passengers",   "value": "Up to 18"         },
-      { "label": "Luggage",      "value": "2 bags"            },
-      { "label": "Class",        "value": "Stretch Limousine" },
-      { "label": "Fuel Type",    "value": "Petrol V8"         },
-      { "label": "Transmission", "value": "Automatic"         },
-      { "label": "A/C",          "value": "Full Limo Climate" }
-    ]
-  },
-  {
-    "slug": "chrysler-emerald-limousine",
-    "classSlug": "stretch-limousine",
-    "name": "Chrysler Emerald Limousine",
-    "category": "Stretch Limousine",
-    "passengers": 14,
-    "luggage": 2,
-    "transferPrice": "AED 800",
-    "price5hr": "AED 3,800 / 5 Hr",
-    "price10hr": "AED 7,000 / 10 Hr",
-    "images": ["https://images.unsplash.com/photo-1631295868223-63265b40d9e4?w=1200&q=85"],
-    "desc": "The Chrysler Emerald Limousine is an iconic classic stretch - elegant, spacious and an unforgettable statement for weddings and special events in Dubai.",
-    "features": ["Classic stretch design", "Emerald interior accents", "Bar & entertainment unit", "Fibre optic lighting"],
-    "specs": [
-      { "label": "Passengers",   "value": "Up to 14"         },
-      { "label": "Luggage",      "value": "2 bags"            },
-      { "label": "Class",        "value": "Stretch Limousine" },
-      { "label": "Fuel Type",    "value": "Petrol V8"         },
-      { "label": "Transmission", "value": "Automatic"         },
-      { "label": "A/C",          "value": "Full Limo Climate" }
-    ]
-  },
-  {
-    "slug": "toyota-coaster-21",
-    "classSlug": "standard-bus",
-    "name": "Toyota Coaster 21 Seater",
-    "category": "Standard Bus",
-    "passengers": 21,
-    "luggage": 15,
-    "transferPrice": "AED 500",
-    "price5hr": "AED 900 / 5 Hr",
-    "price10hr": "AED 1,500 / 10 Hr",
-    "images": ["https://images.unsplash.com/photo-1570125909232-eb263c188f7e?w=1200&q=85"],
-    "desc": "The Toyota Coaster 21 Seater is a reliable, comfortable mini-bus ideal for corporate shuttles, school runs and group airport transfers across Dubai.",
-    "features": ["21 reclining seats", "Overhead racks", "Central A/C", "PA system"],
-    "specs": [
-      { "label": "Passengers",   "value": "Up to 21"      },
-      { "label": "Luggage",      "value": "15 bags"        },
-      { "label": "Class",        "value": "Standard Bus"   },
-      { "label": "Fuel Type",    "value": "Diesel"         },
-      { "label": "Transmission", "value": "Automatic"      },
-      { "label": "A/C",          "value": "Full Bus A/C"   }
-    ]
-  },
-  {
-    "slug": "toyota-hiace-11",
-    "classSlug": "standard-bus",
-    "name": "Toyota Hiace 11 Seater",
-    "category": "Standard Van / Mini Bus",
-    "passengers": 11,
-    "luggage": 8,
-    "transferPrice": "AED 350",
-    "price5hr": "AED 750 / 5 Hr",
-    "price10hr": "AED 1,200 / 10 Hr",
-    "images": ["https://images.unsplash.com/photo-1570125909232-eb263c188f7e?w=1200&q=85"],
-    "desc": "The Toyota Hiace 11 Seater is the go-to solution for mid-size group transfers - dependable, spacious and available 24/7 across Dubai.",
-    "features": ["11 comfortable seats", "Overhead storage", "USB charging", "Rear A/C vents"],
-    "specs": [
-      { "label": "Passengers",   "value": "Up to 11"      },
-      { "label": "Luggage",      "value": "8 bags"         },
-      { "label": "Class",        "value": "Standard Bus"   },
-      { "label": "Fuel Type",    "value": "Diesel"         },
-      { "label": "Transmission", "value": "Automatic"      },
-      { "label": "A/C",          "value": "Dual Zone A/C"  }
-    ]
-  },
-  {
-    "slug": "50-seater-luxury-bus",
-    "classSlug": "standard-bus",
-    "name": "50 Seater Luxury Coach",
-    "category": "Luxury Coach",
-    "passengers": 50,
-    "luggage": 50,
-    "transferPrice": "AED 800",
-    "price5hr": "AED 1,100 / 5 Hr",
-    "price10hr": "AED 1,700 / 10 Hr",
-    "images": ["https://images.unsplash.com/photo-1570125909232-eb263c188f7e?w=1200&q=85"],
-    "desc": "Our 50-Seater Luxury Coach is Dubai's premier solution for large corporate group transport, event shuttles and airport runs.",
-    "features": ["50 reclining seats", "Underfloor luggage bay", "Onboard Wi-Fi", "PA system & entertainment"],
-    "specs": [
-      { "label": "Passengers",   "value": "Up to 50"         },
-      { "label": "Luggage",      "value": "Full luggage bay"  },
-      { "label": "Class",        "value": "Standard Bus"      },
-      { "label": "Fuel Type",    "value": "Diesel"            },
-      { "label": "Transmission", "value": "Automatic"         },
-      { "label": "A/C",          "value": "Full Coach A/C"    }
+      { "label": "Passengers",   "value": "Up to 5"           },
+      { "label": "Luggage",      "value": "4 bags"             },
+      { "label": "Class",        "value": "Luxury SUV"         },
+      { "label": "Fuel Type",    "value": "Petrol/Mild Hybrid" },
+      { "label": "Transmission", "value": "Automatic 8G"       },
+      { "label": "A/C",          "value": "4-Zone Climate"     }
     ]
   },
   {
@@ -541,12 +387,12 @@
     "desc": "The Rolls-Royce Ghost is the definitive expression of effortless luxury - a silent, serene cabin wrapped in hand-stitched leather and real wood veneers.",
     "features": ["Starlight headliner", "Bespoke leather interior", "Rear lounge seating", "Spirit of Ecstasy hood ornament"],
     "specs": [
-      { "label": "Passengers",   "value": "Up to 3"        },
-      { "label": "Luggage",      "value": "3 bags"          },
-      { "label": "Class",        "value": "Rolls-Royce"     },
-      { "label": "Fuel Type",    "value": "Petrol V12"      },
-      { "label": "Transmission", "value": "Automatic 8G"    },
-      { "label": "A/C",          "value": "4-Zone Climate"  }
+      { "label": "Passengers",   "value": "Up to 3"       },
+      { "label": "Luggage",      "value": "3 bags"         },
+      { "label": "Class",        "value": "Rolls-Royce"    },
+      { "label": "Fuel Type",    "value": "Petrol V12"     },
+      { "label": "Transmission", "value": "Automatic 8G"   },
+      { "label": "A/C",          "value": "4-Zone Climate" }
     ]
   },
   {
@@ -563,12 +409,188 @@
     "desc": "The Rolls-Royce Cullinan is the world's most luxurious SUV - combining the magnificent presence of a high-riding vehicle with the signature Rolls-Royce Magic Carpet Ride.",
     "features": ["Viewing Suite rear seats", "Starlight headliner", "Bespoke Rolls-Royce interior", "All-terrain capability"],
     "specs": [
-      { "label": "Passengers",   "value": "Up to 4"        },
-      { "label": "Luggage",      "value": "4 bags"          },
-      { "label": "Class",        "value": "Rolls-Royce"     },
-      { "label": "Fuel Type",    "value": "Petrol V12"      },
-      { "label": "Transmission", "value": "Automatic 8G"    },
-      { "label": "A/C",          "value": "4-Zone Climate"  }
+      { "label": "Passengers",   "value": "Up to 4"       },
+      { "label": "Luggage",      "value": "4 bags"         },
+      { "label": "Class",        "value": "Rolls-Royce"    },
+      { "label": "Fuel Type",    "value": "Petrol V12"     },
+      { "label": "Transmission", "value": "Automatic 8G"   },
+      { "label": "A/C",          "value": "4-Zone Climate" }
+    ]
+  },
+  {
+    "slug": "gmc-yukon-limousine",
+    "classSlug": "stretch-limousine",
+    "name": "GMC Yukon Limousine",
+    "category": "Stretch Limousine",
+    "passengers": 18,
+    "luggage": 2,
+    "transferPrice": "AED 850",
+    "price5hr": "AED 4,000 / 5 Hr",
+    "price10hr": "AED 7,000 / 10 Hr",
+    "images": ["https://images.unsplash.com/photo-1631295868223-63265b40d9e4?w=1200&q=85"],
+    "desc": "The GMC Yukon Stretch Limousine is the ultimate party and event vehicle in Dubai - seating up to 18 with a fully equipped entertainment bar.",
+    "features": ["Seating for 18", "Entertainment bar", "LED mood lighting", "Starlight ceiling"],
+    "specs": [
+      { "label": "Passengers",   "value": "Up to 18"          },
+      { "label": "Luggage",      "value": "2 bags"             },
+      { "label": "Class",        "value": "Stretch Limousine"  },
+      { "label": "Fuel Type",    "value": "Petrol V8"          },
+      { "label": "Transmission", "value": "Automatic"          },
+      { "label": "A/C",          "value": "Full Limo Climate"  }
+    ]
+  },
+  {
+    "slug": "chevy-suburban-titanium-limousine",
+    "classSlug": "stretch-limousine",
+    "name": "Chevy Suburban Titanium Limousine",
+    "category": "Stretch Limousine",
+    "passengers": 16,
+    "luggage": 2,
+    "transferPrice": "AED 900",
+    "price5hr": "AED 4,200 / 5 Hr",
+    "price10hr": "AED 7,500 / 10 Hr",
+    "images": ["https://images.unsplash.com/photo-1631295868223-63265b40d9e4?w=1200&q=85"],
+    "desc": "The Chevy Suburban Titanium Limousine delivers bold American stretch luxury - perfect for weddings, VIP events and unforgettable nights out in Dubai.",
+    "features": ["Titanium interior trim", "Premium bar setup", "Privacy partition", "Neon mood lighting"],
+    "specs": [
+      { "label": "Passengers",   "value": "Up to 16"          },
+      { "label": "Luggage",      "value": "2 bags"             },
+      { "label": "Class",        "value": "Stretch Limousine"  },
+      { "label": "Fuel Type",    "value": "Petrol V8"          },
+      { "label": "Transmission", "value": "Automatic"          },
+      { "label": "A/C",          "value": "Full Limo Climate"  }
+    ]
+  },
+  {
+    "slug": "gmc-yukon-diamond-limousine",
+    "classSlug": "stretch-limousine",
+    "name": "GMC Yukon Diamond Limousine",
+    "category": "Stretch Limousine",
+    "passengers": 18,
+    "luggage": 2,
+    "transferPrice": "AED 950",
+    "price5hr": "AED 4,500 / 5 Hr",
+    "price10hr": "AED 8,000 / 10 Hr",
+    "images": ["https://images.unsplash.com/photo-1631295868223-63265b40d9e4?w=1200&q=85"],
+    "desc": "The GMC Yukon Diamond Limousine is the crown jewel of our stretch fleet - opulent diamond-stitched interiors and a full entertainment suite for the most exclusive occasions.",
+    "features": ["Diamond-stitched leather", "Full bar lounge", "Crystal glassware", "Starlight ceiling"],
+    "specs": [
+      { "label": "Passengers",   "value": "Up to 18"          },
+      { "label": "Luggage",      "value": "2 bags"             },
+      { "label": "Class",        "value": "Stretch Limousine"  },
+      { "label": "Fuel Type",    "value": "Petrol V8"          },
+      { "label": "Transmission", "value": "Automatic"          },
+      { "label": "A/C",          "value": "Full Limo Climate"  }
+    ]
+  },
+  {
+    "slug": "chrysler-emerald-limousine",
+    "classSlug": "stretch-limousine",
+    "name": "Chrysler Emerald Limousine",
+    "category": "Stretch Limousine",
+    "passengers": 14,
+    "luggage": 2,
+    "transferPrice": "AED 800",
+    "price5hr": "AED 3,800 / 5 Hr",
+    "price10hr": "AED 7,000 / 10 Hr",
+    "images": ["https://images.unsplash.com/photo-1631295868223-63265b40d9e4?w=1200&q=85"],
+    "desc": "The Chrysler Emerald Limousine is an iconic classic stretch - elegant, spacious and an unforgettable statement for weddings and special events in Dubai.",
+    "features": ["Classic stretch design", "Emerald interior accents", "Bar & entertainment unit", "Fibre optic lighting"],
+    "specs": [
+      { "label": "Passengers",   "value": "Up to 14"          },
+      { "label": "Luggage",      "value": "2 bags"             },
+      { "label": "Class",        "value": "Stretch Limousine"  },
+      { "label": "Fuel Type",    "value": "Petrol V8"          },
+      { "label": "Transmission", "value": "Automatic"          },
+      { "label": "A/C",          "value": "Full Limo Climate"  }
+    ]
+  },
+  {
+    "slug": "toyota-coaster-21",
+    "classSlug": "standard-bus",
+    "name": "Toyota Coaster 21 Seater",
+    "category": "Standard Bus",
+    "passengers": 21,
+    "luggage": 15,
+    "transferPrice": "AED 500",
+    "price5hr": "AED 900 / 5 Hr",
+    "price10hr": "AED 1,500 / 10 Hr",
+    "images": ["https://images.unsplash.com/photo-1570125909232-eb263c188f7e?w=1200&q=85"],
+    "desc": "The Toyota Coaster 21 Seater is a reliable, comfortable mini-bus ideal for corporate shuttles, school runs and group airport transfers across Dubai.",
+    "features": ["21 reclining seats", "Overhead racks", "Central A/C", "PA system"],
+    "specs": [
+      { "label": "Passengers",   "value": "Up to 21"    },
+      { "label": "Luggage",      "value": "15 bags"      },
+      { "label": "Class",        "value": "Standard Bus" },
+      { "label": "Fuel Type",    "value": "Diesel"       },
+      { "label": "Transmission", "value": "Automatic"    },
+      { "label": "A/C",          "value": "Full Bus A/C" }
+    ]
+  },
+  {
+    "slug": "toyota-hiace-11",
+    "classSlug": "standard-bus",
+    "name": "Toyota Hiace 11 Seater",
+    "category": "Standard Van / Mini Bus",
+    "passengers": 11,
+    "luggage": 8,
+    "transferPrice": "AED 350",
+    "price5hr": "AED 750 / 5 Hr",
+    "price10hr": "AED 1,200 / 10 Hr",
+    "images": ["https://images.unsplash.com/photo-1570125909232-eb263c188f7e?w=1200&q=85"],
+    "desc": "The Toyota Hiace 11 Seater is the go-to solution for mid-size group transfers - dependable, spacious and available 24/7 across Dubai.",
+    "features": ["11 comfortable seats", "Overhead storage", "USB charging", "Rear A/C vents"],
+    "specs": [
+      { "label": "Passengers",   "value": "Up to 11"     },
+      { "label": "Luggage",      "value": "8 bags"        },
+      { "label": "Class",        "value": "Standard Bus"  },
+      { "label": "Fuel Type",    "value": "Diesel"        },
+      { "label": "Transmission", "value": "Automatic"     },
+      { "label": "A/C",          "value": "Dual Zone A/C" }
+    ]
+  },
+  {
+    "slug": "50-seater-luxury-coach",
+    "classSlug": "luxury-coach-bus",
+    "name": "50 Seater Luxury Coach",
+    "category": "Luxury Coach Bus",
+    "passengers": 50,
+    "luggage": 50,
+    "transferPrice": "AED 800",
+    "price5hr": "AED 1,100 / 5 Hr",
+    "price10hr": "AED 1,700 / 10 Hr",
+    "images": ["https://images.unsplash.com/photo-1570125909232-eb263c188f7e?w=1200&q=85"],
+    "desc": "Our 50-Seater Luxury Coach is Dubai's premier solution for large corporate group transport, event shuttles and airport runs.",
+    "features": ["50 reclining seats", "Underfloor luggage bay", "Onboard Wi-Fi", "PA system & entertainment"],
+    "specs": [
+      { "label": "Passengers",   "value": "Up to 50"        },
+      { "label": "Luggage",      "value": "Full luggage bay" },
+      { "label": "Class",        "value": "Luxury Coach Bus" },
+      { "label": "Fuel Type",    "value": "Diesel"           },
+      { "label": "Transmission", "value": "Automatic"        },
+      { "label": "A/C",          "value": "Full Coach A/C"   }
+    ]
+  },
+  {
+    "slug": "35-seater-luxury-coach",
+    "classSlug": "luxury-coach-bus",
+    "name": "35 Seater Luxury Coach",
+    "category": "Luxury Coach Bus",
+    "passengers": 35,
+    "luggage": 35,
+    "transferPrice": "AED 650",
+    "price5hr": "AED 950 / 5 Hr",
+    "price10hr": "AED 1,500 / 10 Hr",
+    "images": ["https://images.unsplash.com/photo-1570125909232-eb263c188f7e?w=1200&q=85"],
+    "desc": "Our 35-Seater Luxury Coach is the ideal mid-size group transport solution for corporate events, school trips and airport transfers across Dubai and the UAE.",
+    "features": ["35 reclining seats", "Underfloor luggage bay", "Onboard Wi-Fi", "USB charging at every seat"],
+    "specs": [
+      { "label": "Passengers",   "value": "Up to 35"        },
+      { "label": "Luggage",      "value": "Full luggage bay" },
+      { "label": "Class",        "value": "Luxury Coach Bus" },
+      { "label": "Fuel Type",    "value": "Diesel"           },
+      { "label": "Transmission", "value": "Automatic"        },
+      { "label": "A/C",          "value": "Full Coach A/C"   }
     ]
   }
 ]

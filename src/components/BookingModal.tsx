@@ -25,12 +25,12 @@ interface BookingModalProps {
 type BookingType = "transfer" | "5hr" | "10hr" | "point" | "weekly" | "monthly";
 
 const bookingTypes: { value: BookingType; label: string; desc: string }[] = [
-  { value: "transfer", label: "Airport Transfer",  desc: "One-way or return transfer"  },
-  { value: "5hr",      label: "5 Hour Package",    desc: "Half day with chauffeur"     },
-  { value: "10hr",     label: "10 Hour Package",   desc: "Full day with chauffeur"     },
-  { value: "point",    label: "Point to Point",    desc: "Custom route, fixed price"   },
-  { value: "weekly",   label: "Weekly Package",    desc: "7 days dedicated chauffeur"  },
-  { value: "monthly",  label: "Monthly Package",   desc: "Dedicated monthly driver"    },
+  { value: "transfer", label: "Airport Transfer", desc: "One-way or return transfer"  },
+  { value: "5hr",      label: "5 Hour Package",   desc: "Half day with chauffeur"     },
+  { value: "10hr",     label: "10 Hour Package",  desc: "Full day with chauffeur"     },
+  { value: "point",    label: "Point to Point",   desc: "Custom route, fixed price"   },
+  { value: "weekly",   label: "Weekly Package",   desc: "7 days dedicated chauffeur"  },
+  { value: "monthly",  label: "Monthly Package",  desc: "Dedicated monthly driver"    },
 ];
 
 export default function BookingModal({
@@ -57,8 +57,12 @@ export default function BookingModal({
 
   if (!isOpen) return null;
 
-  const seatCount = typeof maxPassengers === "number" && maxPassengers > 0 ? maxPassengers : 4;
+  const seatCount        = typeof maxPassengers === "number" && maxPassengers > 0 ? maxPassengers : 4;
   const passengerOptions = Array.from({ length: seatCount }, (_, i) => i + 1);
+
+  const isMultiDay     = bookingType === "weekly" || bookingType === "monthly";
+  const isPointToPoint = bookingType === "point";
+  const needsRoute     = bookingType === "transfer" || bookingType === "point";
 
   const priceMap: Record<BookingType, string> = {
     transfer: transferPrice,
@@ -69,11 +73,14 @@ export default function BookingModal({
     monthly:  "Contact for Rate",
   };
 
+  const displayPrice = (type: BookingType) =>
+    type === "weekly" || type === "monthly"
+      ? "Contact for Rate"
+      : `Starting from ${priceMap[type]}`;
+
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>
   ) => setForm((p) => ({ ...p, [e.target.name]: e.target.value }));
-
-  const isMultiDay = bookingType === "weekly" || bookingType === "monthly";
 
   const buildWhatsAppMessage = () => {
     const dateStr    = selectedDate ? format(selectedDate, "dd MMM yyyy") : "Not specified";
@@ -84,7 +91,7 @@ export default function BookingModal({
       ``,
       `*Vehicle:* ${carName} (${carCategory})`,
       `*Booking Type:* ${bookingTypes.find((b) => b.value === bookingType)?.label}`,
-      `*Price:* ${priceMap[bookingType]}`,
+      `*Price:* ${displayPrice(bookingType)}`,
       ``,
       `*Client Details*`,
       `Name: ${form.name}`,
@@ -107,7 +114,7 @@ export default function BookingModal({
   const handleSubmit = () => {
     if (!form.name || !form.phone) return;
     const encoded = encodeURIComponent(buildWhatsAppMessage());
-    window.open(`https://wa.me/971509200818?text=${encoded}`, "_blank");
+    window.open(`https://wa.me/971509852818?text=${encoded}`, "_blank");
     setTimeout(() => setSent(true), 2500);
   };
 
@@ -139,14 +146,12 @@ export default function BookingModal({
                 <CheckCircle size={50} color="white" strokeWidth={2.5} />
               </div>
             </div>
-
             <h2 className="text-2xl font-bold text-zinc-900 mb-2">Booking Sent!</h2>
             <p className="text-zinc-500 text-sm leading-relaxed mb-8 max-w-xs">
               Your request for the{" "}
               <span className="font-semibold text-zinc-700">{carName}</span> has
               been sent via WhatsApp. Our team will confirm your booking shortly.
             </p>
-
             <a
               href="/"
               className="w-full max-w-xs py-3 rounded-xl text-white text-sm font-bold text-center shadow-md hover:opacity-90 transition-opacity block"
@@ -191,7 +196,7 @@ export default function BookingModal({
             {/* ── SCROLLABLE BODY ────────────────────────────── */}
             <div className="overflow-y-auto flex-1 px-6 py-4 space-y-5">
 
-              {/* STEP 1 */}
+              {/* ── STEP 1 ─────────────────────────────────── */}
               {step === 1 && (
                 <>
                   {/* Booking Type */}
@@ -215,6 +220,14 @@ export default function BookingModal({
                             {bt.label}
                           </p>
                           <p className="text-xs text-zinc-400 mt-0.5">{bt.desc}</p>
+                          <p
+                            className="text-xs font-bold mt-1.5"
+                            style={{ color: bookingType === bt.value ? "#b76e79" : "#a0a0a0" }}
+                          >
+                            {bt.value === "weekly" || bt.value === "monthly"
+                              ? "Contact for Rate"
+                              : `From ${priceMap[bt.value]}`}
+                          </p>
                         </button>
                       ))}
                     </div>
@@ -229,9 +242,29 @@ export default function BookingModal({
                       Estimated Price
                     </span>
                     <span className="font-bold text-base" style={{ color: "#b76e79" }}>
-                      {priceMap[bookingType]}
+                      {displayPrice(bookingType)}
                     </span>
                   </div>
+
+                  {/* Weekly/Monthly info banner */}
+                  {isMultiDay && (
+                    <div
+                      className="rounded-xl px-4 py-3 border border-rose-100 text-xs text-zinc-500 leading-relaxed"
+                      style={{ background: "#fdf9f5" }}
+                    >
+                      💼 For <strong>{bookingType === "weekly" ? "weekly" : "monthly"}</strong> packages, our team will provide a custom quote based on your schedule and requirements. Please fill in your details and we&apos;ll get back to you within the hour.
+                    </div>
+                  )}
+
+                  {/* Point to Point info banner */}
+                  {isPointToPoint && (
+                    <div
+                      className="rounded-xl px-4 py-3 border border-rose-100 text-xs text-zinc-500 leading-relaxed"
+                      style={{ background: "#fdf9f5" }}
+                    >
+                      📍 For <strong>Point to Point</strong> transfers, please enter your pickup and drop-off locations on the next step. Price is based on the standard transfer rate.
+                    </div>
+                  )}
 
                   {/* Start / Journey Date */}
                   <div>
@@ -286,24 +319,26 @@ export default function BookingModal({
                     </div>
                   )}
 
-                  {/* Pickup Time */}
-                  <div>
-                    <label className={labelClass}>Pickup Time</label>
-                    <div className="relative">
-                      <Clock size={16} className="absolute left-3 top-1/2 -translate-y-1/2 text-rose-300" />
-                      <input
-                        type="time"
-                        name="time"
-                        value={form.time}
-                        onChange={handleChange}
-                        className="w-full pl-9 pr-4 py-3 rounded-xl border border-rose-100 focus:border-rose-300 focus:outline-none text-sm text-zinc-700"
-                      />
+                  {/* Pickup Time — hide for weekly/monthly */}
+                  {!isMultiDay && (
+                    <div>
+                      <label className={labelClass}>Pickup Time</label>
+                      <div className="relative">
+                        <Clock size={16} className="absolute left-3 top-1/2 -translate-y-1/2 text-rose-300" />
+                        <input
+                          type="time"
+                          name="time"
+                          value={form.time}
+                          onChange={handleChange}
+                          className="w-full pl-9 pr-4 py-3 rounded-xl border border-rose-100 focus:border-rose-300 focus:outline-none text-sm text-zinc-700"
+                        />
+                      </div>
                     </div>
-                  </div>
+                  )}
                 </>
               )}
 
-              {/* STEP 2 */}
+              {/* ── STEP 2 ─────────────────────────────────── */}
               {step === 2 && (
                 <>
                   {/* Full Name */}
@@ -369,29 +404,34 @@ export default function BookingModal({
                     </p>
                   </div>
 
-                  {/* Pickup Location */}
+                  {/* Pickup Location — always shown */}
                   <div>
-                    <label className={labelClass}>Pickup Location</label>
+                    <label className={labelClass}>
+                      {needsRoute ? "Pickup Location" : "Primary Location / Base"}
+                    </label>
                     <div className="relative">
                       <MapPin size={16} className="absolute left-3 top-1/2 -translate-y-1/2 text-rose-300" />
                       <input
-                        type="text" name="pickup" placeholder="Hotel, address or landmark"
+                        type="text" name="pickup"
+                        placeholder={needsRoute ? "Hotel, address or landmark" : "Your base location / area"}
                         value={form.pickup} onChange={handleChange} className={inputClass}
                       />
                     </div>
                   </div>
 
-                  {/* Drop-off */}
-                  <div>
-                    <label className={labelClass}>Drop-off Location</label>
-                    <div className="relative">
-                      <MapPin size={16} className="absolute left-3 top-1/2 -translate-y-1/2 text-rose-300" />
-                      <input
-                        type="text" name="dropoff" placeholder="Destination address"
-                        value={form.dropoff} onChange={handleChange} className={inputClass}
-                      />
+                  {/* Drop-off — only for transfer & point to point */}
+                  {needsRoute && (
+                    <div>
+                      <label className={labelClass}>Drop-off Location</label>
+                      <div className="relative">
+                        <MapPin size={16} className="absolute left-3 top-1/2 -translate-y-1/2 text-rose-300" />
+                        <input
+                          type="text" name="dropoff" placeholder="Destination address"
+                          value={form.dropoff} onChange={handleChange} className={inputClass}
+                        />
+                      </div>
                     </div>
-                  </div>
+                  )}
 
                   {/* Notes */}
                   <div>
@@ -400,7 +440,11 @@ export default function BookingModal({
                       <StickyNote size={16} className="absolute left-3 top-3.5 text-rose-300" />
                       <textarea
                         name="notes"
-                        placeholder="Special requests, flight number, luggage details..."
+                        placeholder={
+                          isMultiDay
+                            ? "Describe your schedule, daily usage, special requirements..."
+                            : "Special requests, flight number, luggage details..."
+                        }
                         value={form.notes}
                         onChange={handleChange}
                         rows={3}
@@ -441,14 +485,34 @@ export default function BookingModal({
                         </span>
                       </div>
                     )}
-                    <div className="flex justify-between">
-                      <span className="text-zinc-400">Time</span>
-                      <span className="text-zinc-700 font-medium">{form.time || "-"}</span>
-                    </div>
+                    {!isMultiDay && (
+                      <div className="flex justify-between">
+                        <span className="text-zinc-400">Time</span>
+                        <span className="text-zinc-700 font-medium">{form.time || "-"}</span>
+                      </div>
+                    )}
+                    {form.pickup && (
+                      <div className="flex justify-between">
+                        <span className="text-zinc-400">
+                          {needsRoute ? "Pickup" : "Base"}
+                        </span>
+                        <span className="text-zinc-700 font-medium text-right max-w-[60%] text-xs truncate">
+                          {form.pickup}
+                        </span>
+                      </div>
+                    )}
+                    {needsRoute && form.dropoff && (
+                      <div className="flex justify-between">
+                        <span className="text-zinc-400">Drop-off</span>
+                        <span className="text-zinc-700 font-medium text-right max-w-[60%] text-xs truncate">
+                          {form.dropoff}
+                        </span>
+                      </div>
+                    )}
                     <div className="flex justify-between border-t border-rose-100 pt-1.5 mt-1">
                       <span className="text-zinc-400">Est. Price</span>
                       <span className="font-bold" style={{ color: "#b76e79" }}>
-                        {priceMap[bookingType]}
+                        {displayPrice(bookingType)}
                       </span>
                     </div>
                   </div>

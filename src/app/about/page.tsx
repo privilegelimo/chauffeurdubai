@@ -3,21 +3,22 @@ import Image from "next/image";
 import { CheckCircle, Shield, Award, Users, Car, ThumbsUp, Phone, MessageCircle } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "About Us | Privilege Luxury Travel - Chauffeur Service Dubai",
+  title: "About Us | Chauffeur Dubai Luxury Travel - Chauffeur Service Dubai",
   description:
-    "20 years of luxury chauffeur service in Dubai. Privilege Luxury Travel is Dubai's most trusted private driver and limousine company - serving airports, corporates, and VIP clients across the UAE.",
+    "20 years of luxury chauffeur service in Dubai. Chauffeur Dubai Luxury Travel is Dubai's most trusted private driver and limousine company - serving airports, corporates, and VIP clients across the UAE.",
   alternates: { canonical: "https://chauffeurdubai.ae/about" },
 };
 
-const roseGoldGradient = "linear-gradient(135deg, #b76e79, #e8a4a0, #c9956c)";
+const roseGoldGradient       = "linear-gradient(135deg, #b76e79, #e8a4a0, #c9956c)";
 const roseGoldGradientSubtle = "linear-gradient(135deg, #f9eded, #fdf4f0)";
 
 const milestones = [
-  { year: "2004", event: "Privilege Luxury Travel founded in Dubai, UAE" },
+  { year: "2004", event: "Chauffeur Dubai Luxury Travel founded in Dubai, UAE" },
   { year: "2008", event: "Expanded fleet to include Mercedes S-Class and VIP Sprinters" },
-  { year: "2012", event: "Launched corporate chauffeur accounts across Dubai" },
-  { year: "2016", event: "Added luxury bus and limousine services to the fleet" },
-  { year: "2020", event: "Introduced real-time flight tracking for all airport transfers" },
+  { year: "2010", event: "Launched corporate chauffeur accounts across Dubai" },
+  { year: "2012", event: "Added luxury bus and limousine services to the fleet" },
+  { year: "2016", event: "Introduced real-time flight tracking for all airport transfers" },
+  { year: "2020", event: "Added luxury vans to the fleet" },
   { year: "2024", event: "10,000+ satisfied clients and 20+ premium vehicles in fleet" },
 ];
 
@@ -61,7 +62,7 @@ export default function AboutPage() {
       <section className="relative h-72 sm:h-96 flex items-end overflow-hidden pt-16">
         <Image
           src="https://images.unsplash.com/photo-1563720360172-67b8f3dce741?w=1600&q=85"
-          alt="About Privilege Luxury Travel - luxury chauffeur service Dubai"
+          alt="About Chauffeur Dubai Luxury Travel - luxury chauffeur service Dubai"
           fill
           className="object-cover object-center"
           priority
@@ -86,11 +87,11 @@ export default function AboutPage() {
                 WebkitTextFillColor: "transparent",
               }}
             >
-              Privilege Luxury Travel
+              Chauffeur Dubai Luxury Travel
             </span>
           </h1>
           <p className="text-white/70 max-w-2xl text-sm sm:text-base">
-            Dubai's most trusted luxury chauffeur service - 20 years of premium
+            Dubai&apos;s most trusted luxury chauffeur service - 20 years of premium
             private driver and limousine services across the UAE.
           </p>
         </div>
@@ -121,9 +122,11 @@ export default function AboutPage() {
             </h2>
             <div className="space-y-4 text-zinc-500 leading-relaxed text-sm">
               <p>
-                Founded in 2004, <strong className="text-zinc-700">Privilege Luxury Travel</strong> has
-                grown from a small fleet of executive sedans to Dubai's most comprehensive
-                luxury chauffeur service - operating at <strong className="text-zinc-700">chauffeurdubai.ae</strong>.
+                Founded in 2004,{" "}
+                <strong className="text-zinc-700">Chauffeur Dubai Luxury Travel</strong> has
+                grown from a small fleet of executive sedans to Dubai&apos;s most comprehensive
+                luxury chauffeur service - operating at{" "}
+                <strong className="text-zinc-700">chauffeurdubai.ae</strong>.
               </p>
               <p>
                 We serve corporate executives, international visitors, families, and VIP
@@ -154,12 +157,12 @@ export default function AboutPage() {
             <h3 className="text-2xl font-bold mb-6">Privilege by Numbers</h3>
             <div className="grid grid-cols-2 gap-5">
               {[
-                { val: "20+",      label: "Years in Dubai"          },
-                { val: "10,000+",  label: "Happy Clients"           },
-                { val: "80+",      label: "Luxury Vehicles"         },
-                { val: "4.9★",     label: "Average Client Rating"   },
-                { val: "24/7",     label: "Availability"            },
-                { val: "4",        label: "UAE Airports Covered"    },
+                { val: "20+",     label: "Years in Dubai"        },
+                { val: "10,000+", label: "Happy Clients"         },
+                { val: "80+",     label: "Luxury Vehicles"       },
+                { val: "4.9★",    label: "Average Client Rating" },
+                { val: "24/7",    label: "Availability"          },
+                { val: "4",       label: "UAE Airports Covered"  },
               ].map(({ val, label }) => (
                 <div key={label} className="bg-white/10 rounded-2xl p-5 text-center">
                   <p className="text-2xl font-bold">{val}</p>
@@ -216,17 +219,22 @@ export default function AboutPage() {
               20 Years in Dubai
             </h2>
           </div>
+
           <div className="relative">
+            {/* Vertical line */}
             <div className="absolute left-6 top-0 bottom-0 w-px bg-rose-100" />
+
             <div className="space-y-8">
-              {milestones.map(({ year, event }) => (
+              {milestones.map(({ year, event }, index) => (
                 <div key={year} className="relative flex items-start gap-6 pl-14">
+                  {/* Step number circle */}
                   <div
-                    className="absolute left-0 w-12 h-12 rounded-full flex items-center justify-center text-white text-xs font-bold shrink-0 shadow-md"
+                    className="absolute left-0 w-12 h-12 rounded-full flex items-center justify-center text-white text-sm font-bold shrink-0 shadow-md"
                     style={{ background: roseGoldGradient }}
                   >
-                    {year.slice(2)}
+                    {index + 1}
                   </div>
+                  {/* Card */}
                   <div className="bg-white rounded-2xl p-5 border border-rose-100 shadow-sm flex-1">
                     <p className="text-xs font-bold mb-1" style={{ color: "#b76e79" }}>
                       {year}
@@ -243,15 +251,15 @@ export default function AboutPage() {
       {/* ── CTA ───────────────────────────────────────────────────────── */}
       <section className="py-20 px-4 text-center" style={{ background: roseGoldGradient }}>
         <h2 className="text-2xl sm:text-3xl font-bold text-white mb-3">
-          Experience the Privilege Difference
+          Experience the Chauffeur Difference
         </h2>
         <p className="text-white/80 mb-8 max-w-xl mx-auto">
-          Join 10,000+ satisfied clients who trust Privilege Luxury Travel for
+          Join 10,000+ satisfied clients who trust Chauffeur Luxury Travel for
           every journey in Dubai and the UAE.
         </p>
         <div className="flex flex-col sm:flex-row justify-center gap-4">
           <a
-            href="https://wa.me/971509200818"
+            href="https://wa.me/971509852818"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center gap-2 bg-white font-bold px-8 py-4 rounded-full shadow-lg hover:shadow-xl transition-all"
@@ -261,11 +269,11 @@ export default function AboutPage() {
             Book Now
           </a>
           <a
-            href="tel:+971509200818"
+            href="tel:+971509852818"
             className="inline-flex items-center justify-center gap-2 border-2 border-white text-white hover:bg-white hover:text-rose-400 font-bold px-8 py-4 rounded-full transition-all"
           >
             <Phone size={18} />
-            +971 50 920 0818
+            +971 50 985 2818
           </a>
         </div>
       </section>

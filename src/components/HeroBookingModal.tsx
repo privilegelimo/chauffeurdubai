@@ -5,6 +5,7 @@ import { X, MapPin, Car, Calendar, Clock, User, Phone, Mail, ChevronDown, ArrowR
 import { DayPicker } from "react-day-picker";
 import "react-day-picker/dist/style.css";
 import { format } from "date-fns";
+import allVehiclesRaw from "@/data/vehicles.json";
 
 const roseGold = "linear-gradient(135deg, #b76e79, #e8a4a0, #c9956c)";
 
@@ -59,18 +60,6 @@ const DUBAI_LOCATIONS = [
   "Ferrari World Abu Dhabi",
 ];
 
-const CLASS_LABELS: Record<string, string> = {
-  "business-class":               "Business Class",
-  "first-class":                  "First Class",
-  "business-van":                 "Business Van",
-  "mercedes-sprinter-luxury-van": "Mercedes Sprinter Luxury Van",
-  "mercedes-sprinter-luxury-vip": "Mercedes Sprinter Luxury VIP",
-  "luxury-suv":                   "Luxury SUV",
-  "rolls-royce":                  "Rolls-Royce",
-  "stretch-limousine":            "Stretch Limousine",
-  "standard-bus":                 "Standard Bus",
-};
-
 const BOOKING_TYPES = [
   { value: "transfer", label: "Airport Transfer", desc: "One-way or return" },
   { value: "5hr",      label: "5 Hour Package",   desc: "Half day"          },
@@ -80,35 +69,7 @@ const BOOKING_TYPES = [
   { value: "monthly",  label: "Monthly",          desc: "30 days"           },
 ];
 
-const allVehiclesData = [
-  { slug: "lexus-es300",                    classSlug: "business-class",               name: "Lexus ES 300",                       category: "Executive Saloon / Sedan",       passengers: 3,  luggage: 3,  transferPrice: "AED 350",   price5hr: "AED 900 / 5 Hr",   price10hr: "AED 1,400 / 10 Hr",  images: ["https://images.unsplash.com/photo-1555215695-3004980ad54e?w=800&q=80"] },
-  { slug: "audi-a6",                        classSlug: "business-class",               name: "Audi A6",                            category: "Executive Saloon / Sedan",       passengers: 3,  luggage: 3,  transferPrice: "AED 350",   price5hr: "AED 900 / 5 Hr",   price10hr: "AED 1,400 / 10 Hr",  images: ["https://images.unsplash.com/photo-1555215695-3004980ad54e?w=800&q=80"] },
-  { slug: "byd-han",                        classSlug: "business-class",               name: "BYD Han EV",                         category: "Executive Electric Sedan",       passengers: 3,  luggage: 3,  transferPrice: "AED 350",   price5hr: "AED 900 / 5 Hr",   price10hr: "AED 1,400 / 10 Hr",  images: ["https://images.unsplash.com/photo-1555215695-3004980ad54e?w=800&q=80"] },
-  { slug: "citroen-space-tourer",           classSlug: "business-class",               name: "Citroën Space Tourer 7 Pax",         category: "Executive MPV / 7 Seater",      passengers: 7,  luggage: 5,  transferPrice: "AED 350",   price5hr: "AED 950 / 5 Hr",   price10hr: "AED 1,400 / 10 Hr",  images: ["https://images.unsplash.com/photo-1617469955246-19b0e89ce0d3?w=800&q=80"] },
-  { slug: "toyota-granvia",                 classSlug: "business-class",               name: "Toyota Granvia Van 7 Pax",           category: "Premium MPV / 7 Seater",        passengers: 7,  luggage: 6,  transferPrice: "AED 350",   price5hr: "AED 950 / 5 Hr",   price10hr: "AED 1,400 / 10 Hr",  images: ["https://images.unsplash.com/photo-1617469955246-19b0e89ce0d3?w=800&q=80"] },
-  { slug: "mercedes-s500",                  classSlug: "first-class",                  name: "Mercedes S 500",                     category: "Executive VIP / First Class",    passengers: 3,  luggage: 3,  transferPrice: "AED 900",   price5hr: "AED 1,500 / 5 Hr", price10hr: "AED 2,700 / 10 Hr",  images: ["https://images.unsplash.com/photo-1563720360172-67b8f3dce741?w=800&q=80"] },
-  { slug: "bmw-7-series",                   classSlug: "first-class",                  name: "BMW 7 Series",                       category: "Executive Saloon / First Class", passengers: 3,  luggage: 3,  transferPrice: "AED 550",   price5hr: "AED 1,100 / 5 Hr", price10hr: "AED 1,700 / 10 Hr",  images: ["https://images.unsplash.com/photo-1555215695-3004980ad54e?w=800&q=80"] },
-  { slug: "mercedes-vito-tourer",           classSlug: "business-van",                 name: "Mercedes Vito Tourer",               category: "Executive MPV",                  passengers: 7,  luggage: 7,  transferPrice: "AED 350",   price5hr: "AED 950 / 5 Hr",   price10hr: "AED 1,400 / 10 Hr",  images: ["https://images.unsplash.com/photo-1617469955246-19b0e89ce0d3?w=800&q=80"] },
-  { slug: "mercedes-v300-tiffany",          classSlug: "business-van",                 name: "Mercedes V 300 Tiffany",             category: "Luxury MPV",                     passengers: 7,  luggage: 7,  transferPrice: "AED 550",   price5hr: "AED 1,300 / 5 Hr", price10hr: "AED 2,000 / 10 Hr",  images: ["https://images.unsplash.com/photo-1617469955246-19b0e89ce0d3?w=800&q=80"] },
-  { slug: "mercedes-vip-trend",             classSlug: "business-van",                 name: "Mercedes VIP Trend 250",             category: "Executive VIP MPV",              passengers: 7,  luggage: 7,  transferPrice: "AED 750",   price5hr: "AED 1,300 / 5 Hr", price10hr: "AED 2,000 / 10 Hr",  images: ["https://images.unsplash.com/photo-1617469955246-19b0e89ce0d3?w=800&q=80"] },
-  { slug: "mercedes-sprinter-ultra-luxury", classSlug: "mercedes-sprinter-luxury-van", name: "Mercedes Sprinter Ultra Luxury Van", category: "Executive Luxury Van",           passengers: 16, luggage: 9,  transferPrice: "AED 1,000", price5hr: "AED 1,400 / 5 Hr", price10hr: "AED 2,300 / 10 Hr",  images: ["https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=800&q=80"] },
-  { slug: "mercedes-sprinter-19",           classSlug: "mercedes-sprinter-luxury-van", name: "Mercedes Sprinter 19 Seater",        category: "Luxury Van",                     passengers: 19, luggage: 9,  transferPrice: "AED 1,000", price5hr: "AED 1,400 / 5 Hr", price10hr: "AED 2,400 / 10 Hr",  images: ["https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=800&q=80"] },
-  { slug: "mercedes-sprinter-avant-garde",  classSlug: "mercedes-sprinter-luxury-vip", name: "Mercedes Sprinter Avant Garde VIP",  category: "Executive VIP Van",              passengers: 11, luggage: 6,  transferPrice: "AED 1,100", price5hr: "AED 1,500 / 5 Hr", price10hr: "AED 2,500 / 10 Hr",  images: ["https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=800&q=80"] },
-  { slug: "mercedes-sprinter-business-vip", classSlug: "mercedes-sprinter-luxury-vip", name: "Mercedes Sprinter Business Class VIP", category: "Business Class VIP Van",      passengers: 13, luggage: 7,  transferPrice: "AED 1,000", price5hr: "AED 1,400 / 5 Hr", price10hr: "AED 2,300 / 10 Hr",  images: ["https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=800&q=80"] },
-  { slug: "gmc-yukon-denali",               classSlug: "luxury-suv",                   name: "GMC Yukon Denali",                   category: "Luxury SUV",                     passengers: 7,  luggage: 7,  transferPrice: "AED 350",   price5hr: "AED 950 / 5 Hr",   price10hr: "AED 1,400 / 10 Hr",  images: ["https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?w=800&q=80"] },
-  { slug: "cadillac-escalade",              classSlug: "luxury-suv",                   name: "Cadillac Escalade 7 Seater",         category: "Luxury SUV",                     passengers: 7,  luggage: 7,  transferPrice: "AED 550",   price5hr: "AED 1,100 / 5 Hr", price10hr: "AED 1,700 / 10 Hr",  images: ["https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?w=800&q=80"] },
-  { slug: "range-rover-sport",              classSlug: "luxury-suv",                   name: "Range Rover Sport",                  category: "Luxury SUV",                     passengers: 5,  luggage: 4,  transferPrice: "AED 550",   price5hr: "AED 1,100 / 5 Hr", price10hr: "AED 1,700 / 10 Hr",  images: ["https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?w=800&q=80"] },
-  { slug: "rolls-royce-ghost",              classSlug: "rolls-royce",                  name: "Rolls-Royce Ghost",                  category: "Ultra Luxury Saloon",            passengers: 3,  luggage: 3,  transferPrice: "AED 2,500", price5hr: "AED 5,000 / 5 Hr", price10hr: "AED 9,000 / 10 Hr",  images: ["https://images.unsplash.com/photo-1563720360172-67b8f3dce741?w=800&q=80"] },
-  { slug: "rolls-royce-cullinan",           classSlug: "rolls-royce",                  name: "Rolls-Royce Cullinan",               category: "Ultra Luxury SUV",               passengers: 4,  luggage: 4,  transferPrice: "AED 3,000", price5hr: "AED 6,000 / 5 Hr", price10hr: "AED 11,000 / 10 Hr", images: ["https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?w=800&q=80"] },
-  { slug: "gmc-yukon-limousine",            classSlug: "stretch-limousine",            name: "GMC Yukon Limousine",                category: "Stretch Limousine",              passengers: 18, luggage: 2,  transferPrice: "AED 850",   price5hr: "AED 4,000 / 5 Hr", price10hr: "AED 7,000 / 10 Hr",  images: ["https://images.unsplash.com/photo-1631295868223-63265b40d9e4?w=800&q=80"] },
-  { slug: "chevy-suburban-titanium-limousine", classSlug: "stretch-limousine",         name: "Chevy Suburban Titanium Limousine",  category: "Stretch Limousine",              passengers: 16, luggage: 2,  transferPrice: "AED 900",   price5hr: "AED 4,200 / 5 Hr", price10hr: "AED 7,500 / 10 Hr",  images: ["https://images.unsplash.com/photo-1631295868223-63265b40d9e4?w=800&q=80"] },
-  { slug: "gmc-yukon-diamond-limousine",    classSlug: "stretch-limousine",            name: "GMC Yukon Diamond Limousine",        category: "Stretch Limousine",              passengers: 18, luggage: 2,  transferPrice: "AED 950",   price5hr: "AED 4,500 / 5 Hr", price10hr: "AED 8,000 / 10 Hr",  images: ["https://images.unsplash.com/photo-1631295868223-63265b40d9e4?w=800&q=80"] },
-  { slug: "chrysler-emerald-limousine",     classSlug: "stretch-limousine",            name: "Chrysler Emerald Limousine",         category: "Stretch Limousine",              passengers: 14, luggage: 2,  transferPrice: "AED 800",   price5hr: "AED 3,800 / 5 Hr", price10hr: "AED 7,000 / 10 Hr",  images: ["https://images.unsplash.com/photo-1631295868223-63265b40d9e4?w=800&q=80"] },
-  { slug: "toyota-coaster-21",              classSlug: "standard-bus",                 name: "Toyota Coaster 21 Seater",           category: "Standard Bus",                   passengers: 21, luggage: 15, transferPrice: "AED 500",   price5hr: "AED 900 / 5 Hr",   price10hr: "AED 1,500 / 10 Hr",  images: ["https://images.unsplash.com/photo-1570125909232-eb263c188f7e?w=800&q=80"] },
-  { slug: "toyota-hiace-11",                classSlug: "standard-bus",                 name: "Toyota Hiace 11 Seater",             category: "Standard Van / Mini Bus",        passengers: 11, luggage: 8,  transferPrice: "AED 350",   price5hr: "AED 750 / 5 Hr",   price10hr: "AED 1,200 / 10 Hr",  images: ["https://images.unsplash.com/photo-1570125909232-eb263c188f7e?w=800&q=80"] },
-  { slug: "50-seater-luxury-bus",           classSlug: "standard-bus",                 name: "50 Seater Luxury Coach",             category: "Luxury Coach",                   passengers: 50, luggage: 50, transferPrice: "AED 800",   price5hr: "AED 1,100 / 5 Hr", price10hr: "AED 1,700 / 10 Hr",  images: ["https://images.unsplash.com/photo-1570125909232-eb263c188f7e?w=800&q=80"] },
-];
-
+// ─── Type ──────────────────────────────────────────────────────────────────────
 type Vehicle = {
   slug: string;
   classSlug: string;
@@ -121,6 +82,19 @@ type Vehicle = {
   price10hr: string;
   images: string[];
 };
+
+const allVehiclesData = allVehiclesRaw as Vehicle[];
+
+// CLASS_LABELS auto-generated from JSON — no more manual updates needed
+const CLASS_LABELS: Record<string, string> = Object.fromEntries(
+  [...new Set(allVehiclesData.map((v) => v.classSlug))].map((slug) => [
+    slug,
+    slug
+      .split("-")
+      .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
+      .join(" "),
+  ])
+);
 
 const STEPS = [
   { number: 1, label: "Route"    },
@@ -214,7 +188,7 @@ export default function HeroBookingModal({ isOpen, onClose }: HeroBookingModalPr
 
   if (!isOpen) return null;
 
-  const vehicles      = allVehiclesData as Vehicle[];
+  const vehicles      = allVehiclesData;
   const classGroups   = [...new Set(vehicles.map((v) => v.classSlug))];
   const classVehicles = selectedClass ? vehicles.filter((v) => v.classSlug === selectedClass) : [];
   const isMultiDay    = bookingType === "weekly" || bookingType === "monthly";
@@ -268,8 +242,7 @@ export default function HeroBookingModal({ isOpen, onClose }: HeroBookingModalPr
       form.notes ? `Notes: ${form.notes}` : null,
     ].filter(Boolean).join("\n");
 
-    window.open(`https://wa.me/971509200818?text=${encodeURIComponent(lines)}`, "_blank");
-    // Show success after 2.5s
+    window.open(`https://wa.me/971509852818?text=${encodeURIComponent(lines)}`, "_blank");
     setTimeout(() => setSent(true), 2500);
   };
 
@@ -299,14 +272,12 @@ export default function HeroBookingModal({ isOpen, onClose }: HeroBookingModalPr
                 <CheckCircle size={50} color="white" strokeWidth={2.5} />
               </div>
             </div>
-
             <h2 className="text-2xl font-bold text-zinc-900 mb-2">Booking Sent!</h2>
             <p className="text-zinc-500 text-sm leading-relaxed mb-8 max-w-xs">
               Your request for the{" "}
               <span className="font-semibold text-zinc-700">{selectedVehicle?.name}</span> has
               been sent via WhatsApp. Our team will confirm your booking shortly.
             </p>
-
             <a
               href="/"
               className="w-full max-w-xs py-3 rounded-xl text-white text-sm font-bold text-center shadow-md hover:opacity-90 transition-opacity block"

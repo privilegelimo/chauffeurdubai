@@ -38,61 +38,61 @@ const classInfo: Record<string, { label: string; description: string; image: str
   "business-class": {
     label: "Business Class",
     description:
-      "Executive sedans and MPVs offering premium comfort and style. Perfect for corporate transfers, business meetings, and airport pickups across Dubai.",
+      "Executive sedans and MPVs offering premium comfort and style. Perfect for corporate transfers, business meetings, and airport pickups across Dubai, Abu Dhabi, and Sharjah.",
     image: "https://images.unsplash.com/photo-1555215695-3004980ad54e?w=1400&q=85",
   },
   "first-class": {
     label: "First Class",
     description:
-      "The absolute pinnacle of chauffeur-driven luxury. Mercedes S 500 and BMW 7 Series - reserved for clients who accept nothing but the finest.",
+      "The absolute pinnacle of chauffeur-driven luxury in the UAE. Mercedes S 500 and BMW 7 Series — reserved for clients in Dubai, Abu Dhabi, and Sharjah who accept nothing but the finest.",
     image: "https://images.unsplash.com/photo-1563720360172-67b8f3dce741?w=1400&q=85",
   },
   "business-van": {
     label: "Business Van",
     description:
-      "Spacious luxury MPVs for groups, families, and travellers with extra luggage. Comfort and class for up to 7 passengers.",
+      "Spacious luxury MPVs for groups, families, and travellers with extra luggage. Comfort and class for up to 7 passengers across Dubai, Abu Dhabi, and Sharjah.",
     image: "https://images.unsplash.com/photo-1617469955246-19b0e89ce0d3?w=1400&q=85",
   },
   "mercedes-sprinter-luxury-van": {
     label: "Mercedes Sprinter Luxury Van",
     description:
-      "Premium Mercedes Sprinter vans for large groups - Ultra Luxury Van and 19 Seater. The benchmark for group airport transfers and corporate events.",
+      "Premium Mercedes Sprinter vans for large groups — Ultra Luxury Van and 19 Seater. The benchmark for group airport transfers and corporate events across Dubai, Abu Dhabi, and Sharjah.",
     image: "https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=1400&q=85",
   },
   "mercedes-sprinter-luxury-vip": {
     label: "Mercedes Sprinter Luxury VIP",
     description:
-      "Bespoke VIP Sprinter interiors handcrafted for the most discerning clients - Avant Garde VIP and Business Class VIP with starlight ceilings and champagne fridges.",
+      "Bespoke VIP Sprinter interiors handcrafted for the most discerning clients in Dubai, Abu Dhabi, and Sharjah — Avant Garde VIP and Business Class VIP with starlight ceilings and champagne fridges.",
     image: "https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=1400&q=85",
   },
   "luxury-suv": {
     label: "Luxury SUV",
     description:
-      "Bold, spacious, and commanding - GMC Yukon Denali, Cadillac Escalade, and Range Rover Sport for families and executive groups who need presence and practicality.",
+      "Bold, spacious, and commanding — GMC Yukon Denali, Cadillac Escalade, and Range Rover Sport for families and executive groups across Dubai, Abu Dhabi, and Sharjah who need presence and practicality.",
     image: "https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?w=1400&q=85",
   },
   "rolls-royce": {
     label: "Rolls-Royce",
     description:
-      "The ultimate expression of automotive prestige. Rolls-Royce Ghost and Cullinan with a professional chauffeur - for occasions that demand nothing less than perfection.",
+      "The ultimate expression of automotive prestige across the UAE. Rolls-Royce Ghost and Cullinan with a professional chauffeur in Dubai and Abu Dhabi — for occasions that demand nothing less than perfection.",
     image: "https://images.unsplash.com/photo-1563720360172-67b8f3dce741?w=1400&q=85",
   },
   "stretch-limousine": {
     label: "Stretch Limousine",
     description:
-      "Make the grandest of entrances. Our stretch limousines - GMC Yukon, Diamond, Chevy Suburban, and Chrysler Emerald - are the ultimate statement for weddings, VIP events, and celebrations.",
+      "Make the grandest of entrances in Dubai, Abu Dhabi, or Sharjah. Our stretch limousines — GMC Yukon, Diamond, Chevy Suburban, and Chrysler Emerald — are the ultimate statement for weddings, VIP events, and celebrations.",
     image: "https://images.unsplash.com/photo-1631295868223-63265b40d9e4?w=1400&q=85",
   },
   "standard-bus": {
     label: "Standard Bus",
     description:
-      "Reliable group transport for every occasion - Toyota Coaster 21 Seater and Hiace 11 Seater for corporate events, airport transfers, and tours.",
+      "Reliable group transport for every occasion across Dubai, Abu Dhabi, and Sharjah — Toyota Coaster 21 Seater and Hiace 11 Seater for corporate events, airport transfers, and tours.",
     image: "https://images.unsplash.com/photo-1570125909232-eb263c188f7e?w=1400&q=85",
   },
   "luxury-coach-bus": {
     label: "Luxury Coach Bus",
     description:
-      "Premium luxury coaches for large group travel - 35 Seater and 50 Seater Luxury Coaches with underfloor luggage bays, onboard Wi-Fi, and reclining seats for corporate events, exhibitions, and airport runs.",
+      "Premium luxury coaches for large group travel across Dubai, Abu Dhabi, and Sharjah — 35 Seater and 50 Seater Luxury Coaches with underfloor luggage bays, onboard Wi-Fi, and reclining seats for corporate events, exhibitions, and airport runs.",
     image: "https://images.unsplash.com/photo-1570125909232-eb263c188f7e?w=1400&q=85",
   },
 };
@@ -112,7 +112,7 @@ export async function generateMetadata({
   const info = classInfo[slug];
   if (!info) return {};
   return {
-    title: `${info.label} Chauffeur Dubai | Luxury Car Hire Dubai`,
+    title: `${info.label} Chauffeur Dubai, Abu Dhabi & Sharjah | Luxury Car Hire UAE`,
     description: info.description,
     alternates: { canonical: `https://chauffeurdubai.ae/fleet/${slug}` },
   };
@@ -136,7 +136,7 @@ export default async function FleetClassPage({
       <section className="relative h-72 sm:h-96 flex items-end overflow-hidden pt-16">
         <Image
           src={info.image}
-          alt={`${info.label} chauffeur Dubai`}
+          alt={`${info.label} chauffeur Dubai Abu Dhabi Sharjah UAE`}
           fill
           className="object-cover object-center"
           priority
@@ -165,7 +165,7 @@ export default async function FleetClassPage({
                 WebkitTextFillColor: "transparent",
               }}
             >
-              Chauffeur Dubai
+              Chauffeur — Dubai, Abu Dhabi & Sharjah
             </span>
           </h1>
           <p className="text-white/70 mt-2 max-w-xl">{info.description}</p>
@@ -189,7 +189,7 @@ export default async function FleetClassPage({
                   <div className="relative h-48 overflow-hidden group">
                     <Image
                       src={images[0]}
-                      alt={`${name} chauffeur hire Dubai`}
+                      alt={`${name} chauffeur hire Dubai Abu Dhabi Sharjah`}
                       fill
                       className="object-cover group-hover:scale-105 transition-transform duration-500"
                     />
@@ -273,7 +273,8 @@ export default async function FleetClassPage({
           Need Help Choosing?
         </h2>
         <p className="text-white/80 mb-8">
-          Our team is available 24/7 to help you pick the perfect vehicle.
+          Our team is available 24/7 to help you pick the perfect vehicle for your journey
+          across Dubai, Abu Dhabi, and Sharjah.
         </p>
         <div className="flex flex-col sm:flex-row justify-center gap-4">
           <a

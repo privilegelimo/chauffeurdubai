@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowLeft, UserRound, Luggage, CheckCircle, Phone, MessageCircle, Star } from "lucide-react";
 import BookingButton from "@/components/BookingButton";
+import VehicleImageCarousel from "@/components/VehicleImageCarousel";
 import allVehiclesData from "@/data/vehicles.json";
 
 const roseGoldGradient       = "linear-gradient(135deg, #b76e79, #e8a4a0, #c9956c)";
@@ -46,17 +46,17 @@ export async function generateMetadata({
   const vehicle = allVehicles.find((v) => v.slug === car && v.classSlug === slug);
   if (!vehicle) return {};
   return {
-    title: `${vehicle.name} Chauffeur Dubai | Hire with Driver from ${vehicle.transferPrice}`,
+    title: `${vehicle.name} Chauffeur Dubai, Abu Dhabi & Sharjah | Hire with Driver from ${vehicle.transferPrice}`,
     description: vehicle.metaDesc,
     keywords: vehicle.seoKeywords,
     alternates: {
       canonical: `https://chauffeurdubai.ae/fleet/${vehicle.classSlug}/${vehicle.slug}`,
     },
     openGraph: {
-      title: `${vehicle.name} - Luxury Chauffeur Dubai`,
+      title: `${vehicle.name} - Luxury Chauffeur Dubai, Abu Dhabi & Sharjah`,
       description: vehicle.metaDesc,
       url: `https://chauffeurdubai.ae/fleet/${vehicle.classSlug}/${vehicle.slug}`,
-      images: [{ url: vehicle.images[0], alt: `${vehicle.name} chauffeur hire Dubai` }],
+      images: [{ url: vehicle.images[0], alt: `${vehicle.name} chauffeur hire Dubai Abu Dhabi Sharjah` }],
       type: "website",
     },
   };
@@ -81,7 +81,7 @@ export default async function CarPage({
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Product",
-            name: `${vehicle.name} Chauffeur Dubai`,
+            name: `${vehicle.name} Chauffeur Dubai Abu Dhabi Sharjah`,
             description: vehicle.metaDesc,
             image: vehicle.images[0],
             url: `https://chauffeurdubai.ae/fleet/${vehicle.classSlug}/${vehicle.slug}`,
@@ -92,30 +92,23 @@ export default async function CarPage({
               lowPrice: vehicle.transferPrice.replace(/[^0-9]/g, ""),
               offerCount: 3,
               offers: [
-                { "@type": "Offer", name: "Airport Transfer Dubai", price: vehicle.transferPrice.replace(/[^0-9]/g, ""), priceCurrency: "AED" },
+                { "@type": "Offer", name: "Airport Transfer Dubai Abu Dhabi Sharjah", price: vehicle.transferPrice.replace(/[^0-9]/g, ""), priceCurrency: "AED" },
                 { "@type": "Offer", name: "5 Hour Package", price: vehicle.price5hr.replace(/[^0-9]/g, "").slice(0, 4), priceCurrency: "AED" },
                 { "@type": "Offer", name: "10 Hour Package", price: vehicle.price10hr.replace(/[^0-9]/g, "").slice(0, 5), priceCurrency: "AED" },
               ],
             },
+            areaServed: ["Dubai", "Abu Dhabi", "Sharjah", "UAE"],
             aggregateRating: { "@type": "AggregateRating", ratingValue: "5", reviewCount: "47", bestRating: "5" },
           }),
         }}
       />
 
-      {/* Hero */}
-      <section className="relative h-[60vh] min-h-[400px] overflow-hidden pt-16">
-        <Image
-          src={vehicle.images[0]}
-          alt={`${vehicle.name} chauffeur hire Dubai`}
-          fill
-          className="object-cover object-center"
-          priority
-        />
-        <div
-          className="absolute inset-0"
-          style={{ background: "linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(183,110,121,0.2) 60%, transparent 100%)" }}
-        />
-        <div className="absolute bottom-8 left-0 right-0 px-4 sm:px-6 lg:px-8">
+      {/* ── HERO — Carousel ──────────────────────────────────────────────── */}
+      <section className="relative pt-16">
+        <VehicleImageCarousel images={vehicle.images} name={vehicle.name} />
+
+        {/* Overlay text — positioned over the carousel */}
+        <div className="absolute bottom-8 left-0 right-0 px-4 sm:px-6 lg:px-8 z-30">
           <div className="max-w-7xl mx-auto">
             <Link
               href={`/fleet/${vehicle.classSlug}`}
@@ -145,19 +138,19 @@ export default async function CarPage({
         </div>
       </section>
 
-      {/* Main Content */}
+      {/* ── MAIN CONTENT ─────────────────────────────────────────────────── */}
       <section
         className="py-16 px-4 sm:px-6 lg:px-8"
         style={{ background: "linear-gradient(180deg, #fff 0%, #fdf0ef 100%)" }}
       >
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-10">
 
-          {/* Left */}
+          {/* ── LEFT ─────────────────────────────────────────────────────── */}
           <div className="lg:col-span-2 space-y-10">
 
             <div>
               <h2 className="text-2xl font-bold text-zinc-900 mb-4">
-                {vehicle.name} Chauffeur Service in Dubai
+                {vehicle.name} Chauffeur Service in Dubai, Abu Dhabi & Sharjah
               </h2>
               <p className="text-zinc-500 leading-relaxed mb-4">{vehicle.desc}</p>
               <p className="text-zinc-400 leading-relaxed text-sm">{vehicle.longDesc}</p>
@@ -214,18 +207,18 @@ export default async function CarPage({
 
           </div>
 
-          {/* Right - Booking Card */}
+          {/* ── RIGHT — Booking Card ──────────────────────────────────────── */}
           <div className="lg:col-span-1">
             <div className="sticky top-24 space-y-4">
               <div className="bg-white rounded-3xl border border-rose-100 shadow-lg overflow-hidden">
                 <div className="p-6" style={{ background: roseGoldGradient }}>
                   <p className="text-white/80 text-xs uppercase tracking-widest mb-1">Starting From</p>
                   <p className="text-white font-bold text-3xl">{vehicle.transferPrice}</p>
-                  <p className="text-white/70 text-xs mt-1">Airport Transfer in Dubai</p>
+                  <p className="text-white/70 text-xs mt-1">Airport Transfer — Dubai, Abu Dhabi & Sharjah</p>
                 </div>
                 <div className="p-5 space-y-3">
                   <div className="flex justify-between items-center py-2 border-b border-rose-50 text-sm">
-                    <span className="text-zinc-500">Transfer in Dubai</span>
+                    <span className="text-zinc-500">Transfer — Dubai, Abu Dhabi & Sharjah</span>
                     <span className="font-bold" style={{ color: "#b76e79" }}>{vehicle.transferPrice}</span>
                   </div>
                   <div className="flex justify-between items-center py-2 border-b border-rose-50 text-sm">
@@ -271,7 +264,7 @@ export default async function CarPage({
                   "Fixed price - no hidden charges",
                   "Free cancellation (24h notice)",
                   "Confirmed within minutes",
-                  "Available 24/7 across Dubai",
+                  "Available 24/7 across Dubai, Abu Dhabi & Sharjah",
                 ].map((t) => (
                   <p key={t} className="font-medium">&#10003; {t}</p>
                 ))}
@@ -282,13 +275,13 @@ export default async function CarPage({
         </div>
       </section>
 
-      {/* CTA Strip */}
+      {/* ── CTA STRIP ────────────────────────────────────────────────────── */}
       <section className="py-16 px-4 text-center" style={{ background: roseGoldGradient }}>
         <h2 className="text-2xl font-bold text-white mb-2">
-          Ready to Book the {vehicle.name} in Dubai?
+          Ready to Book the {vehicle.name} in Dubai, Abu Dhabi or Sharjah?
         </h2>
         <p className="text-white/80 text-sm mb-6">
-          Available 24/7 - airport transfers, corporate hire and special occasions across Dubai and UAE.
+          Available 24/7 — airport transfers, corporate hire and special occasions across Dubai, Abu Dhabi, Sharjah, and the UAE.
         </p>
         <BookingButton
           carName={vehicle.name}

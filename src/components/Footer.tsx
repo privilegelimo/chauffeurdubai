@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Phone, Mail, MapPin, Instagram, Facebook } from "lucide-react";
 
 const serviceLinks = [
@@ -35,20 +36,29 @@ export default function Footer() {
 
           {/* Brand */}
           <div className="sm:col-span-2 lg:col-span-1">
-            <p
-              className="font-bold text-2xl uppercase tracking-wider mb-4"
-              style={{
-                background: "linear-gradient(135deg, #b76e79, #e8a4a0, #c9956c)",
-                WebkitBackgroundClip: "text",
-                WebkitTextFillColor: "transparent",
-              }}
-            >
-              ChauffeurDubai.ae
-            </p>
+            <Link href="/" className="flex flex-col items-start gap-1 mb-4">
+              <Image
+                src="/images/logo.png"
+                alt="Chauffeur Dubai Luxury Travel Logo"
+                width={90}
+                height={40}
+                className="object-contain brightness-0 invert"
+              />
+              <span
+                className="text-[9px] font-semibold tracking-widest uppercase leading-none"
+                style={{
+                  background: "linear-gradient(135deg, #b76e79, #e8a4a0, #c9956c)",
+                  WebkitBackgroundClip: "text",
+                  WebkitTextFillColor: "transparent",
+                }}
+              >
+                ChauffeurDubai.ae
+              </span>
+            </Link>
             <p className="text-zinc-400 text-sm leading-relaxed max-w-sm">
               Dubai&apos;s premier luxury chauffeur service. Professional, punctual,
               and discreet private drivers available 24/7 for airport transfers,
-              corporate travel, and VIP events across Dubai and the UAE.
+              corporate travel, and VIP events across Dubai, Abu Dhabi, Sharjah, and the UAE.
             </p>
             <div className="flex gap-4 mt-5">
               <a href="#" className="text-zinc-500 hover:text-rose-300 transition-colors">
@@ -112,7 +122,7 @@ export default function Footer() {
               </li>
               <li className="flex items-start gap-2">
                 <MapPin size={15} className="text-rose-300 mt-0.5 shrink-0" />
-                <span>Dubai, United Arab Emirates</span>
+                <span>Dubai, Abu Dhabi & Sharjah — United Arab Emirates</span>
               </li>
             </ul>
 
@@ -144,7 +154,7 @@ export default function Footer() {
         {/* ── BOTTOM BAR ────────────────────────────────────────────────── */}
         <div className="border-t border-zinc-800 pt-6 flex flex-col sm:flex-row justify-between items-center gap-3 text-xs text-zinc-600">
           <p>© {new Date().getFullYear()} ChauffeurDubai.ae — All rights reserved.</p>
-          <p>Luxury Chauffeur Service Dubai | Private Driver Dubai | Airport Transfer Dubai</p>
+          <p>Luxury Chauffeur Service Dubai | Private Driver Dubai | Airport Transfer Dubai, Abu Dhabi & Sharjah</p>
         </div>
 
       </div>

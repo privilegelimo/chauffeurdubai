@@ -90,7 +90,7 @@ export default function FleetPage() {
       <section className="relative h-72 sm:h-96 flex items-end overflow-hidden pt-16">
         <Image
           src="https://images.unsplash.com/photo-1563720360172-67b8f3dce741?w=1600&q=85"
-          alt="Luxury chauffeur fleet Dubai"
+          alt="Luxury chauffeur fleet Dubai Abu Dhabi Sharjah UAE"
           fill
           className="object-cover object-center"
           priority
@@ -107,7 +107,7 @@ export default function FleetPage() {
             className="text-xs font-semibold uppercase tracking-widest mb-2"
             style={{ color: "#e8a4a0" }}
           >
-            Privilege Luxury Travel
+            Chauffeur Dubai Luxury Travel
           </p>
           <h1 className="text-3xl sm:text-5xl font-bold text-white mb-2">
             Our{" "}
@@ -120,12 +120,13 @@ export default function FleetPage() {
             >
               Luxury Fleet
             </span>{" "}
-            in Dubai
+            in Dubai, Abu Dhabi & Sharjah
           </h1>
           <p className="text-white/70 max-w-2xl text-sm sm:text-base">
             From executive sedans and luxury SUVs to Rolls-Royce, stretch
             limousines and luxury coaches — every vehicle comes with a
-            professional chauffeur, fixed pricing and 24/7 availability.
+            professional chauffeur, fixed pricing and 24/7 availability
+            across Dubai, Abu Dhabi, and Sharjah.
           </p>
         </div>
       </section>
@@ -140,10 +141,10 @@ export default function FleetPage() {
           {/* Stats Row */}
           <div className="flex flex-wrap justify-center gap-8 text-center mb-8">
             {[
-              { value: `${allVehicles.length}+`, label: "Vehicles Available" },
-              { value: `${availableClasses.length}`,  label: "Fleet Classes"  },
-              { value: "24/7",                         label: "Availability"  },
-              { value: "AED 350",                      label: "Starting From" },
+              { value: `${allVehicles.length}+`, label: "Vehicles Available"       },
+              { value: `${availableClasses.length}`,  label: "Fleet Classes"        },
+              { value: "24/7",                         label: "UAE-Wide Availability" },
+              { value: "AED 350",                      label: "Starting From"        },
             ].map(({ value, label }) => (
               <div key={label}>
                 <p className="text-2xl font-bold" style={{ color: "#b76e79" }}>{value}</p>
@@ -235,9 +236,7 @@ export default function FleetPage() {
                       >
                         <span className="flex items-center gap-2">
                           {CLASS_LABELS[cls] ?? cls}
-                          <span
-                            className="text-xs opacity-70"
-                          >
+                          <span className="text-xs opacity-70">
                             ({grouped[cls].length})
                           </span>
                         </span>
@@ -274,7 +273,7 @@ export default function FleetPage() {
                     className="text-xs font-semibold uppercase tracking-widest mb-1"
                     style={{ color: "#b76e79" }}
                   >
-                    {grouped[cls].length} vehicle{grouped[cls].length > 1 ? "s" : ""}
+                    {grouped[cls].length} vehicle{grouped[cls].length > 1 ? "s" : ""} — Dubai, Abu Dhabi & Sharjah
                   </p>
                   <h2 className="text-2xl sm:text-3xl font-bold text-zinc-900">
                     {CLASS_LABELS[cls] ?? cls}
@@ -301,7 +300,7 @@ export default function FleetPage() {
                     <div className="relative h-52 overflow-hidden">
                       <Image
                         src={vehicle.images[0]}
-                        alt={`${vehicle.name} chauffeur hire Dubai`}
+                        alt={`${vehicle.name} chauffeur hire Dubai Abu Dhabi Sharjah`}
                         fill
                         className="object-cover group-hover:scale-105 transition-transform duration-500"
                       />
@@ -422,7 +421,7 @@ export default function FleetPage() {
         </h2>
         <p className="text-white/80 mb-8 max-w-xl mx-auto">
           Our team is available 24/7 to recommend the perfect vehicle for your
-          journey, group size and occasion.
+          journey across Dubai, Abu Dhabi, and Sharjah — whatever your group size or occasion.
         </p>
         <div className="flex flex-col sm:flex-row justify-center gap-4">
           <a

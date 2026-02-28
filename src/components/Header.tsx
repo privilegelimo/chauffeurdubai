@@ -2,12 +2,14 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Phone, Menu, X, ChevronDown } from "lucide-react";
 
 const serviceLinks = [
-  { label: "Airport Transfer Dubai",        href: "/services/airport-transfer-dubai"          },
+  { label: "Airport Transfer Dubai",         href: "/services/airport-transfer-dubai"           },
   { label: "Corporate Chauffeur Dubai",      href: "/services/corporate-chauffeur-dubai"        },
   { label: "VIP Chauffeur Dubai",            href: "/services/vip-chauffeur-dubai"              },
+  { label: "Luxury Van Rental Dubai",        href: "/services/luxury-van-rental-dubai"          },
   { label: "Full Day & Hourly Chauffeur",    href: "/services/full-day-chauffeur-dubai"         },
   { label: "Event Transport Dubai",          href: "/services/event-transport-dubai"            },
   { label: "Wedding Limo Dubai",             href: "/services/wedding-limo-dubai"               },
@@ -43,17 +45,24 @@ export default function Header() {
         <div className="flex items-center justify-between h-16">
 
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2 shrink-0">
+          <Link href="/" className="flex flex-col items-center gap-0.5 shrink-0">
+            <Image
+              src="/images/logo.png"
+              alt="Chauffeur Dubai Luxury Travel Logo"
+              width={80}
+              height={36}
+              className="object-contain"
+              priority
+            />
             <span
-              className="font-bold text-xl tracking-wider uppercase"
+              className="text-[9px] font-semibold tracking-widest uppercase leading-none"
               style={{
                 background: "linear-gradient(135deg, #b76e79, #e8a4a0, #c9956c)",
                 WebkitBackgroundClip: "text",
                 WebkitTextFillColor: "transparent",
               }}
             >
-              Chauffeur
-              <span style={{ WebkitTextFillColor: "#1f2937" }}>Dubai</span>
+              Chauffeur Dubai
             </span>
           </Link>
 

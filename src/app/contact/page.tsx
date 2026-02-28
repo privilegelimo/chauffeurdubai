@@ -3,9 +3,9 @@ import Image from "next/image";
 import { Phone, Mail, MapPin, Clock, MessageCircle, Instagram, Facebook, Youtube } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Contact Us | Book Chauffeur Service Dubai - Chauffeur Dubai Luxury Travel",
+  title: "Contact Us | Book Chauffeur Service Dubai, Abu Dhabi & Sharjah - Chauffeur Dubai Luxury Travel",
   description:
-    "Contact Chauffeur Dubai Luxury Travel to book your luxury chauffeur service in Dubai. Call, WhatsApp, or email us 24/7. Airport transfers, corporate chauffeur, wedding limo, and more.",
+    "Contact Chauffeur Dubai Luxury Travel to book your luxury chauffeur service in Dubai, Abu Dhabi, and Sharjah. Call, WhatsApp, or email us 24/7. Airport transfers, corporate chauffeur, wedding limo, and more.",
   alternates: { canonical: "https://chauffeurdubai.ae/contact" },
 };
 
@@ -45,24 +45,24 @@ const contactDetails = [
     icon: Clock,
     label: "Hours",
     value: "24 Hours / 7 Days",
-    sub: "365 days a year",
+    sub: "365 days a year across the UAE",
     href: null,
   },
 ];
 
 const services = [
-  "Airport Transfer Dubai",
-  "Corporate Chauffeur Service Dubai",
-  "Wedding Limo Dubai",
-  "Full Day Chauffeur Dubai",
-  "Private Driver for Sightseeing Dubai",
-  "Chauffeur Service Dubai to Abu Dhabi",
-  "Monthly Driver Dubai",
-  "Mercedes Sprinter Rent with Driver",
-  "Luxury Van Rental with Driver Dubai",
-  "VIP Airport Pick-up Dubai",
-  "Bus Rental Dubai",
-  "Rolls-Royce Rental with Driver Dubai",
+  "Airport Transfer Dubai, Abu Dhabi & Sharjah",
+  "Corporate Chauffeur Service Dubai & Abu Dhabi",
+  "Wedding Limo Dubai & Sharjah",
+  "Full Day Chauffeur Dubai, Abu Dhabi & Sharjah",
+  "Private Driver for Sightseeing Dubai & Abu Dhabi",
+  "Chauffeur Service Dubai to Abu Dhabi & Sharjah",
+  "Monthly Driver Dubai, Abu Dhabi & Sharjah",
+  "Mercedes Sprinter Rent with Driver UAE",
+  "Luxury Van Rental with Driver Dubai & Sharjah",
+  "VIP Airport Pick-up DXB, DWC, AUH & SHJ",
+  "Bus Rental Dubai, Abu Dhabi & Sharjah",
+  "Rolls-Royce Rental with Driver Dubai & Abu Dhabi",
 ];
 
 export default function ContactPage() {
@@ -72,7 +72,7 @@ export default function ContactPage() {
       <section className="relative h-64 sm:h-80 flex items-end overflow-hidden pt-16">
         <Image
           src="https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=1600&q=85"
-          alt="Contact Chauffeur Dubai Luxury Travel - book chauffeur service Dubai"
+          alt="Contact Chauffeur Dubai Luxury Travel - book chauffeur service Dubai Abu Dhabi Sharjah"
           fill
           className="object-cover object-center"
           priority
@@ -98,7 +98,7 @@ export default function ContactPage() {
             </span>
           </h1>
           <p className="text-white/70 max-w-xl text-sm sm:text-base">
-            Book your luxury chauffeur service in Dubai - we're available
+            Book your luxury chauffeur service in Dubai, Abu Dhabi, and Sharjah — we&apos;re available
             24/7 via WhatsApp, phone, or email.
           </p>
         </div>
@@ -118,11 +118,11 @@ export default function ContactPage() {
                 Get in Touch
               </p>
               <h2 className="text-2xl font-bold text-zinc-900 mb-2">
-                We're Available 24/7
+                We&apos;re Available 24/7 Across the UAE
               </h2>
               <p className="text-zinc-500 text-sm leading-relaxed">
-                Reach us any time for bookings, quotes, or enquiries. Our team
-                responds within minutes.
+                Reach us any time for bookings, quotes, or enquiries across Dubai,
+                Abu Dhabi, and Sharjah. Our team responds within minutes.
               </p>
             </div>
 
@@ -198,9 +198,9 @@ export default function ContactPage() {
                 Fastest Way to Book
               </h3>
               <p className="opacity-80 mb-6 text-sm leading-relaxed">
-                WhatsApp us your journey details - date, pickup, destination,
-                and number of passengers - and we'll confirm your{" "}
-                <strong>luxury chauffeur service Dubai</strong> booking within
+                WhatsApp us your journey details — date, pickup, destination,
+                and number of passengers — and we&apos;ll confirm your{" "}
+                <strong>luxury chauffeur service in Dubai, Abu Dhabi, or Sharjah</strong> booking within
                 minutes.
               </p>
               <a
@@ -218,10 +218,10 @@ export default function ContactPage() {
             {/* Services we cover */}
             <div className="bg-white rounded-3xl p-8 border border-rose-100 shadow-sm">
               <h3 className="text-xl font-bold text-zinc-900 mb-2">
-                Services We Cover
+                Services We Cover Across Dubai, Abu Dhabi & Sharjah
               </h3>
               <p className="text-zinc-500 text-sm mb-6">
-                Mention which service you need when you contact us:
+                Mention which service and city you need when you contact us:
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                 {services.map((s) => (
@@ -239,21 +239,21 @@ export default function ContactPage() {
             {/* Map embed placeholder */}
             <div className="bg-white rounded-3xl overflow-hidden border border-rose-100 shadow-sm">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3610.178864083396!2d55.29256731500943!3d25.204849983895996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f4345b3e2b9cf%3A0x28a8be3f3fcb1ee9!2sZa%27abeel%20St%20-%20Dubai!5e0!3m2!1sen!2sae!4v1620000000000!5m2!1sen!2sae"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3608.7725322075275!2d55.304793375539916!3d25.24458532977937!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f43f28654be41%3A0x42ce892abda4c3e9!2sPrivilege%20Luxury%20Travel%20LLC!5e0!3m2!1sen!2sae!4v1772207964554!5m2!1sen!2sae"
                 width="100%"
                 height="280"
                 style={{ border: 0 }}
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="Chauffeur Luxury Travel Dubai Office Location"
+                title="Chauffeur Luxury Travel Dubai Office Location - Serving Dubai, Abu Dhabi & Sharjah"
               />
               <div className="p-5">
                 <p className="font-bold text-zinc-900 text-sm">
                   Chauffeur Luxury Travel
                 </p>
                 <p className="text-zinc-500 text-xs mt-1">
-                  Shraifi One Building, Suite 45, Zaa'beel St, Dubai, UAE
+                  Shraifi One Building, Suite 45, Zaa&apos;beel St, Dubai, UAE — Serving Dubai, Abu Dhabi & Sharjah
                 </p>
               </div>
             </div>
@@ -264,8 +264,8 @@ export default function ContactPage() {
       {/* ── BOTTOM CTA ────────────────────────────────────────────────── */}
       <section className="py-16 px-4 text-center bg-white border-t border-rose-100">
         <p className="text-zinc-500 text-sm mb-4">
-          Looking for a <strong className="text-zinc-700">chauffeur service near me</strong> in Dubai?
-          We cover all areas - Downtown, JBR, Business Bay, DIFC, Palm Jumeirah, and more.
+          Looking for a <strong className="text-zinc-700">chauffeur service near me</strong> in Dubai, Abu Dhabi, or Sharjah?
+          We cover all areas — Downtown Dubai, JBR, Business Bay, DIFC, Palm Jumeirah, Abu Dhabi Corniche, Sharjah City, and more.
         </p>
         <div className="flex flex-col sm:flex-row justify-center gap-4">
           <a

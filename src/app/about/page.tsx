@@ -3,9 +3,9 @@ import Image from "next/image";
 import { CheckCircle, Shield, Award, Users, Car, ThumbsUp, Phone, MessageCircle } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "About Us | Chauffeur Dubai Luxury Travel - Chauffeur Service Dubai",
+  title: "About Us | Chauffeur Dubai Luxury Travel - Chauffeur Service Dubai, Abu Dhabi & Sharjah",
   description:
-    "20 years of luxury chauffeur service in Dubai. Chauffeur Dubai Luxury Travel is Dubai's most trusted private driver and limousine company - serving airports, corporates, and VIP clients across the UAE.",
+    "20 years of luxury chauffeur service in Dubai, Abu Dhabi, and Sharjah. Chauffeur Dubai Luxury Travel is the UAE's most trusted private driver and limousine company - serving airports, corporates, and VIP clients across the UAE.",
   alternates: { canonical: "https://chauffeurdubai.ae/about" },
 };
 
@@ -15,43 +15,43 @@ const roseGoldGradientSubtle = "linear-gradient(135deg, #f9eded, #fdf4f0)";
 const milestones = [
   { year: "2004", event: "Chauffeur Dubai Luxury Travel founded in Dubai, UAE" },
   { year: "2008", event: "Expanded fleet to include Mercedes S-Class and VIP Sprinters" },
-  { year: "2010", event: "Launched corporate chauffeur accounts across Dubai" },
+  { year: "2010", event: "Launched corporate chauffeur accounts across Dubai, Abu Dhabi, and Sharjah" },
   { year: "2012", event: "Added luxury bus and limousine services to the fleet" },
-  { year: "2016", event: "Introduced real-time flight tracking for all airport transfers" },
-  { year: "2020", event: "Added luxury vans to the fleet" },
-  { year: "2024", event: "10,000+ satisfied clients and 20+ premium vehicles in fleet" },
+  { year: "2016", event: "Introduced real-time flight tracking for all airport transfers across DXB, DWC, AUH & SHJ" },
+  { year: "2020", event: "Expanded operations to Abu Dhabi and Sharjah — luxury vans added to the fleet" },
+  { year: "2024", event: "10,000+ satisfied clients across the UAE and 80+ premium vehicles in fleet" },
 ];
 
 const values = [
   {
     icon: Shield,
     title: "Safety First",
-    desc: "Every chauffeur is background-checked, licensed, and trained in defensive driving. Your safety is our non-negotiable priority.",
+    desc: "Every chauffeur is background-checked, licensed, and trained in defensive driving. Your safety across Dubai, Abu Dhabi, and Sharjah is our non-negotiable priority.",
   },
   {
     icon: Award,
     title: "20 Years of Excellence",
-    desc: "Two decades of serving Dubai's elite, corporates, and international visitors with consistent 5-star service.",
+    desc: "Two decades of serving Dubai, Abu Dhabi, and Sharjah's elite, corporates, and international visitors with consistent 5-star service.",
   },
   {
     icon: Users,
     title: "Client-Centred",
-    desc: "We build lasting relationships. From your first booking to your hundredth, you'll always feel like our most important client.",
+    desc: "We build lasting relationships. From your first booking in Dubai to your hundredth transfer in Abu Dhabi, you'll always feel like our most important client.",
   },
   {
     icon: Car,
     title: "Premium Fleet",
-    desc: "Our vehicles are immaculately maintained - Mercedes, BMW, Rolls-Royce, GMC, and more. Always clean, always luxury.",
+    desc: "Our vehicles are immaculately maintained — Mercedes, BMW, Rolls-Royce, GMC, and more. Always clean, always luxury, available across Dubai, Abu Dhabi, and Sharjah.",
   },
   {
     icon: ThumbsUp,
     title: "Transparent Pricing",
-    desc: "No hidden fees, no surge pricing. Fixed rates for every journey so you know exactly what you're paying before you book.",
+    desc: "No hidden fees, no surge pricing. Fixed rates for every journey across the UAE so you know exactly what you're paying before you book.",
   },
   {
     icon: CheckCircle,
     title: "24/7 Availability",
-    desc: "Day or night, weekday or holiday - our team and fleet are always ready. We never sleep so you never wait.",
+    desc: "Day or night, weekday or holiday — our team and fleet are always ready across Dubai, Abu Dhabi, and Sharjah. We never sleep so you never wait.",
   },
 ];
 
@@ -62,7 +62,7 @@ export default function AboutPage() {
       <section className="relative h-72 sm:h-96 flex items-end overflow-hidden pt-16">
         <Image
           src="https://images.unsplash.com/photo-1563720360172-67b8f3dce741?w=1600&q=85"
-          alt="About Chauffeur Dubai Luxury Travel - luxury chauffeur service Dubai"
+          alt="About Chauffeur Dubai Luxury Travel - luxury chauffeur service Dubai Abu Dhabi Sharjah"
           fill
           className="object-cover object-center"
           priority
@@ -76,7 +76,7 @@ export default function AboutPage() {
         />
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-12 w-full">
           <p className="text-xs font-semibold uppercase tracking-widest mb-2" style={{ color: "#e8a4a0" }}>
-            Est. 2004 - Dubai, UAE
+            Est. 2004 — Dubai, UAE
           </p>
           <h1 className="text-3xl sm:text-5xl font-bold text-white mb-2">
             About{" "}
@@ -91,8 +91,8 @@ export default function AboutPage() {
             </span>
           </h1>
           <p className="text-white/70 max-w-2xl text-sm sm:text-base">
-            Dubai&apos;s most trusted luxury chauffeur service - 20 years of premium
-            private driver and limousine services across the UAE.
+            The UAE&apos;s most trusted luxury chauffeur service — 20 years of premium
+            private driver and limousine services across Dubai, Abu Dhabi, and Sharjah.
           </p>
         </div>
       </section>
@@ -118,33 +118,34 @@ export default function AboutPage() {
               >
                 Luxury Chauffeur Service
               </span>{" "}
-              in Dubai
+              in Dubai, Abu Dhabi & Sharjah
             </h2>
             <div className="space-y-4 text-zinc-500 leading-relaxed text-sm">
               <p>
                 Founded in 2004,{" "}
                 <strong className="text-zinc-700">Chauffeur Dubai Luxury Travel</strong> has
-                grown from a small fleet of executive sedans to Dubai&apos;s most comprehensive
-                luxury chauffeur service - operating at{" "}
+                grown from a small fleet of executive sedans to the UAE&apos;s most comprehensive
+                luxury chauffeur service — operating across Dubai, Abu Dhabi, and Sharjah at{" "}
                 <strong className="text-zinc-700">chauffeurdubai.ae</strong>.
               </p>
               <p>
                 We serve corporate executives, international visitors, families, and VIP
                 clients with a full range of services including{" "}
-                <strong className="text-zinc-700">dubai airport transfer</strong>,{" "}
-                <strong className="text-zinc-700">corporate chauffeur service Dubai</strong>,{" "}
-                <strong className="text-zinc-700">wedding limo Dubai</strong>, and{" "}
-                <strong className="text-zinc-700">monthly driver Dubai</strong> packages.
+                <strong className="text-zinc-700">airport transfers covering DXB, DWC, Abu Dhabi International & Sharjah airports</strong>,{" "}
+                <strong className="text-zinc-700">corporate chauffeur service in Dubai and Abu Dhabi</strong>,{" "}
+                <strong className="text-zinc-700">wedding limo in Dubai and Sharjah</strong>, and{" "}
+                <strong className="text-zinc-700">monthly driver packages across the UAE</strong>.
               </p>
               <p>
                 Our fleet spans luxury sedans, VIP vans, Mercedes Sprinters, stretch
-                limousines, and a 50-seater luxury coach - all driven by professionally
-                trained, background-checked chauffeurs available 24/7 across the UAE.
+                limousines, and a 50-seater luxury coach — all driven by professionally
+                trained, background-checked chauffeurs available 24/7 across Dubai,
+                Abu Dhabi, Sharjah, and the wider UAE.
               </p>
               <p>
                 With over 10,000 satisfied clients and a 4.9-star average rating,
                 we are proud to be the most trusted name in{" "}
-                <strong className="text-zinc-700">luxury chauffeur Dubai</strong>.
+                <strong className="text-zinc-700">luxury chauffeur services across the UAE</strong>.
               </p>
             </div>
           </div>
@@ -157,12 +158,12 @@ export default function AboutPage() {
             <h3 className="text-2xl font-bold mb-6">Privilege by Numbers</h3>
             <div className="grid grid-cols-2 gap-5">
               {[
-                { val: "20+",     label: "Years in Dubai"        },
-                { val: "10,000+", label: "Happy Clients"         },
-                { val: "80+",     label: "Luxury Vehicles"       },
-                { val: "4.9★",    label: "Average Client Rating" },
-                { val: "24/7",    label: "Availability"          },
-                { val: "4",       label: "UAE Airports Covered"  },
+                { val: "20+",     label: "Years Across the UAE"     },
+                { val: "10,000+", label: "Happy Clients"            },
+                { val: "80+",     label: "Luxury Vehicles"          },
+                { val: "4.9★",    label: "Average Client Rating"    },
+                { val: "24/7",    label: "Availability"             },
+                { val: "4",       label: "UAE Airports Covered"     },
               ].map(({ val, label }) => (
                 <div key={label} className="bg-white/10 rounded-2xl p-5 text-center">
                   <p className="text-2xl font-bold">{val}</p>
@@ -216,7 +217,7 @@ export default function AboutPage() {
               Our Journey
             </p>
             <h2 className="text-3xl sm:text-4xl font-bold text-zinc-900">
-              20 Years in Dubai
+              20 Years Across the UAE
             </h2>
           </div>
 
@@ -254,8 +255,8 @@ export default function AboutPage() {
           Experience the Chauffeur Difference
         </h2>
         <p className="text-white/80 mb-8 max-w-xl mx-auto">
-          Join 10,000+ satisfied clients who trust Chauffeur Luxury Travel for
-          every journey in Dubai and the UAE.
+          Join 10,000+ satisfied clients who trust Chauffeur Dubai Luxury Travel for
+          every journey across Dubai, Abu Dhabi, Sharjah, and the UAE.
         </p>
         <div className="flex flex-col sm:flex-row justify-center gap-4">
           <a

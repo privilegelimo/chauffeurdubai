@@ -12,7 +12,8 @@
     "images": [
       "/images/vehicles/lexus-es300-1.webp",
       "/images/vehicles/lexus-es300-2.webp",
-      "/images/vehicles/lexus-es300-3.webp"
+      "/images/vehicles/lexus-es300-3.webp",
+      "/images/vehicles/lexus-es300-4.webp"
     ],
     "metaDesc": "Book a Lexus ES 300 chauffeur in Dubai, Abu Dhabi & Sharjah. Luxury hybrid sedan with professional driver. Fixed pricing from AED 350.",
     "seoKeywords": "Lexus ES 300 chauffeur Dubai, Lexus ES hire Dubai, luxury sedan Dubai chauffeur",
@@ -67,11 +68,7 @@
     "transferPrice": "AED 350",
     "price5hr": "AED 900 / 5 Hr",
     "price10hr": "AED 1,400 / 10 Hr",
-    "images": [
-      "/images/vehicles/byd-han-1.webp",
-      "/images/vehicles/byd-han-2.webp",
-      "/images/vehicles/byd-han-3.webp"
-    ],
+    "images": [],
     "metaDesc": "Book a BYD Han EV chauffeur in Dubai, Abu Dhabi & Sharjah. Premium all-electric executive sedan with professional driver. From AED 350.",
     "seoKeywords": "BYD Han EV chauffeur Dubai, electric car hire Dubai, eco luxury sedan Dubai",
     "desc": "The BYD Han EV is a premium all-electric sedan blending cutting-edge technology with executive comfort for the eco-conscious traveller.",
@@ -96,11 +93,7 @@
     "transferPrice": "AED 350",
     "price5hr": "AED 950 / 5 Hr",
     "price10hr": "AED 1,400 / 10 Hr",
-    "images": [
-      "/images/vehicles/citroen-space-tourer-1.webp",
-      "/images/vehicles/citroen-space-tourer-2.webp",
-      "/images/vehicles/citroen-space-tourer-3.webp"
-    ],
+    "images": [],
     "metaDesc": "Book a Citroën Space Tourer 7-seater chauffeur in Dubai, Abu Dhabi & Sharjah. Spacious executive MPV with professional driver. From AED 350.",
     "seoKeywords": "Citroen Space Tourer Dubai, 7 seater chauffeur Dubai, group transfer Dubai MPV",
     "desc": "The Citroën Space Tourer offers flexible, comfortable seating for up to 7 passengers - ideal for family or group airport transfers.",
@@ -127,7 +120,6 @@
     "price10hr": "AED 1,400 / 10 Hr",
     "images": [
       "/images/vehicles/toyota-granvia-1.webp",
-      "/images/vehicles/toyota-granvia-2.webp",
       "/images/vehicles/toyota-granvia-3.webp"
     ],
     "metaDesc": "Book a Toyota Granvia 7-seater chauffeur in Dubai, Abu Dhabi & Sharjah. Premium MPV with captain chairs and professional driver. From AED 350.",
@@ -157,7 +149,11 @@
     "images": [
       "/images/vehicles/mercedes-s500-1.webp",
       "/images/vehicles/mercedes-s500-2.webp",
-      "/images/vehicles/mercedes-s500-3.webp"
+      "/images/vehicles/mercedes-s500-3.webp",
+      "/images/vehicles/mercedes-s500-4.webp",
+      "/images/vehicles/mercedes-s500-5.webp",
+      "/images/vehicles/mercedes-s500-6.webp",
+      "/images/vehicles/mercedes-s500-7.webp"
     ],
     "metaDesc": "Book a Mercedes S 500 chauffeur in Dubai, Abu Dhabi & Sharjah. The pinnacle of first-class executive travel. From AED 900.",
     "seoKeywords": "Mercedes S500 chauffeur Dubai, S-Class hire Dubai, first class car Dubai",
@@ -186,7 +182,9 @@
     "images": [
       "/images/vehicles/bmw-7-series-1.webp",
       "/images/vehicles/bmw-7-series-2.webp",
-      "/images/vehicles/bmw-7-series-3.webp"
+      "/images/vehicles/bmw-7-series-3.webp",
+      "/images/vehicles/bmw-7-series-4.webp",
+      "/images/vehicles/bmw-7-series-5.webp"
     ],
     "metaDesc": "Book a BMW 7 Series chauffeur in Dubai, Abu Dhabi & Sharjah. First-class executive saloon with professional driver. From AED 550.",
     "seoKeywords": "BMW 7 Series chauffeur Dubai, BMW 7 hire Dubai, first class sedan Dubai",
@@ -215,7 +213,9 @@
     "images": [
       "/images/vehicles/mercedes-vito-tourer-1.webp",
       "/images/vehicles/mercedes-vito-tourer-2.webp",
-      "/images/vehicles/mercedes-vito-tourer-3.webp"
+      "/images/vehicles/mercedes-vito-tourer-3.webp",
+      "/images/vehicles/mercedes-vito-tourer-4.webp",
+      "/images/vehicles/mercedes-vito-tourer-5.webp"
     ],
     "metaDesc": "Book a Mercedes Vito Tourer chauffeur in Dubai, Abu Dhabi & Sharjah. Spacious executive MPV for group travel. From AED 350.",
     "seoKeywords": "Mercedes Vito Tourer Dubai, Mercedes Vito chauffeur Dubai, group van hire Dubai",
@@ -273,7 +273,9 @@
     "images": [
       "/images/vehicles/mercedes-vip-trend-1.webp",
       "/images/vehicles/mercedes-vip-trend-2.webp",
-      "/images/vehicles/mercedes-vip-trend-3.webp"
+      "/images/vehicles/mercedes-vip-trend-3.webp",
+      "/images/vehicles/mercedes-vip-trend-4.webp",
+      "/images/vehicles/mercedes-vip-trend-5.webp"
     ],
     "metaDesc": "Book a Mercedes VIP Trend 250 chauffeur in Dubai, Abu Dhabi & Sharjah. Executive VIP MPV with 42-inch rear display. From AED 750.",
     "seoKeywords": "Mercedes VIP Trend Dubai, VIP van hire Dubai, executive MPV Dubai chauffeur",
@@ -302,7 +304,11 @@
     "images": [
       "/images/vehicles/mercedes-v-class-1.webp",
       "/images/vehicles/mercedes-v-class-2.webp",
-      "/images/vehicles/mercedes-v-class-3.webp"
+      "/images/vehicles/mercedes-v-class-3.webp",
+      "/images/vehicles/mercedes-v-class-4.webp",
+      "/images/vehicles/mercedes-v-class-5.webp",
+      "/images/vehicles/mercedes-v-class-6.webp",
+      "/images/vehicles/mercedes-v-class-7.webp"
     ],
     "metaDesc": "Book a Mercedes V-Class chauffeur in Dubai, Abu Dhabi & Sharjah. The benchmark luxury people carrier for families and groups. From AED 450.",
     "seoKeywords": "Mercedes V-Class chauffeur Dubai, V-Class hire Dubai, luxury van rental Dubai",
@@ -360,7 +366,12 @@
     "images": [
       "/images/vehicles/mercedes-sprinter-19-1.webp",
       "/images/vehicles/mercedes-sprinter-19-2.webp",
-      "/images/vehicles/mercedes-sprinter-19-3.webp"
+      "/images/vehicles/mercedes-sprinter-19-3.webp",
+      "/images/vehicles/mercedes-sprinter-19-4.webp",
+      "/images/vehicles/mercedes-sprinter-19-5.webp",
+      "/images/vehicles/mercedes-sprinter-19-6.webp",
+      "/images/vehicles/mercedes-sprinter-19-7.webp",
+      "/images/vehicles/mercedes-sprinter-19-8.webp"
     ],
     "metaDesc": "Book a Mercedes Sprinter 19-seater in Dubai, Abu Dhabi & Sharjah. Large group airport transfers and corporate events. From AED 1,000.",
     "seoKeywords": "Mercedes Sprinter 19 seater Dubai, large group van Dubai, Sprinter bus hire Dubai",
@@ -388,8 +399,7 @@
     "price10hr": "AED 2,500 / 10 Hr",
     "images": [
       "/images/vehicles/mercedes-sprinter-avant-garde-1.webp",
-      "/images/vehicles/mercedes-sprinter-avant-garde-2.webp",
-      "/images/vehicles/mercedes-sprinter-avant-garde-3.webp"
+      "/images/vehicles/mercedes-sprinter-avant-garde-2.webp"
     ],
     "metaDesc": "Book a Mercedes Sprinter Avant Garde VIP in Dubai, Abu Dhabi & Sharjah. Handcrafted VIP van with starlight ceiling. From AED 1,100.",
     "seoKeywords": "Mercedes Sprinter Avant Garde Dubai, VIP Sprinter hire Dubai, luxury group van Dubai",
@@ -415,10 +425,11 @@
     "transferPrice": "AED 1,000",
     "price5hr": "AED 1,400 / 5 Hr",
     "price10hr": "AED 2,300 / 10 Hr",
-    "images": [
-      "/images/vehicles/mercedes-sprinter-business-vip-1.webp",
-      "/images/vehicles/mercedes-sprinter-business-vip-2.webp",
-      "/images/vehicles/mercedes-sprinter-business-vip-3.webp"
+    "images": ["/images/vehicles/mercedes-business-class-sprinter-1.webp",
+      "/images/vehicles/mercedes-business-class-sprinter-2.webp",
+      "/images/vehicles/mercedes-business-class-sprinter-3.webp",
+      "/images/vehicles/mercedes-business-class-sprinter-4.webp",
+      "/images/vehicles/mercedes-business-class-sprinter-5.webp"
     ],
     "metaDesc": "Book a Mercedes Sprinter Business Class VIP in Dubai, Abu Dhabi & Sharjah. Premium leather seating and executive amenities. From AED 1,000.",
     "seoKeywords": "Mercedes Sprinter Business VIP Dubai, executive Sprinter Dubai, VIP van hire Dubai",
@@ -447,7 +458,8 @@
     "images": [
       "/images/vehicles/gmc-yukon-denali-1.webp",
       "/images/vehicles/gmc-yukon-denali-2.webp",
-      "/images/vehicles/gmc-yukon-denali-3.webp"
+      "/images/vehicles/gmc-yukon-denali-4.webp",
+      "/images/vehicles/gmc-yukon-denali-5.webp"
     ],
     "metaDesc": "Book a GMC Yukon Denali chauffeur in Dubai, Abu Dhabi & Sharjah. Bold luxury SUV with professional driver. From AED 350.",
     "seoKeywords": "GMC Yukon Denali chauffeur Dubai, GMC Yukon hire Dubai, luxury SUV Dubai",
@@ -476,7 +488,8 @@
     "images": [
       "/images/vehicles/cadillac-escalade-1.webp",
       "/images/vehicles/cadillac-escalade-2.webp",
-      "/images/vehicles/cadillac-escalade-3.webp"
+      "/images/vehicles/cadillac-escalade-3.webp",
+      "/images/vehicles/cadillac-escalade-4.webp"
     ],
     "metaDesc": "Book a Cadillac Escalade chauffeur in Dubai, Abu Dhabi & Sharjah. Ultimate American luxury SUV with professional driver. From AED 550.",
     "seoKeywords": "Cadillac Escalade chauffeur Dubai, Escalade hire Dubai, luxury SUV Dubai chauffeur",
@@ -505,7 +518,8 @@
     "images": [
       "/images/vehicles/range-rover-sport-1.webp",
       "/images/vehicles/range-rover-sport-2.webp",
-      "/images/vehicles/range-rover-sport-3.webp"
+      "/images/vehicles/range-rover-sport-3.webp",
+      "/images/vehicles/range-rover-sport-4.webp"
     ],
     "metaDesc": "Book a Range Rover Sport chauffeur in Dubai, Abu Dhabi & Sharjah. Iconic British luxury SUV with professional driver. From AED 550.",
     "seoKeywords": "Range Rover Sport chauffeur Dubai, Range Rover hire Dubai, luxury SUV chauffeur Dubai",
@@ -531,11 +545,7 @@
     "transferPrice": "AED 2,500",
     "price5hr": "AED 5,000 / 5 Hr",
     "price10hr": "AED 9,000 / 10 Hr",
-    "images": [
-      "/images/vehicles/rolls-royce-ghost-1.webp",
-      "/images/vehicles/rolls-royce-ghost-2.webp",
-      "/images/vehicles/rolls-royce-ghost-3.webp"
-    ],
+    "images": [],
     "metaDesc": "Book a Rolls-Royce Ghost chauffeur in Dubai, Abu Dhabi & Sharjah. The ultimate ultra-luxury saloon with professional driver. From AED 2,500.",
     "seoKeywords": "Rolls-Royce Ghost Dubai, Rolls-Royce hire Dubai, ultra luxury car Dubai chauffeur",
     "desc": "The Rolls-Royce Ghost is the definitive expression of effortless luxury - a silent, serene cabin wrapped in hand-stitched leather and real wood veneers.",
@@ -563,7 +573,9 @@
     "images": [
       "/images/vehicles/rolls-royce-cullinan-1.webp",
       "/images/vehicles/rolls-royce-cullinan-2.webp",
-      "/images/vehicles/rolls-royce-cullinan-3.webp"
+      "/images/vehicles/rolls-royce-cullinan-3.webp",
+      "/images/vehicles/rolls-royce-cullinan-4.webp",
+      "/images/vehicles/rolls-royce-cullinan-5.webp"
     ],
     "metaDesc": "Book a Rolls-Royce Cullinan chauffeur in Dubai, Abu Dhabi & Sharjah. The world's most luxurious SUV with professional driver. From AED 3,000.",
     "seoKeywords": "Rolls-Royce Cullinan Dubai, Rolls-Royce SUV hire Dubai, ultra luxury SUV Dubai",
@@ -592,7 +604,9 @@
     "images": [
       "/images/vehicles/gmc-yukon-limousine-1.webp",
       "/images/vehicles/gmc-yukon-limousine-2.webp",
-      "/images/vehicles/gmc-yukon-limousine-3.webp"
+      "/images/vehicles/gmc-yukon-limousine-3.webp",
+      "/images/vehicles/gmc-yukon-limousine-4.webp",
+      "/images/vehicles/gmc-yukon-limousine-5.webp"
     ],
     "metaDesc": "Book a GMC Yukon Limousine in Dubai, Abu Dhabi & Sharjah. Seats 18 with entertainment bar. From AED 850.",
     "seoKeywords": "GMC Yukon limousine Dubai, stretch limo hire Dubai, party limo Dubai",
@@ -621,7 +635,9 @@
     "images": [
       "/images/vehicles/chevy-suburban-titanium-limousine-1.webp",
       "/images/vehicles/chevy-suburban-titanium-limousine-2.webp",
-      "/images/vehicles/chevy-suburban-titanium-limousine-3.webp"
+      "/images/vehicles/chevy-suburban-titanium-limousine-3.webp",
+      "/images/vehicles/chevy-suburban-titanium-limousine-4.webp",
+      "/images/vehicles/chevy-suburban-titanium-limousine-5.webp"
     ],
     "metaDesc": "Book a Chevy Suburban Titanium Limousine in Dubai, Abu Dhabi & Sharjah. Bold American stretch luxury for weddings and VIP events. From AED 900.",
     "seoKeywords": "Chevy Suburban limousine Dubai, Suburban stretch limo Dubai, wedding limo Dubai",
@@ -647,11 +663,7 @@
     "transferPrice": "AED 950",
     "price5hr": "AED 4,500 / 5 Hr",
     "price10hr": "AED 8,000 / 10 Hr",
-    "images": [
-      "/images/vehicles/gmc-yukon-diamond-limousine-1.webp",
-      "/images/vehicles/gmc-yukon-diamond-limousine-2.webp",
-      "/images/vehicles/gmc-yukon-diamond-limousine-3.webp"
-    ],
+    "images": [],
     "metaDesc": "Book a GMC Yukon Diamond Limousine in Dubai, Abu Dhabi & Sharjah. Diamond-stitched interiors and full entertainment suite. From AED 950.",
     "seoKeywords": "GMC Yukon Diamond limo Dubai, diamond limousine Dubai, luxury stretch limo Dubai",
     "desc": "The GMC Yukon Diamond Limousine is the crown jewel of our stretch fleet - opulent diamond-stitched interiors and a full entertainment suite for the most exclusive occasions.",
@@ -679,7 +691,8 @@
     "images": [
       "/images/vehicles/chrysler-emerald-limousine-1.webp",
       "/images/vehicles/chrysler-emerald-limousine-2.webp",
-      "/images/vehicles/chrysler-emerald-limousine-3.webp"
+      "/images/vehicles/chrysler-emerald-limousine-3.webp",
+      "/images/vehicles/chrysler-emerald-limousine-4.webp"
     ],
     "metaDesc": "Book a Chrysler Emerald Limousine in Dubai, Abu Dhabi & Sharjah. Classic stretch limo for weddings and special events. From AED 800.",
     "seoKeywords": "Chrysler Emerald limousine Dubai, classic limo hire Dubai, wedding stretch limo Dubai",
@@ -705,11 +718,7 @@
     "transferPrice": "AED 500",
     "price5hr": "AED 900 / 5 Hr",
     "price10hr": "AED 1,500 / 10 Hr",
-    "images": [
-      "/images/vehicles/toyota-coaster-21-1.webp",
-      "/images/vehicles/toyota-coaster-21-2.webp",
-      "/images/vehicles/toyota-coaster-21-3.webp"
-    ],
+    "images": [],
     "metaDesc": "Book a Toyota Coaster 21-seater in Dubai, Abu Dhabi & Sharjah. Reliable mini-bus for corporate shuttles and group transfers. From AED 500.",
     "seoKeywords": "Toyota Coaster Dubai, 21 seater bus hire Dubai, mini bus Dubai chauffeur",
     "desc": "The Toyota Coaster 21 Seater is a reliable, comfortable mini-bus ideal for corporate shuttles, school runs and group airport transfers across Dubai.",
@@ -792,11 +801,9 @@
     "transferPrice": "AED 650",
     "price5hr": "AED 950 / 5 Hr",
     "price10hr": "AED 1,500 / 10 Hr",
-    "images": [
-      "/images/vehicles/35-seater-luxury-coach-1.webp",
+    "images": ["/images/vehicles/35-seater-luxury-coach-1.webp",
       "/images/vehicles/35-seater-luxury-coach-2.webp",
-      "/images/vehicles/35-seater-luxury-coach-3.webp"
-    ],
+      "/images/vehicles/35-seater-luxury-coach-3.webp"],
     "metaDesc": "Book a 35-seater luxury coach in Dubai, Abu Dhabi & Sharjah. Mid-size group transport for corporate events and school trips. From AED 650.",
     "seoKeywords": "35 seater coach Dubai, luxury coach hire Dubai, mid size bus Dubai",
     "desc": "Our 35-Seater Luxury Coach is the ideal mid-size group transport solution for corporate events, school trips and airport transfers across Dubai and the UAE.",

@@ -1,5 +1,6 @@
 "use client";
 
+
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
@@ -25,9 +26,11 @@ import {
 } from "lucide-react";
 import HeroBookingModal from "@/components/HeroBookingModal";
 
+
 // ─── Constants ─────────────────────────────────────────────────────────────
 const roseGoldGradient       = "linear-gradient(135deg, #b76e79, #e8a4a0, #c9956c)";
 const roseGoldGradientSubtle = "linear-gradient(135deg, #f9eded, #fdf4f0)";
+
 
 // ─── Vehicle Classes ────────────────────────────────────────────────────────
 const vehicleClasses = [
@@ -163,6 +166,7 @@ const vehicleClasses = [
   },
 ];
 
+
 // ─── Services ───────────────────────────────────────────────────────────────
 const services = [
   {
@@ -230,6 +234,7 @@ const services = [
   },
 ];
 
+
 // ─── Stats ──────────────────────────────────────────────────────────────────
 const stats = [
   { icon: Users,    value: "10,000+",  label: "Happy Clients"   },
@@ -238,11 +243,12 @@ const stats = [
   { icon: ThumbsUp, value: "4.9★",     label: "Average Rating"  },
 ];
 
+
 // ─── FAQs ────────────────────────────────────────────────────────────────────
 const faqs = [
   {
     q: "How do I book a chauffeur service in Dubai, Abu Dhabi, or Sharjah?",
-    a: "Book instantly via WhatsApp at +971 50 985 2818, call us, or email booking@chauffeurdubai.ae. We confirm within minutes, 24/7 across Dubai, Abu Dhabi, and Sharjah.",
+    a: "Book instantly via WhatsApp at +971 50 985 2818, call us, or email [booking@chauffeurdubai.ae](mailto:booking@chauffeurdubai.ae). We confirm within minutes, 24/7 across Dubai, Abu Dhabi, and Sharjah.",
   },
   {
     q: "Do you offer VIP airport pick-up in Dubai, Abu Dhabi, and Sharjah?",
@@ -268,7 +274,12 @@ const faqs = [
     q: "Is your luxury chauffeur service available 24/7 across the UAE?",
     a: "Yes, our professional chauffeurs are available around the clock, 365 days a year across Dubai, Abu Dhabi, Sharjah, and all UAE emirates.",
   },
+  {
+    q: "What makes your luxury transport different from regular taxi services in Dubai?",
+    a: "Our luxury transport service offers pre-booked professional chauffeurs, premium vehicles, fixed transparent pricing, and a white-glove experience — far beyond what a standard taxi provides across Dubai, Abu Dhabi, and Sharjah.",
+  },
 ];
+
 
 // ─── JSON-LD ───────────────────────────────────────────────────────────────
 const jsonLd = {
@@ -310,13 +321,17 @@ const jsonLd = {
       { "@type": "Offer", itemOffered: { "@type": "Service", name: "Rolls Royce Rental with Driver Dubai"           } },
       { "@type": "Offer", itemOffered: { "@type": "Service", name: "Mercedes Sprinter Rent with Driver Dubai"       } },
       { "@type": "Offer", itemOffered: { "@type": "Service", name: "Luxury Van Rental Dubai Abu Dhabi Sharjah"      } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Luxury Transport Dubai Abu Dhabi Sharjah"       } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Luxury Transportation Dubai UAE"                } },
     ],
   },
 };
 
+
 // ────────────────────────────────────────────────────────────────────────────
 export default function HomePage() {
   const [modalOpen, setModalOpen] = useState(false);
+
 
   return (
     <>
@@ -324,6 +339,7 @@ export default function HomePage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
+
 
       {/* ── HERO ──────────────────────────────────────────────────────── */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
@@ -339,6 +355,7 @@ export default function HomePage() {
           style={{ background: "rgba(0,0,0,0.45)" }}
         />
 
+
         <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center py-20">
           <div
             className="inline-flex items-center gap-2 text-white text-xs font-semibold px-5 py-2 rounded-full mb-8 uppercase tracking-widest shadow-md"
@@ -347,6 +364,7 @@ export default function HomePage() {
             <Star size={12} fill="white" />
             20 Years of Premium Chauffeur Service Across the UAE
           </div>
+
 
           <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold text-white leading-tight mb-6 drop-shadow-lg">
             Luxury{" "}
@@ -363,14 +381,17 @@ export default function HomePage() {
             Dubai, Abu Dhabi & Sharjah
           </h1>
 
+
           <p className="text-white/80 text-lg sm:text-xl max-w-3xl mx-auto mb-10 leading-relaxed">
             Premium{" "}
             <strong className="text-white">limo rental in Dubai</strong>,{" "}
             <strong className="text-white">airport transfers across the UAE</strong>,{" "}
             <strong className="text-white">corporate chauffeur service</strong> in Dubai, Abu Dhabi & Sharjah,
             and <strong className="text-white">luxury van rental</strong> —
-            available 24/7 with professional licensed drivers.
+            the finest <strong className="text-white">luxury transport</strong> available
+            24/7 with professional licensed drivers.
           </p>
+
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
             <button
@@ -383,6 +404,7 @@ export default function HomePage() {
               <ChevronRight size={18} />
             </button>
 
+
             <a
               href="tel:+971509852818"
               className="flex items-center gap-2 border-2 border-white/70 text-white hover:border-white hover:bg-white/10 font-semibold text-base px-9 py-4 rounded-full transition-all duration-200"
@@ -391,6 +413,7 @@ export default function HomePage() {
               +971 50 985 2818
             </a>
           </div>
+
 
           <div className="flex flex-wrap items-center justify-center gap-6 text-sm">
             {[
@@ -404,11 +427,13 @@ export default function HomePage() {
           </div>
         </div>
 
+
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-white/40">
           <span className="uppercase tracking-widest text-[10px]">Scroll</span>
           <div className="w-px h-8 bg-white/20 animate-pulse" />
         </div>
       </section>
+
 
       {/* ── STATS ─────────────────────────────────────────────────────── */}
       <section className="bg-white py-16 px-4 sm:px-6 lg:px-8 border-y border-rose-100">
@@ -437,6 +462,7 @@ export default function HomePage() {
         </div>
       </section>
 
+
       {/* ── VEHICLE CLASSES ───────────────────────────────────────────── */}
       <section
         id="fleet"
@@ -463,6 +489,7 @@ export default function HomePage() {
               <strong className="text-zinc-700">luxury bus rental across Sharjah and the UAE</strong> — choose your class below.
             </p>
           </div>
+
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {vehicleClasses.map(
@@ -491,6 +518,7 @@ export default function HomePage() {
                     </div>
                   </div>
 
+
                   <div className="p-6 flex flex-col flex-1">
                     <p
                       className="text-xs font-semibold uppercase tracking-widest mb-1"
@@ -502,6 +530,7 @@ export default function HomePage() {
                     <p className="text-zinc-500 text-sm mb-3 leading-relaxed">{description}</p>
                     <p className="text-zinc-400 text-xs italic mb-4">{vehicles}</p>
 
+
                     <div className="flex items-center gap-4 mt-auto pt-4 border-t border-rose-50">
                       <div className="flex items-center gap-1.5 text-zinc-500 text-sm">
                         <UserRound size={14} style={{ color: "#b76e79" }} />
@@ -512,6 +541,7 @@ export default function HomePage() {
                         {luggage}
                       </div>
                     </div>
+
 
                     <div
                       className="mt-4 flex items-center gap-1 text-sm font-semibold"
@@ -530,6 +560,7 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
 
       {/* ── SERVICES ──────────────────────────────────────────────────── */}
       <section
@@ -552,9 +583,11 @@ export default function HomePage() {
               From{" "}
               <strong className="text-zinc-700">airport transfers in Dubai, Abu Dhabi & Sharjah</strong> to{" "}
               <strong className="text-zinc-700">chauffeur service near me</strong> searches —
-              we cover every journey across the UAE.
+              we cover every{" "}
+              <strong className="text-zinc-700">luxury transportation</strong> need across the UAE.
             </p>
           </div>
+
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {services.map(({ icon: Icon, title, description, href }) => (
@@ -587,6 +620,7 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
 
       {/* ── WHY CHOOSE US ─────────────────────────────────────────────── */}
       <section
@@ -622,7 +656,8 @@ export default function HomePage() {
               a <strong className="text-zinc-700">monthly driver in Dubai</strong>{" "}
               or Abu Dhabi, or a one-time{" "}
               <strong className="text-zinc-700">VIP airport pick-up</strong>{" "}
-              — we handle every journey with precision and care.
+              — we handle every{" "}
+              <strong className="text-zinc-700">luxury transport</strong> journey with precision and care.
             </p>
             <ul className="space-y-4">
               {[
@@ -641,6 +676,7 @@ export default function HomePage() {
               ))}
             </ul>
           </div>
+
 
           <div
             className="rounded-3xl p-8 text-white shadow-2xl"
@@ -670,6 +706,7 @@ export default function HomePage() {
         </div>
       </section>
 
+
       {/* ── FULL DAY CHAUFFEUR SERVICE ─────────────────────────────── */}
       <section
         id="full-day-chauffeur"
@@ -687,6 +724,7 @@ export default function HomePage() {
             <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
           </div>
 
+
           <div>
             <p
               className="text-sm font-semibold uppercase tracking-widest mb-3"
@@ -703,7 +741,9 @@ export default function HomePage() {
               gives you a dedicated professional driver with car for as long as you need. Whether
               it&apos;s a packed corporate schedule, a leisurely city tour, or a day of
               meetings across the UAE, your chauffeur is at your disposal from morning
-              to night. Choose from our{" "}
+              to night. As the UAE&apos;s leading{" "}
+              <strong className="text-zinc-700">luxury transportation</strong> provider,
+              choose from our{" "}
               <strong className="text-zinc-700">Packages</strong> with{" "}
               transparent pricing and no hidden charges.
             </p>
@@ -747,6 +787,7 @@ export default function HomePage() {
         </div>
       </section>
 
+
       {/* ── FAQ ───────────────────────────────────────────────────────── */}
       <section
         className="py-24 px-4 sm:px-6 lg:px-8"
@@ -782,6 +823,7 @@ export default function HomePage() {
         </div>
       </section>
 
+
       {/* ── BOOKING CTA ───────────────────────────────────────────────── */}
       <section
         id="contact"
@@ -798,7 +840,8 @@ export default function HomePage() {
             <strong className="text-white">limo rental in Dubai</strong>, a{" "}
             <strong className="text-white">monthly driver in Abu Dhabi</strong>,
             a <strong className="text-white">luxury van in Sharjah</strong>, or a last-minute{" "}
-            <strong className="text-white">chauffeur service near me</strong> — we are
+            <strong className="text-white">chauffeur service near me</strong> — our{" "}
+            <strong className="text-white">luxury transportation</strong> is
             available 24/7 across the UAE.
           </p>
           <p className="opacity-70 text-sm mb-10">
@@ -826,11 +869,12 @@ export default function HomePage() {
               title="Email Chauffeur Dubai Luxury Travel UAE"
               className="flex items-center gap-3 border-2 border-white/50 text-white/80 hover:bg-white/10 font-semibold text-base px-9 py-4 rounded-full transition-all duration-200"
             >
-              booking@chauffeurdubai.ae
+              [booking@chauffeurdubai.ae](mailto:booking@chauffeurdubai.ae)
             </a>
           </div>
         </div>
       </section>
+
 
       {/* Booking Modal */}
       <HeroBookingModal

@@ -49,8 +49,8 @@ export default function Header() {
             <Image
               src="/images/logo.png"
               alt="Chauffeur Dubai Luxury Travel Logo"
-              width={80}
-              height={36}
+              width={110}
+              height={50}
               className="object-contain"
               priority
             />

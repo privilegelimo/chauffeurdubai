@@ -239,7 +239,8 @@ export default function ServicesPage() {
           </h1>
           <p className="text-white/70 max-w-2xl text-sm sm:text-base">
             Airport transfers, corporate chauffeur, wedding limo, sightseeing,
-            event transport, and more — all across Dubai, Abu Dhabi, Sharjah, and the UAE.
+            event transport, and more — premium{" "}
+            <strong className="text-white/90">luxury transport</strong> across Dubai, Abu Dhabi, Sharjah, and the UAE.
           </p>
         </div>
       </section>
@@ -341,8 +342,9 @@ export default function ServicesPage() {
         <h2 className="text-2xl sm:text-3xl font-bold text-white mb-3">
           Not Sure Which Service You Need?
         </h2>
-        <p className="text-white/80 mb-8 max-w-xl mx-auto">
-          Our team is available 24/7 across Dubai, Abu Dhabi, and Sharjah. Tell us your journey and we&apos;ll recommend
+                <p className="text-white/80 mb-8 max-w-xl mx-auto">
+          Our team is available 24/7 across Dubai, Abu Dhabi, and Sharjah for all your{" "}
+          <strong className="text-white">luxury transportation</strong> needs. Tell us your journey and we&apos;ll recommend
           the perfect vehicle and service for you.
         </p>
         <div className="flex flex-col sm:flex-row justify-center gap-4">

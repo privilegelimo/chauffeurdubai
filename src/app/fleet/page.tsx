@@ -89,7 +89,7 @@ export default function FleetPage() {
       {/* ── HERO ──────────────────────────────────────────────────────── */}
       <section className="relative h-72 sm:h-96 flex items-end overflow-hidden pt-16">
         <Image
-          src="https://images.unsplash.com/photo-1563720360172-67b8f3dce741?w=1600&q=85"
+          src="/images/vehicles/audi-a6-1.webp"
           alt="Luxury chauffeur fleet Dubai Abu Dhabi Sharjah UAE"
           fill
           className="object-cover object-center"

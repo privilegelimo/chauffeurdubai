@@ -35,23 +35,24 @@ const roseGoldGradientSubtle = "linear-gradient(135deg, #f9eded, #fdf4f0)";
 // ─── Vehicle Classes ────────────────────────────────────────────────────────
 const vehicleClasses = [
   {
-    slug: "business-class",
-    label: "Business Class",
-    tagline: "Executive comfort for every journey",
-    image: "https://images.unsplash.com/photo-1555215695-3004980ad54e?w=800&q=80",
-    imageAlt: "Business class chauffeur Dubai Sharjah Abu Dhabi - Lexus ES 300 Audi A6 executive sedan",
-    vehicles: "Lexus ES 300, Audi A6, BYD Han EV, Citroën Space Tourer, Toyota Granvia",
-    passengers: 7,
-    luggage: "6 bags",
-    priceFrom: "AED 350",
-    description:
-      "Executive sedans and MPVs for corporate chauffeur service in Dubai, Sharjah, and Abu Dhabi — airport transfers, and business meetings across the UAE.",
-  },
+  slug: "business-class",
+  label: "Business Class",
+  tagline: "Executive comfort for every journey",
+  image: "/images/vehicles/audi-a6-1.webp",
+  imageAlt: "Business class chauffeur Dubai Sharjah Abu Dhabi - Lexus ES 300 Audi A6 executive sedan",
+  vehicles: "Lexus ES 300, Audi A6, BYD Han EV, Citroën Space Tourer, Toyota Granvia",
+  passengers: 7,
+  luggage: "6 bags",
+  priceFrom: "AED 350",
+  description:
+    "Executive sedans and MPVs for corporate chauffeur service in Dubai, Sharjah, and Abu Dhabi — airport transfers, and business meetings across the UAE.",
+},
+
   {
     slug: "first-class",
     label: "First Class",
     tagline: "The pinnacle of luxury travel",
-    image: "https://images.unsplash.com/photo-1563720360172-67b8f3dce741?w=800&q=80",
+    image: "/images/vehicles/mercedes-s500-1.webp",
     imageAlt: "First class chauffeur Dubai Abu Dhabi - Mercedes S500 BMW 7 Series luxury sedan hire",
     vehicles: "Mercedes S 500, BMW 7 Series - the finest executive saloons in Dubai",
     passengers: 3,
@@ -64,7 +65,7 @@ const vehicleClasses = [
     slug: "business-van",
     label: "Business Van",
     tagline: "Space and luxury for groups",
-    image: "https://images.unsplash.com/photo-1617469955246-19b0e89ce0d3?w=800&q=80",
+    image: "/images/vehicles/mercedes-v300-tiffany-1.webp",
     imageAlt: "Business van chauffeur Dubai Sharjah - Mercedes Vito luxury van rental with driver UAE",
     vehicles: "Mercedes Vito Tourer, V-Class, V 300 Tiffany, VIP Trend 250",
     passengers: 7,
@@ -77,7 +78,7 @@ const vehicleClasses = [
     slug: "mercedes-sprinter-luxury-van",
     label: "Mercedes Sprinter Luxury Van",
     tagline: "Large group luxury on every road",
-    image: "https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=800&q=80",
+    image: "/images/vehicles/mercedes-sprinter-19-1.webp",
     imageAlt: "Mercedes Sprinter luxury van rental Dubai Abu Dhabi - group airport transfer UAE",
     vehicles: "Mercedes Sprinter Ultra Luxury Van, Mercedes Sprinter 19 Seater",
     passengers: 19,
@@ -90,7 +91,7 @@ const vehicleClasses = [
     slug: "mercedes-sprinter-luxury-vip",
     label: "Mercedes Sprinter Luxury VIP",
     tagline: "Bespoke VIP interiors for discerning groups",
-    image: "https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=800&q=80",
+    image: "/images/vehicles/mercedes-sprinter-avant-garde-1.webp",
     imageAlt: "Mercedes Sprinter VIP luxury interior Dubai - starlight ceiling executive van UAE",
     vehicles: "Mercedes Sprinter Avant Garde VIP, Mercedes Sprinter Business Class VIP",
     passengers: 13,
@@ -103,20 +104,20 @@ const vehicleClasses = [
     slug: "luxury-suv",
     label: "Luxury SUV",
     tagline: "Commanding presence on every road",
-    image: "https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?w=800&q=80",
+    image: "/images/vehicles/cadillac-escalade-1.webp",
     imageAlt: "Luxury SUV chauffeur Dubai Abu Dhabi Sharjah - GMC Yukon Denali Cadillac Escalade Range Rover hire",
-    vehicles: "GMC Yukon Denali, Cadillac Escalade 7 Seater, Range Rover Sport",
+    vehicles: "GMC Yukon Denali, Cadillac Escalade 7 Seater, Range Rover",
     passengers: 7,
     luggage: "7 bags",
     priceFrom: "AED 350",
     description:
-      "Bold, spacious SUVs — GMC Yukon Denali, Cadillac Escalade, and Range Rover Sport for families and VIP groups across Dubai, Abu Dhabi, and Sharjah.",
+      "Bold, spacious SUVs — GMC Yukon Denali, Cadillac Escalade, and Range Rover for families and VIP groups across Dubai, Abu Dhabi, and Sharjah.",
   },
   {
     slug: "rolls-royce",
     label: "Rolls-Royce",
     tagline: "The ultimate automotive luxury",
-    image: "https://images.unsplash.com/photo-1563720360172-67b8f3dce741?w=800&q=80",
+    image: "/images/vehicles/rolls-royce-cullinan-1.webp",
     imageAlt: "Rolls-Royce rental with driver Dubai Abu Dhabi - Rolls-Royce Ghost Cullinan chauffeur UAE",
     vehicles: "Rolls-Royce Ghost, Rolls-Royce Cullinan",
     passengers: 4,
@@ -129,7 +130,7 @@ const vehicleClasses = [
     slug: "stretch-limousine",
     label: "Stretch Limousine",
     tagline: "Make your grandest entrance",
-    image: "https://images.unsplash.com/photo-1631295868223-63265b40d9e4?w=800&q=80",
+    image: "/images/vehicles/gmc-yukon-limousine-1.webp",
     imageAlt: "Stretch limousine hire Dubai Sharjah - wedding limo GMC Yukon Chrysler Emerald UAE",
     vehicles: "GMC Yukon Limousine, GMC Yukon Diamond, Chevy Suburban Titanium, Chrysler Emerald",
     passengers: 18,
@@ -142,7 +143,7 @@ const vehicleClasses = [
     slug: "luxury-coach-bus",
     label: "Luxury Coach Bus",
     tagline: "Premium large group travel across the UAE",
-    image: "https://images.unsplash.com/photo-1570125909232-eb263c188f7e?w=800&q=80",
+    image: "/images/vehicles/50-seater-luxury-coach-1.webp",
     imageAlt: "Luxury coach bus rental Dubai Abu Dhabi Sharjah - 35 50 seater group transport UAE events",
     vehicles: "35 Seater Luxury Coach, 50 Seater Luxury Coach",
     passengers: 50,
@@ -155,7 +156,7 @@ const vehicleClasses = [
     slug: "standard-bus",
     label: "Standard Bus",
     tagline: "Reliable group travel, no compromise",
-    image: "https://images.unsplash.com/photo-1570125909232-eb263c188f7e?w=800&q=80",
+    image: "/images/vehicles/toyota-hiace-11-1.webp",
     imageAlt: "Standard bus rental Dubai Sharjah Abu Dhabi - Toyota Coaster Hiace group transfer UAE",
     vehicles: "Toyota Coaster 21 Seater, Toyota Hiace 11 Seater",
     passengers: 21,
@@ -256,7 +257,7 @@ const faqs = [
   },
   {
     q: "What vehicles are available for chauffeur hire in Dubai?",
-    a: "Our fleet includes Mercedes S 500, BMW 7 Series, Rolls-Royce Ghost & Cullinan, Lexus ES 300, Audi A6, GMC Yukon Denali, Cadillac Escalade, Range Rover Sport, Mercedes V-Class, Mercedes Sprinter, and a full range of stretch limousines and buses.",
+    a: "Our fleet includes Mercedes S 500, BMW 7 Series, Rolls-Royce Ghost & Cullinan, Lexus ES 300, Audi A6, GMC Yukon Denali, Cadillac Escalade, Range Rover, Mercedes V-Class, Mercedes Sprinter, and a full range of stretch limousines and buses.",
   },
   {
     q: "Do you offer a chauffeur service from Dubai to Abu Dhabi or Sharjah?",
@@ -295,7 +296,7 @@ const jsonLd = {
   image: "https://chauffeurdubai.ae/og-image.jpg",
   address: {
     "@type": "PostalAddress",
-    streetAddress: "Shraifi One Building Suite 45 - Zaa'beel St",
+    streetAddress: "Suite 45 Shraifi One Building - Zaa'beel St",
     addressLocality: "Dubai",
     addressRegion: "Dubai",
     addressCountry: "AE",
@@ -344,7 +345,7 @@ export default function HomePage() {
       {/* ── HERO ──────────────────────────────────────────────────────── */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
         <Image
-          src="/images/Rolls-royce.webp"
+          src="/images/hero-rolls-royce.webp"
           alt="Luxury chauffeur service Dubai Abu Dhabi Sharjah - professional private driver UAE"
           fill
           className="object-cover object-center scale-105"
@@ -716,7 +717,7 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div className="relative rounded-3xl overflow-hidden shadow-2xl aspect-[4/3]">
             <Image
-              src="https://images.unsplash.com/photo-1563720360172-67b8f3dce741?w=900&q=85"
+              src="/images/services/full-day-chauffeur.webp"
               alt="Full day chauffeur service Dubai Abu Dhabi Sharjah - dedicated private driver for the day UAE"
               fill
               className="object-cover"
@@ -845,7 +846,7 @@ export default function HomePage() {
             available 24/7 across the UAE.
           </p>
           <p className="opacity-70 text-sm mb-10">
-            Shraifi One Building, Suite 45, Zaa&apos;beel St, Dubai, UAE
+            Suite 45, Shraifi One Building, Zaa&apos;beel St, Dubai, UAE
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <button

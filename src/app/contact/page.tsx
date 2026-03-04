@@ -37,7 +37,7 @@ const contactDetails = [
   {
     icon: MapPin,
     label: "Office",
-    value: "Shraifi One Building, Suite 45",
+    value: "Suite 45, Shraifi One Building",
     sub: "Zaa'beel St, Dubai, UAE",
     href: "https://goo.gl/maps/21XXcACyGnB7fVXe7",
   },
@@ -71,17 +71,17 @@ export default function ContactPage() {
       {/* ── HERO ──────────────────────────────────────────────────────── */}
       <section className="relative h-64 sm:h-80 flex items-end overflow-hidden pt-16">
         <Image
-          src="https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=1600&q=85"
-          alt="Contact Chauffeur Dubai Luxury Travel - book chauffeur service Dubai Abu Dhabi Sharjah"
-          fill
-          className="object-cover object-center"
-          priority
-        />
+                          src="/images/contact.webp"
+                          alt="Luxury chauffeur service Dubai Abu Dhabi Sharjah - professional private driver UAE"
+                          fill
+                          className="object-cover object-center scale-105"
+                          priority
+                        />
         <div
           className="absolute inset-0"
           style={{
             background:
-              "linear-gradient(to top, rgba(0,0,0,0.88) 0%, rgba(183,110,121,0.4) 60%, transparent 100%)",
+              "linear-gradient(to top, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.4) 60%, transparent 100%)",
           }}
         />
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-10 w-full">
@@ -253,7 +253,7 @@ export default function ContactPage() {
                   Chauffeur Luxury Travel
                 </p>
                 <p className="text-zinc-500 text-xs mt-1">
-                  Shraifi One Building, Suite 45, Zaa&apos;beel St, Dubai, UAE — Serving Dubai, Abu Dhabi & Sharjah
+                 Suite 45, Shraifi One Building, Zaa&apos;beel St, Dubai, UAE — Serving Dubai, Abu Dhabi & Sharjah
                 </p>
               </div>
             </div>

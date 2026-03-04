@@ -218,7 +218,7 @@ export default async function CarPage({
                 </div>
                 <div className="p-5 space-y-3">
                   <div className="flex justify-between items-center py-2 border-b border-rose-50 text-sm">
-                    <span className="text-zinc-500">Transfer — Dubai, Abu Dhabi & Sharjah</span>
+                    <span className="text-zinc-500">Transfer Within Dubai</span>
                     <span className="font-bold" style={{ color: "#b76e79" }}>{vehicle.transferPrice}</span>
                   </div>
                   <div className="flex justify-between items-center py-2 border-b border-rose-50 text-sm">

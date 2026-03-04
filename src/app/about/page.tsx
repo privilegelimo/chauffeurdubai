@@ -61,17 +61,17 @@ export default function AboutPage() {
       {/* ── HERO ──────────────────────────────────────────────────────── */}
       <section className="relative h-72 sm:h-96 flex items-end overflow-hidden pt-16">
         <Image
-          src="https://images.unsplash.com/photo-1563720360172-67b8f3dce741?w=1600&q=85"
-          alt="About Chauffeur Dubai Luxury Travel - luxury chauffeur service Dubai Abu Dhabi Sharjah"
-          fill
-          className="object-cover object-center"
-          priority
-        />
+                  src="/images/about.webp"
+                  alt="Luxury chauffeur service Dubai Abu Dhabi Sharjah - professional private driver UAE"
+                  fill
+                  className="object-cover object-center scale-105"
+                  priority
+                />
         <div
           className="absolute inset-0"
           style={{
             background:
-              "linear-gradient(to top, rgba(0,0,0,0.88) 0%, rgba(183,110,121,0.4) 60%, transparent 100%)",
+              "linear-gradient(to top, rgba(0,0,0,0.40) 0%, rgba(0,0,0,0) 60%, transparent 100%)",
           }}
         />
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-12 w-full">

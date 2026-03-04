@@ -49,7 +49,7 @@ const vehicleSuggestions = [
     vehicles: [
       { name: "GMC Yukon Denali",         seats: 7 },
       { name: "Cadillac Escalade 7 Seater", seats: 7 },
-      { name: "Range Rover Sport",        seats: 5 },
+      { name: "Range Rover",        seats: 5 },
     ],
     maxPassengers: 7,
     priceFrom: "AED 350",

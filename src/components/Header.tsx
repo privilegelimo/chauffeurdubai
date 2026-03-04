@@ -49,13 +49,13 @@ export default function Header() {
             <Image
               src="/images/logo.png"
               alt="Chauffeur Dubai Luxury Travel Logo"
-              width={110}
-              height={50}
+              width={140}
+              height={60}
               className="object-contain"
               priority
             />
             <span
-              className="text-[9px] font-semibold tracking-widest uppercase leading-none"
+              className="text-[15px] font-bold tracking-widest uppercase leading-none"
               style={{
                 background: "linear-gradient(135deg, #b76e79, #e8a4a0, #c9956c)",
                 WebkitBackgroundClip: "text",

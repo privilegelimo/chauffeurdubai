@@ -72,7 +72,7 @@
     "metaDesc": "Book a BYD Han EV chauffeur in Dubai, Abu Dhabi & Sharjah. Premium all-electric executive sedan with professional driver. From AED 350.",
     "seoKeywords": "BYD Han EV chauffeur Dubai, electric car hire Dubai, eco luxury sedan Dubai",
     "desc": "The BYD Han EV is a premium all-electric sedan blending cutting-edge technology with executive comfort for the eco-conscious traveller.",
-    "longDesc": "The BYD Han EV represents the future of executive travel — zero emissions, blistering performance and a beautifully appointed cabin. Perfect for the eco-conscious traveller who refuses to compromise on luxury across Dubai, Abu Dhabi, and Sharjah.",
+    "longDesc": "The BYD Han EV represents the future of executive travel - zero emissions, blistering performance and a beautifully appointed cabin. Perfect for the eco-conscious traveller who refuses to compromise on luxury across Dubai, Abu Dhabi, and Sharjah.",
     "features": ["Nappa leather seats", "DiLink smart system", "360-degree camera", "Zero emissions"],
     "specs": [
       { "label": "Passengers",   "value": "Up to 3"       },
@@ -93,7 +93,12 @@
     "transferPrice": "AED 350",
     "price5hr": "AED 900 / 5 Hr",
     "price10hr": "AED 1,200 / 10 Hr",
-    "images": [],
+    "images": [
+      "/images/vehicles/citroen-space-tourer-1.webp",
+      "/images/vehicles/citroen-space-tourer-2.webp",
+      "/images/vehicles/citroen-space-tourer-3.webp",
+      "/images/vehicles/citroen-space-tourer-4.webp"
+    ],
     "metaDesc": "Book a Citroën Space Tourer 7-seater chauffeur in Dubai, Abu Dhabi & Sharjah. Spacious executive MPV with professional driver. From AED 350.",
     "seoKeywords": "Citroen Space Tourer Dubai, 7 seater chauffeur Dubai, group transfer Dubai MPV",
     "desc": "The Citroën Space Tourer offers flexible, comfortable seating for up to 7 passengers - ideal for family or group airport transfers.",
@@ -249,7 +254,7 @@
     "metaDesc": "Book a Mercedes V 300 Tiffany Edition chauffeur in Dubai, Abu Dhabi & Sharjah. Bespoke luxury MPV with starlight ceiling. From AED 550.",
     "seoKeywords": "Mercedes V300 Tiffany Dubai, luxury MPV hire Dubai, bespoke van chauffeur Dubai",
     "desc": "The Mercedes V 300 Tiffany Edition elevates group travel to an art form with its bespoke interior and whisper-quiet ride.",
-    "longDesc": "The Mercedes V 300 Tiffany Edition is in a class of its own. Every surface has been custom-finished to the highest standard — from the starlight ceiling to the refrigerator and privacy blinds. This is the ultimate group vehicle for VIP clients, corporate delegations and private events across Dubai, Abu Dhabi, and Sharjah.",
+    "longDesc": "The Mercedes V 300 Tiffany Edition is in a class of its own. Every surface has been custom-finished to the highest standard - from the starlight ceiling to the refrigerator and privacy blinds. This is the ultimate group vehicle for VIP clients, corporate delegations and private events across Dubai, Abu Dhabi, and Sharjah.",
     "features": ["Custom Tiffany interior", "Starlight ceiling", "Refrigerator", "Privacy blinds"],
     "specs": [
       { "label": "Passengers",   "value": "Up to 7"      },
@@ -312,7 +317,7 @@
     ],
     "metaDesc": "Book a Mercedes V-Class chauffeur in Dubai, Abu Dhabi & Sharjah. The benchmark luxury people carrier for families and groups. From AED 450.",
     "seoKeywords": "Mercedes V-Class chauffeur Dubai, V-Class hire Dubai, luxury van rental Dubai",
-    "desc": "The Mercedes V-Class is the benchmark luxury people carrier — combining the elegance of a Mercedes saloon with the spaciousness of a premium van. Perfect for family trips, airport transfers and corporate group travel. With its plush interior, advanced tech and smooth ride, the V-Class turns every journey into a first-class experience.",
+    "desc": "The Mercedes V-Class is the benchmark luxury people carrier - combining the elegance of a Mercedes saloon with the spaciousness of a premium van. Perfect for family trips, airport transfers and corporate group travel. With its plush interior, advanced tech and smooth ride, the V-Class turns every journey into a first-class experience.",
     "longDesc": "Whether it's a family airport transfer from DXB, a corporate group shuttle between DIFC and Business Bay, or a private event in Abu Dhabi or Sharjah, the Mercedes V-Class delivers an unmatched combination of space, comfort and Mercedes-Benz refinement. Available 24/7 with a professional chauffeur across Dubai, Abu Dhabi, and Sharjah.",
     "features": ["7 luxury seats with ample legroom", "MBUX infotainment system", "Sliding panoramic roof", "USB & wireless charging"],
     "specs": [
@@ -342,7 +347,7 @@
     "metaDesc": "Book a Mercedes Sprinter Ultra Luxury Van in Dubai, Abu Dhabi & Sharjah. 16-seat executive van with individual screens and Wi-Fi. From AED 1,000.",
     "seoKeywords": "Mercedes Sprinter luxury van Dubai, Sprinter hire Dubai, 16 seater van Dubai chauffeur",
     "desc": "The Mercedes Sprinter Ultra Luxury Van sets the benchmark for large group transport with its lavish custom interior and state-of-the-art facilities.",
-    "longDesc": "The Mercedes Sprinter Ultra Luxury Van is the definitive large-group transport solution. With 16 captain seats, individual screens and onboard Wi-Fi, it ensures every passenger travels in comfort and style — whether it's a corporate roadshow, airport transfer or event shuttle across Dubai, Abu Dhabi, and Sharjah.",
+    "longDesc": "The Mercedes Sprinter Ultra Luxury Van is the definitive large-group transport solution. With 16 captain seats, individual screens and onboard Wi-Fi, it ensures every passenger travels in comfort and style - whether it's a corporate roadshow, airport transfer or event shuttle across Dubai, Abu Dhabi, and Sharjah.",
     "features": ["16 captain seats", "Individual screens", "Onboard Wi-Fi", "Premium sound system"],
     "specs": [
       { "label": "Passengers",   "value": "Up to 16"                      },
@@ -404,7 +409,7 @@
     "metaDesc": "Book a Mercedes Sprinter Avant Garde VIP in Dubai, Abu Dhabi & Sharjah. Handcrafted VIP van with starlight ceiling. From AED 1,100.",
     "seoKeywords": "Mercedes Sprinter Avant Garde Dubai, VIP Sprinter hire Dubai, luxury group van Dubai",
     "desc": "The Mercedes Sprinter Avant Garde VIP is the gold standard in luxury group transport - handcrafted interiors, starlight ceiling and champagne fridge included.",
-    "longDesc": "The Mercedes Sprinter Avant Garde VIP is unlike anything else on the road. Every inch of the interior has been handcrafted to the highest standard — from the electric recline seats to the starlight ceiling and champagne fridge. The ultimate statement in group luxury travel across Dubai, Abu Dhabi, and Sharjah.",
+    "longDesc": "The Mercedes Sprinter Avant Garde VIP is unlike anything else on the road. Every inch of the interior has been handcrafted to the highest standard - from the electric recline seats to the starlight ceiling and champagne fridge. The ultimate statement in group luxury travel across Dubai, Abu Dhabi, and Sharjah.",
     "features": ["Handcrafted interior", "Starlight ceiling", "Electric recline seats", "Champagne fridge"],
     "specs": [
       { "label": "Passengers",   "value": "Up to 11"                      },
@@ -434,7 +439,7 @@
     "metaDesc": "Book a Mercedes Sprinter Business Class VIP in Dubai, Abu Dhabi & Sharjah. Premium leather seating and executive amenities. From AED 1,000.",
     "seoKeywords": "Mercedes Sprinter Business VIP Dubai, executive Sprinter Dubai, VIP van hire Dubai",
     "desc": "The Mercedes Sprinter Business Class VIP delivers an elevated group travel experience with premium leather seating and executive amenities.",
-    "longDesc": "Designed for business delegations and corporate groups, the Mercedes Sprinter Business Class VIP offers individual fold-out tables, rear entertainment and onboard Wi-Fi — turning travel time into productive time across Dubai, Abu Dhabi, and Sharjah.",
+    "longDesc": "Designed for business delegations and corporate groups, the Mercedes Sprinter Business Class VIP offers individual fold-out tables, rear entertainment and onboard Wi-Fi - turning travel time into productive time across Dubai, Abu Dhabi, and Sharjah.",
     "features": ["Business class seating", "Individual fold-out tables", "Rear entertainment", "Wi-Fi"],
     "specs": [
       { "label": "Passengers",   "value": "Up to 13"                      },
@@ -524,7 +529,7 @@
     "metaDesc": "Book a Range Rover chauffeur in Dubai, Abu Dhabi & Sharjah. Iconic British luxury SUV with professional driver. From AED 550.",
     "seoKeywords": "Range Rover chauffeur Dubai, Range Rover hire Dubai, luxury SUV chauffeur Dubai",
     "desc": "The Range Rover is the definitive luxury performance SUV - combining iconic British design with unmatched on-road refinement.",
-    "longDesc": "The Range Rover is a true icon — blending British design heritage with cutting-edge performance. Whether crossing Dubai in style or making an impression at a corporate event in Abu Dhabi or Sharjah, the Range Rover never fails to command attention.",
+    "longDesc": "The Range Rover is a true icon - blending British design heritage with cutting-edge performance. Whether crossing Dubai in style or making an impression at a corporate event in Abu Dhabi or Sharjah, the Range Rover never fails to command attention.",
     "features": ["Windsor leather seats", "Meridian surround sound", "Pivi Pro infotainment", "Configurable terrain response"],
     "specs": [
       { "label": "Passengers",   "value": "Up to 5"           },

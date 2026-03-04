@@ -45,7 +45,7 @@ const vehicleClasses = [
   luggage: "6 bags",
   priceFrom: "AED 350",
   description:
-    "Executive sedans and MPVs for corporate chauffeur service in Dubai, Sharjah, and Abu Dhabi — airport transfers, and business meetings across the UAE.",
+    "Executive sedans and MPVs for corporate chauffeur service in Dubai, Sharjah, and Abu Dhabi - airport transfers, and business meetings across the UAE.",
 },
 
   {
@@ -59,7 +59,7 @@ const vehicleClasses = [
     luggage: "3 bags",
     priceFrom: "AED 550",
     description:
-      "The most prestigious saloons in our fleet. Ideal for VIP airport pick-up in Dubai, Abu Dhabi, and Sharjah — for executives and special occasions.",
+      "The most prestigious saloons in our fleet. Ideal for VIP airport pick-up in Dubai, Abu Dhabi, and Sharjah - for executives and special occasions.",
   },
   {
     slug: "business-van",
@@ -72,7 +72,7 @@ const vehicleClasses = [
     luggage: "7 bags",
     priceFrom: "AED 350",
     description:
-      "Luxury van rental with driver in Dubai, Sharjah, and Abu Dhabi — perfect for families, groups, or anyone travelling with extra luggage.",
+      "Luxury van rental with driver in Dubai, Sharjah, and Abu Dhabi - perfect for families, groups, or anyone travelling with extra luggage.",
   },
   {
     slug: "mercedes-sprinter-luxury-van",
@@ -98,7 +98,7 @@ const vehicleClasses = [
     luggage: "7 bags",
     priceFrom: "AED 1,000",
     description:
-      "Handcrafted VIP Sprinter interiors with starlight ceilings, champagne fridges and executive seating — available across Dubai, Abu Dhabi, and Sharjah.",
+      "Handcrafted VIP Sprinter interiors with starlight ceilings, champagne fridges and executive seating - available across Dubai, Abu Dhabi, and Sharjah.",
   },
   {
     slug: "luxury-suv",
@@ -111,7 +111,7 @@ const vehicleClasses = [
     luggage: "7 bags",
     priceFrom: "AED 350",
     description:
-      "Bold, spacious SUVs — GMC Yukon Denali, Cadillac Escalade, and Range Rover for families and VIP groups across Dubai, Abu Dhabi, and Sharjah.",
+      "Bold, spacious SUVs - GMC Yukon Denali, Cadillac Escalade, and Range Rover for families and VIP groups across Dubai, Abu Dhabi, and Sharjah.",
   },
   {
     slug: "rolls-royce",
@@ -124,7 +124,7 @@ const vehicleClasses = [
     luggage: "4 bags",
     priceFrom: "AED 2,500",
     description:
-      "Experience the pinnacle of automotive prestige — Rolls-Royce Ghost and Cullinan with professional chauffeur in Dubai, Abu Dhabi, and Sharjah.",
+      "Experience the pinnacle of automotive prestige - Rolls-Royce Ghost and Cullinan with professional chauffeur in Dubai, Abu Dhabi, and Sharjah.",
   },
   {
     slug: "stretch-limousine",
@@ -137,7 +137,7 @@ const vehicleClasses = [
     luggage: "2 bags",
     priceFrom: "AED 800",
     description:
-      "Wedding limo in Dubai, Sharjah, and Abu Dhabi — VIP nights out and celebrations. The best stretch limousine service the UAE has to offer.",
+      "Wedding limo in Dubai, Sharjah, and Abu Dhabi - VIP nights out and celebrations. The best stretch limousine service the UAE has to offer.",
   },
   {
     slug: "luxury-coach-bus",
@@ -189,7 +189,7 @@ const services = [
     title: "Private Driver for Sightseeing Dubai",
     href: "/services/private-driver-sightseeing-dubai",
     description:
-      "Explore Burj Khalifa, Palm Jumeirah, Sheikh Zayed Grand Mosque in Abu Dhabi, and more with a private sightseeing driver — at your own pace.",
+      "Explore Burj Khalifa, Palm Jumeirah, Sheikh Zayed Grand Mosque in Abu Dhabi, and more with a private sightseeing driver - at your own pace.",
   },
   {
     icon: Clock,
@@ -210,7 +210,7 @@ const services = [
     title: "Luxury Van Rental in Dubai, Abu Dhabi & Sharjah",
     href: "/services/luxury-van-rental-dubai",
     description:
-      "Spacious Mercedes V-Class, Vito Tourer, and Sprinter vans with professional chauffeur — ideal for group transfers across Dubai, Abu Dhabi, and Sharjah.",
+      "Spacious Mercedes V-Class, Vito Tourer, and Sprinter vans with professional chauffeur - ideal for group transfers across Dubai, Abu Dhabi, and Sharjah.",
   },
   {
     icon: Plane,
@@ -253,7 +253,7 @@ const faqs = [
   },
   {
     q: "Do you offer VIP airport pick-up in Dubai, Abu Dhabi, and Sharjah?",
-    a: "Yes — our VIP airport pick-up service covers DXB, DWC, Abu Dhabi International (AUH), and Sharjah (SHJ) airports with meet & greet and real-time flight tracking.",
+    a: "Yes - our VIP airport pick-up service covers DXB, DWC, Abu Dhabi International (AUH), and Sharjah (SHJ) airports with meet & greet and real-time flight tracking.",
   },
   {
     q: "What vehicles are available for chauffeur hire in Dubai?",
@@ -261,7 +261,7 @@ const faqs = [
   },
   {
     q: "Do you offer a chauffeur service from Dubai to Abu Dhabi or Sharjah?",
-    a: "Yes — we provide intercity chauffeur service from Dubai to Abu Dhabi, Sharjah, Al Ain, and all UAE emirates at fixed transparent rates.",
+    a: "Yes - we provide intercity chauffeur service from Dubai to Abu Dhabi, Sharjah, Al Ain, and all UAE emirates at fixed transparent rates.",
   },
   {
     q: "Can I hire a monthly driver in Dubai, Abu Dhabi, or Sharjah?",
@@ -269,7 +269,7 @@ const faqs = [
   },
   {
     q: "Do you offer Mercedes Sprinter rent with driver in Dubai?",
-    a: "Yes — we offer Mercedes Sprinter rent with driver for group transfers, corporate events, and airport runs across Dubai, Abu Dhabi, Sharjah, and the UAE.",
+    a: "Yes - we offer Mercedes Sprinter rent with driver for group transfers, corporate events, and airport runs across Dubai, Abu Dhabi, Sharjah, and the UAE.",
   },
   {
     q: "Is your luxury chauffeur service available 24/7 across the UAE?",
@@ -277,7 +277,7 @@ const faqs = [
   },
   {
     q: "What makes your luxury transport different from regular taxi services in Dubai?",
-    a: "Our luxury transport service offers pre-booked professional chauffeurs, premium vehicles, fixed transparent pricing, and a white-glove experience — far beyond what a standard taxi provides across Dubai, Abu Dhabi, and Sharjah.",
+    a: "Our luxury transport service offers pre-booked professional chauffeurs, premium vehicles, fixed transparent pricing, and a white-glove experience - far beyond what a standard taxi provides across Dubai, Abu Dhabi, and Sharjah.",
   },
 ];
 
@@ -388,7 +388,7 @@ export default function HomePage() {
             <strong className="text-white">limo rental in Dubai</strong>,{" "}
             <strong className="text-white">airport transfers across the UAE</strong>,{" "}
             <strong className="text-white">corporate chauffeur service</strong> in Dubai, Abu Dhabi & Sharjah,
-            and <strong className="text-white">luxury van rental</strong> —
+            and <strong className="text-white">luxury van rental</strong> -
             the finest <strong className="text-white">luxury transport</strong> available
             24/7 with professional licensed drivers.
           </p>
@@ -480,14 +480,14 @@ export default function HomePage() {
               Choose Your Class
             </p>
             <h2 className="text-3xl sm:text-4xl font-bold text-zinc-900 mb-4">
-              Luxury Chauffeur Fleet — Dubai, Abu Dhabi & Sharjah
+              Luxury Chauffeur Fleet - Dubai, Abu Dhabi & Sharjah
             </h2>
             <p className="text-zinc-500 max-w-2xl mx-auto">
               From{" "}
               <strong className="text-zinc-700">Mercedes S-Class chauffeur in Dubai</strong> to{" "}
               <strong className="text-zinc-700">Rolls-Royce rental with driver in Abu Dhabi</strong>,{" "}
               <strong className="text-zinc-700">stretch limousines</strong>, and{" "}
-              <strong className="text-zinc-700">luxury bus rental across Sharjah and the UAE</strong> — choose your class below.
+              <strong className="text-zinc-700">luxury bus rental across Sharjah and the UAE</strong> - choose your class below.
             </p>
           </div>
 
@@ -583,7 +583,7 @@ export default function HomePage() {
             <p className="text-zinc-500 max-w-2xl mx-auto">
               From{" "}
               <strong className="text-zinc-700">airport transfers in Dubai, Abu Dhabi & Sharjah</strong> to{" "}
-              <strong className="text-zinc-700">chauffeur service near me</strong> searches —
+              <strong className="text-zinc-700">chauffeur service near me</strong> searches -
               we cover every{" "}
               <strong className="text-zinc-700">luxury transportation</strong> need across the UAE.
             </p>
@@ -657,7 +657,7 @@ export default function HomePage() {
               a <strong className="text-zinc-700">monthly driver in Dubai</strong>{" "}
               or Abu Dhabi, or a one-time{" "}
               <strong className="text-zinc-700">VIP airport pick-up</strong>{" "}
-              — we handle every{" "}
+              - we handle every{" "}
               <strong className="text-zinc-700">luxury transport</strong> journey with precision and care.
             </p>
             <ul className="space-y-4">
@@ -668,7 +668,7 @@ export default function HomePage() {
                 "Transparent fixed pricing - no hidden fees, no surge pricing",
                 "Corporate accounts available with priority service",
                 "Serving DXB, DWC, Abu Dhabi International (AUH) & Sharjah (SHJ) airports 24/7",
-                "Intercity transfers — Dubai to Abu Dhabi, Sharjah, Al Ain & beyond",
+                "Intercity transfers - Dubai to Abu Dhabi, Sharjah, Al Ain & beyond",
               ].map((item) => (
                 <li key={item} className="flex items-start gap-3 text-zinc-600 text-sm">
                   <CheckCircle size={18} className="shrink-0 mt-0.5" style={{ color: "#b76e79" }} />
@@ -687,7 +687,7 @@ export default function HomePage() {
             <h3 className="text-2xl font-bold mb-3">Your Safety & Comfort First</h3>
             <p className="opacity-80 leading-relaxed mb-6">
               Every chauffeur at Chauffeur Dubai Luxury Travel undergoes rigorous background
-              checks, defensive driving certification, and ongoing training — so
+              checks, defensive driving certification, and ongoing training - so
               every ride across Dubai, Abu Dhabi, and Sharjah is safe, smooth, and truly luxurious.
             </p>
             <div className="grid grid-cols-2 gap-4">
@@ -734,10 +734,10 @@ export default function HomePage() {
               Most Booked Service
             </p>
             <h2 className="text-3xl sm:text-4xl font-bold text-zinc-900 mb-5">
-              Full Day Chauffeur Service — Dubai, Abu Dhabi & Sharjah
+              Full Day Chauffeur Service - Dubai, Abu Dhabi & Sharjah
             </h2>
             <p className="text-zinc-500 text-lg leading-relaxed mb-8">
-              Our most popular service —{" "}
+              Our most popular service -{" "}
               <strong className="text-zinc-700">full day chauffeur service across Dubai, Abu Dhabi, and Sharjah</strong>{" "}
               gives you a dedicated professional driver with car for as long as you need. Whether
               it&apos;s a packed corporate schedule, a leisurely city tour, or a day of
@@ -752,7 +752,7 @@ export default function HomePage() {
               {[
                 {
                   title: "Dedicated Driver",
-                  desc: "Your chauffeur stays with you for the entire booking — no shared rides across Dubai, Abu Dhabi, or Sharjah.",
+                  desc: "Your chauffeur stays with you for the entire booking - no shared rides across Dubai, Abu Dhabi, or Sharjah.",
                 },
                 {
                   title: "Flexible Packages",
@@ -841,7 +841,7 @@ export default function HomePage() {
             <strong className="text-white">limo rental in Dubai</strong>, a{" "}
             <strong className="text-white">monthly driver in Abu Dhabi</strong>,
             a <strong className="text-white">luxury van in Sharjah</strong>, or a last-minute{" "}
-            <strong className="text-white">chauffeur service near me</strong> — our{" "}
+            <strong className="text-white">chauffeur service near me</strong> - our{" "}
             <strong className="text-white">luxury transportation</strong> is
             available 24/7 across the UAE.
           </p>
@@ -849,30 +849,30 @@ export default function HomePage() {
             Suite 45, Shraifi One Building, Zaa&apos;beel St, Dubai, UAE
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <button
-              onClick={() => setModalOpen(true)}
-              className="flex items-center gap-3 bg-white font-bold text-base px-9 py-4 rounded-full shadow-xl hover:shadow-2xl transition-all duration-200"
-              style={{ color: "#b76e79" }}
-            >
-              <MessageCircle size={20} />
-              Book via WhatsApp
-            </button>
-            <a
-              href="tel:+971509852818"
-              title="Call Chauffeur Dubai Luxury Travel - UAE chauffeur service"
-              className="flex items-center gap-3 border-2 border-white text-white hover:bg-white hover:text-rose-400 font-bold text-base px-9 py-4 rounded-full transition-all duration-200"
-            >
-              <Phone size={20} />
-              +971 50 985 2818
-            </a>
-            <a
-              href="mailto:booking@chauffeurdubai.ae"
-              title="Email Chauffeur Dubai Luxury Travel UAE"
-              className="flex items-center gap-3 border-2 border-white/50 text-white/80 hover:bg-white/10 font-semibold text-base px-9 py-4 rounded-full transition-all duration-200"
-            >
-              [booking@chauffeurdubai.ae](mailto:booking@chauffeurdubai.ae)
-            </a>
-          </div>
+  <button
+    onClick={() => setModalOpen(true)}
+    className="flex items-center gap-3 bg-white font-bold text-base px-9 py-4 rounded-full shadow-xl hover:shadow-2xl transition-all duration-200"
+    style={{ color: "#b76e79" }}
+  >
+    <MessageCircle size={20} />
+    Book via WhatsApp
+  </button>
+  <a
+    href="tel:+971509852818"
+    title="Call Chauffeur Dubai Luxury Travel - UAE chauffeur service"
+    className="flex items-center gap-3 border-2 border-white text-white hover:bg-white hover:text-rose-400 font-bold text-base px-9 py-4 rounded-full transition-all duration-200"
+  >
+    <Phone size={20} />
+    +971 50 985 2818
+  </a>
+  <a
+    href="mailto:booking@chauffeurdubai.ae"
+    title="Email Chauffeur Dubai Luxury Travel UAE"
+    className="flex items-center gap-3 border-2 border-white/50 text-white/80 hover:bg-white/10 font-semibold text-base px-9 py-4 rounded-full transition-all duration-200"
+  >
+    booking@chauffeurdubai.ae
+  </a>
+</div>
         </div>
       </section>
 

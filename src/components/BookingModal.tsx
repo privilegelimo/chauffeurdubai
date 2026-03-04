@@ -293,7 +293,7 @@ export default function BookingModal({
                     )}
                   </div>
 
-                  {/* End Date — weekly/monthly only */}
+                  {/* End Date - weekly/monthly only */}
                   {isMultiDay && (
                     <div>
                       <label className={labelClass}>End Date</label>
@@ -319,7 +319,7 @@ export default function BookingModal({
                     </div>
                   )}
 
-                  {/* Pickup Time — hide for weekly/monthly */}
+                  {/* Pickup Time - hide for weekly/monthly */}
                   {!isMultiDay && (
                     <div>
                       <label className={labelClass}>Pickup Time</label>
@@ -404,7 +404,7 @@ export default function BookingModal({
                     </p>
                   </div>
 
-                  {/* Pickup Location — always shown */}
+                  {/* Pickup Location - always shown */}
                   <div>
                     <label className={labelClass}>
                       {needsRoute ? "Pickup Location" : "Primary Location / Base"}
@@ -419,7 +419,7 @@ export default function BookingModal({
                     </div>
                   </div>
 
-                  {/* Drop-off — only for transfer & point to point */}
+                  {/* Drop-off - only for transfer & point to point */}
                   {needsRoute && (
                     <div>
                       <label className={labelClass}>Drop-off Location</label>

@@ -98,7 +98,7 @@ export default function ContactPage() {
             </span>
           </h1>
           <p className="text-white/70 max-w-xl text-sm sm:text-base">
-            Book your luxury chauffeur service in Dubai, Abu Dhabi, and Sharjah — we&apos;re available
+            Book your luxury chauffeur service in Dubai, Abu Dhabi, and Sharjah - we&apos;re available
             24/7 via WhatsApp, phone, or email.
           </p>
         </div>
@@ -198,8 +198,8 @@ export default function ContactPage() {
                 Fastest Way to Book
               </h3>
               <p className="opacity-80 mb-6 text-sm leading-relaxed">
-                WhatsApp us your journey details — date, pickup, destination,
-                and number of passengers — and we&apos;ll confirm your{" "}
+                WhatsApp us your journey details - date, pickup, destination,
+                and number of passengers - and we&apos;ll confirm your{" "}
                 <strong>luxury chauffeur service in Dubai, Abu Dhabi, or Sharjah</strong> booking within
                 minutes.
               </p>
@@ -253,7 +253,7 @@ export default function ContactPage() {
                   Chauffeur Luxury Travel
                 </p>
                 <p className="text-zinc-500 text-xs mt-1">
-                 Suite 45, Shraifi One Building, Zaa&apos;beel St, Dubai, UAE — Serving Dubai, Abu Dhabi & Sharjah
+                 Suite 45, Shraifi One Building, Zaa&apos;beel St, Dubai, UAE - Serving Dubai, Abu Dhabi & Sharjah
                 </p>
               </div>
             </div>
@@ -265,7 +265,7 @@ export default function ContactPage() {
       <section className="py-16 px-4 text-center bg-white border-t border-rose-100">
         <p className="text-zinc-500 text-sm mb-4">
           Looking for a <strong className="text-zinc-700">chauffeur service near me</strong> in Dubai, Abu Dhabi, or Sharjah?
-          We cover all areas — Downtown Dubai, JBR, Business Bay, DIFC, Palm Jumeirah, Abu Dhabi Corniche, Sharjah City, and more.
+          We cover all areas - Downtown Dubai, JBR, Business Bay, DIFC, Palm Jumeirah, Abu Dhabi Corniche, Sharjah City, and more.
         </p>
         <div className="flex flex-col sm:flex-row justify-center gap-4">
           <a

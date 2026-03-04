@@ -124,7 +124,7 @@ export default function FleetPage() {
           </h1>
           <p className="text-white/70 max-w-2xl text-sm sm:text-base">
             From executive sedans and luxury SUVs to Rolls-Royce, stretch
-            limousines and luxury coaches — every vehicle comes with a
+            limousines and luxury coaches - every vehicle comes with a
             professional chauffeur, fixed pricing and 24/7 availability
             across Dubai, Abu Dhabi, and Sharjah.
           </p>
@@ -162,7 +162,7 @@ export default function FleetPage() {
               <p className="text-sm font-bold text-zinc-700">Filter by Fleet Class</p>
               <p className="text-xs text-zinc-400 mt-0.5">
                 {activeClass
-                  ? `Showing: ${CLASS_LABELS[activeClass]} — ${grouped[activeClass]?.length} vehicle${grouped[activeClass]?.length > 1 ? "s" : ""}`
+                  ? `Showing: ${CLASS_LABELS[activeClass]} - ${grouped[activeClass]?.length} vehicle${grouped[activeClass]?.length > 1 ? "s" : ""}`
                   : `Showing all ${allVehicles.length} vehicles across ${availableClasses.length} classes`}
               </p>
             </div>
@@ -273,7 +273,7 @@ export default function FleetPage() {
                     className="text-xs font-semibold uppercase tracking-widest mb-1"
                     style={{ color: "#b76e79" }}
                   >
-                    {grouped[cls].length} vehicle{grouped[cls].length > 1 ? "s" : ""} — Dubai, Abu Dhabi & Sharjah
+                    {grouped[cls].length} vehicle{grouped[cls].length > 1 ? "s" : ""} - Dubai, Abu Dhabi & Sharjah
                   </p>
                   <h2 className="text-2xl sm:text-3xl font-bold text-zinc-900">
                     {CLASS_LABELS[cls] ?? cls}
@@ -397,7 +397,7 @@ export default function FleetPage() {
                 ))}
               </div>
 
-              {/* Mobile — View Class link */}
+              {/* Mobile - View Class link */}
               <div className="mt-6 sm:hidden text-center">
                 <Link
                   href={`/fleet/${cls}`}
@@ -421,7 +421,7 @@ export default function FleetPage() {
         </h2>
         <p className="text-white/80 mb-8 max-w-xl mx-auto">
           Our team is available 24/7 to recommend the perfect vehicle for your
-          journey across Dubai, Abu Dhabi, and Sharjah — whatever your group size or occasion.
+          journey across Dubai, Abu Dhabi, and Sharjah - whatever your group size or occasion.
         </p>
         <div className="flex flex-col sm:flex-row justify-center gap-4">
           <a

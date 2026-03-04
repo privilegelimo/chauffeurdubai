@@ -9,7 +9,7 @@ import {
 export const metadata: Metadata = {
   title: "Chauffeur Services Dubai, Abu Dhabi & Sharjah | Airport Transfer, Corporate, Wedding Limo",
   description:
-    "Explore all luxury chauffeur services in Dubai, Abu Dhabi, and Sharjah — airport transfers, corporate chauffeur, wedding limo, VIP sightseeing, luxury van rental, and event transport. Available 24/7 across the UAE.",
+    "Explore all luxury chauffeur services in Dubai, Abu Dhabi, and Sharjah - airport transfers, corporate chauffeur, wedding limo, VIP sightseeing, luxury van rental, and event transport. Available 24/7 across the UAE.",
   alternates: { canonical: "https://chauffeurdubai.ae/services" },
 };
 
@@ -25,7 +25,7 @@ const services = [
     image: "/images/services/airport-transfer.webp",
     imageAlt: "Luxury airport transfer Dubai Abu Dhabi Sharjah - chauffeur meet and greet DXB AUH SHJ",
     description:
-      "The most reliable airport transfer service covering DXB, DWC, Abu Dhabi International (AUH), and Sharjah (SHJ) airports. VIP meet & greet, real-time flight tracking, and fixed pricing — no surprises.",
+      "The most reliable airport transfer service covering DXB, DWC, Abu Dhabi International (AUH), and Sharjah (SHJ) airports. VIP meet & greet, real-time flight tracking, and fixed pricing - no surprises.",
     features: [
       "Meet & greet with name board at arrivals",
       "Real-time flight tracking - we wait for delays",
@@ -85,10 +85,10 @@ const services = [
     image: "/images/services/luxury-van-rental.webp",
     imageAlt: "Luxury van rental Dubai Abu Dhabi Sharjah - Mercedes Sprinter VIP van hire with driver UAE",
     description:
-      "Spacious, stylish, and fully equipped — our luxury van rental service is perfect for group airport transfers, corporate roadshows, family trips, and VIP events across Dubai, Abu Dhabi, and Sharjah.",
+      "Spacious, stylish, and fully equipped - our luxury van rental service is perfect for group airport transfers, corporate roadshows, family trips, and VIP events across Dubai, Abu Dhabi, and Sharjah.",
     features: [
       "Mercedes Sprinter VIP, V-Class & Toyota Granvia available",
-      "7 to 19 seats — ideal for groups and families",
+      "7 to 19 seats - ideal for groups and families",
       "Professional chauffeur included",
       "Airport transfers, tours & corporate use across Dubai, Abu Dhabi & Sharjah",
       "Wi-Fi, leather seating & privacy glass",
@@ -105,7 +105,7 @@ const services = [
     image: "/images/services/full-day-chauffeur.webp",
     imageAlt: "Full day chauffeur service Dubai Abu Dhabi Sharjah - hourly car hire with driver UAE",
     description:
-      "Maximum flexibility — book a full day chauffeur service or hire by the hour across Dubai, Abu Dhabi, and Sharjah. Perfect for shopping, meetings, events, or anything in between.",
+      "Maximum flexibility - book a full day chauffeur service or hire by the hour across Dubai, Abu Dhabi, and Sharjah. Perfect for shopping, meetings, events, or anything in between.",
     features: [
       "Half-day, full-day, and hourly packages",
       "No hidden extras - fixed hourly rates",
@@ -144,7 +144,7 @@ const services = [
     image: "/images/services/wedding-limo.webp",
     imageAlt: "Wedding limo Dubai Abu Dhabi Sharjah - Rolls-Royce bridal car hire with chauffeur UAE",
     description:
-      "Make your wedding day unforgettable with our wedding limo service in Dubai, Abu Dhabi, and Sharjah. From Rolls-Royce rental with driver to stretch limousines — arrive in absolute style.",
+      "Make your wedding day unforgettable with our wedding limo service in Dubai, Abu Dhabi, and Sharjah. From Rolls-Royce rental with driver to stretch limousines - arrive in absolute style.",
     features: [
       "Rolls-Royce, stretch limos & luxury sedans available",
       "Decorated vehicle options for weddings",
@@ -164,7 +164,7 @@ const services = [
     image: "/images/services/private-driver.webp",
     imageAlt: "Private driver sightseeing Dubai Abu Dhabi - Burj Khalifa Sheikh Zayed Mosque tour chauffeur",
     description:
-      "Explore Dubai and Abu Dhabi's most iconic landmarks with a private sightseeing driver. Burj Khalifa, Palm Jumeirah, Dubai Marina, Sheikh Zayed Grand Mosque, and more — at your own pace.",
+      "Explore Dubai and Abu Dhabi's most iconic landmarks with a private sightseeing driver. Burj Khalifa, Palm Jumeirah, Dubai Marina, Sheikh Zayed Grand Mosque, and more - at your own pace.",
     features: [
       "Customised sightseeing routes across Dubai & Abu Dhabi",
       "Burj Khalifa, Palm Jumeirah, Dubai Marina, Sheikh Zayed Grand Mosque & more",
@@ -184,7 +184,7 @@ const services = [
     image: "/images/services/monthly-car-with-driver.webp",
     imageAlt: "Monthly car with driver service Dubai Abu Dhabi Sharjah - dedicated chauffeur hire UAE",
     description:
-      "Our monthly car with driver service gives you a dedicated professional chauffeur for daily commutes, school runs, and errands across Dubai, Abu Dhabi, and Sharjah — all at a fixed monthly rate.",
+      "Our monthly car with driver service gives you a dedicated professional chauffeur for daily commutes, school runs, and errands across Dubai, Abu Dhabi, and Sharjah - all at a fixed monthly rate.",
     features: [
       "Dedicated assigned chauffeur each month",
       "Fixed monthly pricing - no surprises",
@@ -239,7 +239,7 @@ export default function ServicesPage() {
           </h1>
           <p className="text-white/70 max-w-2xl text-sm sm:text-base">
             Airport transfers, corporate chauffeur, wedding limo, sightseeing,
-            event transport, and more — premium{" "}
+            event transport, and more - premium{" "}
             <strong className="text-white/90">luxury transport</strong> across Dubai, Abu Dhabi, Sharjah, and the UAE.
           </p>
         </div>

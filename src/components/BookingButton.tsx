@@ -182,7 +182,7 @@ export default function BookingButton({
                 {/* Form Body */}
                 <div className="p-5 space-y-4 max-h-[70vh] overflow-y-auto">
 
-                  {/* Booking Type — 3 col first row, 3 col second row */}
+                  {/* Booking Type - 3 col first row, 3 col second row */}
                   <div>
                     <label className="text-xs font-semibold text-zinc-500 uppercase tracking-wider mb-2 block">
                       Booking Type
@@ -347,7 +347,7 @@ export default function BookingButton({
                     />
                   </div>
 
-                  {/* Drop-off — transfer & point only */}
+                  {/* Drop-off - transfer & point only */}
                   {needsRoute && (
                     <div>
                       <label className="text-xs font-semibold text-zinc-500 uppercase tracking-wider mb-1 block">

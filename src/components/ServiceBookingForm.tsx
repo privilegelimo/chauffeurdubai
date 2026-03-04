@@ -414,7 +414,7 @@ export default function ServiceBookingForm({ service, ctaLabel }: Props) {
             >
               <span className={selectedClass ? "font-semibold text-zinc-800" : "text-zinc-300"}>
                 {selectedClass
-                  ? `${selectedClass.label} — from ${selectedClass.priceFrom}`
+                  ? `${selectedClass.label} - from ${selectedClass.priceFrom}`
                   : "Select a vehicle class…"}
               </span>
               <ChevronDown

@@ -103,11 +103,11 @@ export default async function CarPage({
         }}
       />
 
-      {/* ── HERO — Carousel ──────────────────────────────────────────────── */}
+      {/* ── HERO - Carousel ──────────────────────────────────────────────── */}
       <section className="relative pt-16">
         <VehicleImageCarousel images={vehicle.images} name={vehicle.name} />
 
-        {/* Overlay text — positioned over the carousel */}
+        {/* Overlay text - positioned over the carousel */}
         <div className="absolute bottom-8 left-0 right-0 px-4 sm:px-6 lg:px-8 z-30">
           <div className="max-w-7xl mx-auto">
             <Link
@@ -207,14 +207,14 @@ export default async function CarPage({
 
           </div>
 
-          {/* ── RIGHT — Booking Card ──────────────────────────────────────── */}
+          {/* ── RIGHT - Booking Card ──────────────────────────────────────── */}
           <div className="lg:col-span-1">
             <div className="sticky top-24 space-y-4">
               <div className="bg-white rounded-3xl border border-rose-100 shadow-lg overflow-hidden">
                 <div className="p-6" style={{ background: roseGoldGradient }}>
                   <p className="text-white/80 text-xs uppercase tracking-widest mb-1">Starting From</p>
                   <p className="text-white font-bold text-3xl">{vehicle.transferPrice}</p>
-                  <p className="text-white/70 text-xs mt-1">Airport Transfer — Dubai, Abu Dhabi & Sharjah</p>
+                  <p className="text-white/70 text-xs mt-1">Airport Transfer - Dubai, Abu Dhabi & Sharjah</p>
                 </div>
                 <div className="p-5 space-y-3">
                   <div className="flex justify-between items-center py-2 border-b border-rose-50 text-sm">
@@ -281,7 +281,7 @@ export default async function CarPage({
           Ready to Book the {vehicle.name} in Dubai, Abu Dhabi or Sharjah?
         </h2>
         <p className="text-white/80 text-sm mb-6">
-          Available 24/7 — airport transfers, corporate hire and special occasions across Dubai, Abu Dhabi, Sharjah, and the UAE.
+          Available 24/7 - airport transfers, corporate hire and special occasions across Dubai, Abu Dhabi, Sharjah, and the UAE.
         </p>
         <BookingButton
           carName={vehicle.name}

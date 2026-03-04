@@ -85,7 +85,7 @@ type Vehicle = {
 
 const allVehiclesData = allVehiclesRaw as Vehicle[];
 
-// CLASS_LABELS auto-generated from JSON — no more manual updates needed
+// CLASS_LABELS auto-generated from JSON - no more manual updates needed
 const CLASS_LABELS: Record<string, string> = Object.fromEntries(
   [...new Set(allVehiclesData.map((v) => v.classSlug))].map((slug) => [
     slug,

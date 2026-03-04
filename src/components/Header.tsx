@@ -8,9 +8,9 @@ import { Phone, Menu, X, ChevronDown } from "lucide-react";
 const serviceLinks = [
   { label: "Airport Transfer Dubai",         href: "/services/airport-transfer-dubai"           },
   { label: "Corporate Chauffeur Dubai",      href: "/services/corporate-chauffeur-dubai"        },
-  { label: "VIP Chauffeur Dubai",            href: "/services/vip-chauffeur-dubai"              },
   { label: "Luxury Van Rental Dubai",        href: "/services/luxury-van-rental-dubai"          },
   { label: "Full Day & Hourly Chauffeur",    href: "/services/full-day-chauffeur-dubai"         },
+  { label: "VIP Chauffeur Dubai",            href: "/services/vip-chauffeur-dubai"              },
   { label: "Event Transport Dubai",          href: "/services/event-transport-dubai"            },
   { label: "Wedding Limo Dubai",             href: "/services/wedding-limo-dubai"               },
   { label: "Private Driver Sightseeing",     href: "/services/private-driver-sightseeing-dubai" },
@@ -19,15 +19,15 @@ const serviceLinks = [
 
 const fleetLinks = [
   { label: "First Class",          href: "/fleet/first-class"                  },
+  { label: "Business Van",         href: "/fleet/business-van"                 },
+  { label: "Sprinter Luxury Van",  href: "/fleet/mercedes-sprinter-luxury-van" },
+  { label: "Sprinter Luxury VIP",  href: "/fleet/mercedes-sprinter-luxury-vip" },
   { label: "Rolls-Royce",          href: "/fleet/rolls-royce"                  },
   { label: "Business Class",       href: "/fleet/business-class"               },
   { label: "Luxury SUV",           href: "/fleet/luxury-suv"                   },
-  { label: "Business Van",         href: "/fleet/business-van"                 },
-  { label: "Sprinter Luxury VIP",  href: "/fleet/mercedes-sprinter-luxury-vip" },
-  { label: "Stretch Limousine",    href: "/fleet/stretch-limousine"            },
-  { label: "Sprinter Luxury Van",  href: "/fleet/mercedes-sprinter-luxury-van" },
-  { label: "Standard Bus",         href: "/fleet/standard-bus"                 },
   { label: "Luxury Coach Bus",     href: "/fleet/luxury-coach-bus"             },
+  { label: "Stretch Limousine",    href: "/fleet/stretch-limousine"            },
+  { label: "Standard Bus",         href: "/fleet/standard-bus"                 },
 ];
 
 const roseGoldGradient = "linear-gradient(135deg, #b76e79, #c9956c)";
@@ -153,7 +153,7 @@ export default function Header() {
             <Link href="/contact" className="text-zinc-600 hover:text-rose-400 text-sm font-medium transition-colors">Contact</Link>
           </nav>
 
-          {/* CTA — desktop */}
+          {/* CTA - desktop */}
           <div className="hidden md:flex items-center">
             <a
               href="tel:+971509852818"

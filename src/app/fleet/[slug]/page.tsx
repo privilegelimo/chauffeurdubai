@@ -44,7 +44,7 @@ const classInfo: Record<string, { label: string; description: string; image: str
   "first-class": {
     label: "First Class",
     description:
-      "The absolute pinnacle of chauffeur-driven luxury in the UAE. Mercedes S 500 and BMW 7 Series — reserved for clients in Dubai, Abu Dhabi, and Sharjah who accept nothing but the finest.",
+      "The absolute pinnacle of chauffeur-driven luxury in the UAE. Mercedes S 500 and BMW 7 Series - reserved for clients in Dubai, Abu Dhabi, and Sharjah who accept nothing but the finest.",
     image: "/images/vehicles/mercedes-s500-1.webp",
   },
   "business-van": {
@@ -56,43 +56,43 @@ const classInfo: Record<string, { label: string; description: string; image: str
   "mercedes-sprinter-luxury-van": {
     label: "Mercedes Sprinter Luxury Van",
     description:
-      "Premium Mercedes Sprinter vans for large groups — Ultra Luxury Van and 19 Seater. The benchmark for group airport transfers and corporate events across Dubai, Abu Dhabi, and Sharjah.",
+      "Premium Mercedes Sprinter vans for large groups - Ultra Luxury Van and 19 Seater. The benchmark for group airport transfers and corporate events across Dubai, Abu Dhabi, and Sharjah.",
     image: "/images/vehicles/mercedes-sprinter-19-1.webp",
   },
   "mercedes-sprinter-luxury-vip": {
     label: "Mercedes Sprinter Luxury VIP",
     description:
-      "Bespoke VIP Sprinter interiors handcrafted for the most discerning clients in Dubai, Abu Dhabi, and Sharjah — Avant Garde VIP and Business Class VIP with starlight ceilings and champagne fridges.",
+      "Bespoke VIP Sprinter interiors handcrafted for the most discerning clients in Dubai, Abu Dhabi, and Sharjah - Avant Garde VIP and Business Class VIP with starlight ceilings and champagne fridges.",
     image: "/images/vehicles/mercedes-sprinter-avant-garde-1.webp",
   },
   "luxury-suv": {
     label: "Luxury SUV",
     description:
-      "Bold, spacious, and commanding — GMC Yukon Denali, Cadillac Escalade, and Range Rover for families and executive groups across Dubai, Abu Dhabi, and Sharjah who need presence and practicality.",
+      "Bold, spacious, and commanding - GMC Yukon Denali, Cadillac Escalade, and Range Rover for families and executive groups across Dubai, Abu Dhabi, and Sharjah who need presence and practicality.",
     image: "/images/vehicles/cadillac-escalade-1.webp",
   },
   "rolls-royce": {
     label: "Rolls-Royce",
     description:
-      "The ultimate expression of automotive prestige across the UAE. Rolls-Royce Ghost and Cullinan with a professional chauffeur in Dubai and Abu Dhabi — for occasions that demand nothing less than perfection.",
+      "The ultimate expression of automotive prestige across the UAE. Rolls-Royce Ghost and Cullinan with a professional chauffeur in Dubai and Abu Dhabi - for occasions that demand nothing less than perfection.",
     image: "/images/vehicles/rolls-royce-cullinan-1.webp",
   },
   "stretch-limousine": {
     label: "Stretch Limousine",
     description:
-      "Make the grandest of entrances in Dubai, Abu Dhabi, or Sharjah. Our stretch limousines — GMC Yukon, Diamond, Chevy Suburban, and Chrysler Emerald — are the ultimate statement for weddings, VIP events, and celebrations.",
+      "Make the grandest of entrances in Dubai, Abu Dhabi, or Sharjah. Our stretch limousines - GMC Yukon, Diamond, Chevy Suburban, and Chrysler Emerald - are the ultimate statement for weddings, VIP events, and celebrations.",
     image: "/images/vehicles/gmc-yukon-limousine-1.webp",
   },
   "standard-bus": {
     label: "Standard Bus",
     description:
-      "Reliable group transport for every occasion across Dubai, Abu Dhabi, and Sharjah — Toyota Coaster 21 Seater and Hiace 11 Seater for corporate events, airport transfers, and tours.",
+      "Reliable group transport for every occasion across Dubai, Abu Dhabi, and Sharjah - Toyota Coaster 21 Seater and Hiace 11 Seater for corporate events, airport transfers, and tours.",
     image: "/images/vehicles/50-seater-luxury-coach-1.webp",
   },
   "luxury-coach-bus": {
     label: "Luxury Coach Bus",
     description:
-      "Premium luxury coaches for large group travel across Dubai, Abu Dhabi, and Sharjah — 35 Seater and 50 Seater Luxury Coaches with underfloor luggage bays, onboard Wi-Fi, and reclining seats for corporate events, exhibitions, and airport runs.",
+      "Premium luxury coaches for large group travel across Dubai, Abu Dhabi, and Sharjah - 35 Seater and 50 Seater Luxury Coaches with underfloor luggage bays, onboard Wi-Fi, and reclining seats for corporate events, exhibitions, and airport runs.",
     image: "/images/vehicles/toyota-hiace-11-1.webp",
   },
 };
@@ -133,7 +133,7 @@ export default async function FleetClassPage({
   return (
     <>
       {/* ── HERO ──────────────────────────────────────────────────── */}
-      <section className="relative h-72 sm:h-96 flex items-end overflow-hidden pt-16">
+      <section className="relative h-72 sm:h-125 flex items-end overflow-hidden pt-16">
         <Image
           src={info.image}
           alt={`${info.label} chauffeur Dubai Abu Dhabi Sharjah UAE`}
@@ -165,7 +165,7 @@ export default async function FleetClassPage({
                 WebkitTextFillColor: "transparent",
               }}
             >
-              Chauffeur — Dubai, Abu Dhabi & Sharjah
+              Chauffeur - Dubai, Abu Dhabi & Sharjah
             </span>
           </h1>
           <p className="text-white/70 mt-2 max-w-xl">{info.description}</p>

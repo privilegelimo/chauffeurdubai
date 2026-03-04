@@ -40,12 +40,12 @@ export default function Footer() {
               <Image
                 src="/images/logo.png"
                 alt="Chauffeur Dubai Luxury Travel Logo"
-                width={90}
-                height={40}
+                width={180}
+                height={70}
                 className="object-contain brightness-0 invert"
               />
               <span
-                className="text-[9px] font-semibold tracking-widest uppercase leading-none"
+                className="text-[18px] font-semibold tracking-widest uppercase leading-none"
                 style={{
                   background: "linear-gradient(135deg, #b76e79, #e8a4a0, #c9956c)",
                   WebkitBackgroundClip: "text",
@@ -61,10 +61,10 @@ export default function Footer() {
               corporate travel, and VIP events across Dubai, Abu Dhabi, Sharjah, and the UAE.
             </p>
             <div className="flex gap-4 mt-5">
-              <a href="#" className="text-zinc-500 hover:text-rose-300 transition-colors">
+              <a href="https://www.instagram.com/privilegeluxurylimo/" className="text-zinc-500 hover:text-rose-300 transition-colors">
                 <Instagram size={20} />
               </a>
-              <a href="#" className="text-zinc-500 hover:text-rose-300 transition-colors">
+              <a href="https://www.facebook.com/privilegelimo/" className="text-zinc-500 hover:text-rose-300 transition-colors">
                 <Facebook size={20} />
               </a>
             </div>
@@ -116,13 +116,13 @@ export default function Footer() {
               </li>
               <li className="flex items-center gap-2">
                 <Mail size={15} className="text-rose-300 shrink-0" />
-                <a href="mailto:info@chauffeurdubai.ae" className="hover:text-rose-300 transition-colors">
-                  info@chauffeurdubai.ae
+                <a href="mailto:booking@chauffeurdubai.ae" className="hover:text-rose-300 transition-colors">
+                  booking@chauffeurdubai.ae
                 </a>
               </li>
               <li className="flex items-start gap-2">
                 <MapPin size={15} className="text-rose-300 mt-0.5 shrink-0" />
-                <span>Dubai, Abu Dhabi & Sharjah — United Arab Emirates</span>
+                <span>Dubai, Abu Dhabi & Sharjah - United Arab Emirates</span>
               </li>
             </ul>
 
@@ -153,7 +153,7 @@ export default function Footer() {
 
         {/* ── BOTTOM BAR ────────────────────────────────────────────────── */}
         <div className="border-t border-zinc-800 pt-6 flex flex-col sm:flex-row justify-between items-center gap-3 text-xs text-zinc-600">
-          <p>© {new Date().getFullYear()} ChauffeurDubai.ae — All rights reserved.</p>
+          <p>© {new Date().getFullYear()} ChauffeurDubai.ae - All rights reserved.</p>
           <p>Luxury Chauffeur Service Dubai | Private Driver Dubai | Airport Transfer Dubai, Abu Dhabi & Sharjah</p>
         </div>
 

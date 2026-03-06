@@ -168,7 +168,7 @@ export default function ContactPage() {
               <div className="flex gap-3">
                 {[
                   { icon: Instagram, href: "https://www.instagram.com/privilegeluxurylimo/", label: "Instagram" },
-                  { icon: Facebook, href: "https://www.facebook.com/chauffeurdubai.ae", label: "Facebook" },
+                  { icon: Facebook, href: "https://www.facebook.com/privilegelimo/", label: "Facebook" },
                   { icon: Youtube, href: "https://www.youtube.com/@privilegechauffeurandlimousine", label: "YouTube" },
                 ].map(({ icon: SocialIcon, href, label }) => (
                   <a
@@ -262,29 +262,36 @@ export default function ContactPage() {
       </section>
 
       {/* ── BOTTOM CTA ────────────────────────────────────────────────── */}
-      <section className="py-16 px-4 text-center bg-white border-t border-rose-100">
-        <p className="text-zinc-500 text-sm mb-4">
-          Looking for a <strong className="text-zinc-700">chauffeur service near me</strong> in Dubai, Abu Dhabi, or Sharjah?
-          We cover all areas - Downtown Dubai, JBR, Business Bay, DIFC, Palm Jumeirah, Abu Dhabi Corniche, Sharjah City, and more.
-        </p>
-        <div className="flex flex-col sm:flex-row justify-center gap-4">
-          <a
-            href="tel:+971509852818"
-            className="inline-flex items-center justify-center gap-2 font-bold text-white px-8 py-4 rounded-full shadow-lg hover:opacity-90 transition-all"
-            style={{ background: roseGoldGradient }}
-          >
-            <Phone size={18} />
-            +971 50 985 2818
-          </a>
-          <a
-            href="tel:+971509852818"
-            className="inline-flex items-center justify-center gap-2 font-semibold border-2 border-rose-300 text-rose-400 hover:bg-rose-50 px-8 py-4 rounded-full transition-all"
-          >
-            <Phone size={18} />
-            +971 50 985 2818
-          </a>
-        </div>
-      </section>
+<section
+  className="py-16 px-4 text-center border-t border-rose-100"
+  style={{ background: roseGoldGradient }}
+>
+  <p className="text-white/80 text-sm mb-4">
+    Looking for a <strong className="text-white">chauffeur service near me</strong> in Dubai, Abu Dhabi, or Sharjah?
+    We cover all areas - Downtown Dubai, JBR, Business Bay, DIFC, Palm Jumeirah, Abu Dhabi Corniche, Sharjah City, and more.
+  </p>
+  <div className="flex flex-col sm:flex-row justify-center gap-4">
+    <a
+      href="https://wa.me/971509852818"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="inline-flex items-center justify-center gap-2 bg-white font-bold px-8 py-4 rounded-full shadow-lg hover:shadow-xl transition-all"
+      style={{ color: "#b76e79" }}
+      title="WhatsApp Chauffeur Dubai Luxury Travel Dubai Abu Dhabi Sharjah"
+    >
+      <MessageCircle size={18} />
+      WhatsApp Us
+    </a>
+    <a
+      href="tel:+971509852818"
+      className="inline-flex items-center justify-center gap-2 border-2 border-white text-white hover:bg-white hover:text-rose-400 font-bold px-8 py-4 rounded-full transition-all"
+      title="Call Chauffeur Dubai Luxury Travel - chauffeur service Dubai Abu Dhabi Sharjah"
+    >
+      <Phone size={18} />
+      +971 50 985 2818
+    </a>
+  </div>
+</section>
     </>
   );
 }

@@ -462,7 +462,7 @@ export default function UAEToOmanPage() {
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-            {popularRoutes.map(({ from, to, distance, duration, price, note }) => (
+            {popularRoutes.map(({ from, to, distance, duration, price }) => (
               <div
                 key={`${from}-${to}`}
                 className="bg-white rounded-2xl p-6 border border-rose-100 hover:border-rose-300 shadow-sm hover:shadow-lg transition-all duration-300"

@@ -487,9 +487,6 @@ export default function UAEToOmanPage() {
                     <span className="font-medium text-zinc-700">{duration}</span>
                   </div>
                 </div>
-
-                <p className="text-xs text-zinc-400 italic mb-4">{note}</p>
-
                 <div
                   className="text-sm font-bold px-3 py-2 rounded-xl text-center text-white mb-3"
                   style={{ background: roseGoldGradient }}

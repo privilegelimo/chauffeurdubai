@@ -61,21 +61,20 @@ const jsonLd = {
     priceSpecification: {
       "@type": "PriceSpecification",
       priceCurrency: "AED",
-      price: "From AED 900",
+      price: "From AED 2000",
     },
   },
 };
 
 // ─── Routes ────────────────────────────────────────────────────────────────
 const popularRoutes = [
-  { from: "Dubai",          to: "Muscat",  distance: "~530 km",   duration: "~5–6 hrs",     price: "From AED 900",   note: "Most popular UAE–Oman route"   },
-  { from: "Abu Dhabi",      to: "Muscat",  distance: "~550 km",   duration: "~5.5–6.5 hrs", price: "From AED 950",   note: "Direct intercity transfer"     },
-  { from: "Sharjah",        to: "Muscat",  distance: "~520 km",   duration: "~5–6 hrs",     price: "From AED 900",   note: "Fixed transparent pricing"     },
-  { from: "Dubai",          to: "Salalah", distance: "~1,100 km", duration: "~11–12 hrs",   price: "From AED 1,800", note: "Long-distance luxury transfer" },
-  { from: "Abu Dhabi",      to: "Sohar",   distance: "~350 km",   duration: "~3.5–4 hrs",   price: "From AED 700",   note: "Popular business route"        },
-  { from: "Dubai",          to: "Nizwa",   distance: "~600 km",   duration: "~6–7 hrs",     price: "From AED 1,000", note: "Cultural & tourism transfer"   },
-  { from: "Ras Al Khaimah", to: "Muscat",  distance: "~420 km",   duration: "~4–5 hrs",     price: "From AED 800",   note: "Shortest UAE–Oman route"       },
-  { from: "Dubai",          to: "Sur",     distance: "~680 km",   duration: "~7–8 hrs",     price: "From AED 1,100", note: "Coastal Oman transfer"         },
+  { from: "Dubai",          to: "Muscat",  distance: "~450 km",   duration: "~4.5–5.5 hrs",     price: "From AED 2500"},
+  { from: "Abu Dhabi",      to: "Muscat",  distance: "~500 km",   duration: "~5–6 hrs", price: "From AED 3200"},
+  { from: "Dubai",          to: "Sohar",   distance: "~250 km",   duration: "~3–4 hrs",     price: "From AED 2000"},
+  { from: "Dubai",          to: "Salalah", distance: "~1,250 km", duration: "~12–13 hrs",   price: "From AED 6000"},
+  { from: "Abu Dhabi",      to: "Sohar",   distance: "~300 km",   duration: "~3–4 hrs",   price: "From AED 3000"},
+  { from: "Abu Dhabi",      to: "Salalah",  distance: "~1300 km",   duration: "~13–14 hrs",    price: "From AED 7000"},
+  
 ];
 
 // ─── Features ──────────────────────────────────────────────────────────────
@@ -462,7 +461,7 @@ export default function UAEToOmanPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {popularRoutes.map(({ from, to, distance, duration, price, note }) => (
               <div
                 key={`${from}-${to}`}

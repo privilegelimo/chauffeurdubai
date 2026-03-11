@@ -30,9 +30,9 @@ const contactDetails = [
   {
     icon: Mail,
     label: "Email",
-    value: "booking@chauffeurdubai.ae.com",
+    value: "booking@chauffeurdubai.ae",
     sub: "We reply within the hour",
-    href: "mailto:booking@chauffeurdubai.ae.com",
+    href: "mailto:booking@chauffeurdubai.ae",
   },
   {
     icon: MapPin,

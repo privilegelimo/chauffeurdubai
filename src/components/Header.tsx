@@ -11,6 +11,7 @@ const serviceLinks = [
   { label: "Luxury Van Rental Dubai",        href: "/services/luxury-van-rental-dubai"          },
   { label: "Full Day & Hourly Chauffeur",    href: "/services/full-day-chauffeur-dubai"         },
   { label: "VIP Chauffeur Dubai",            href: "/services/vip-chauffeur-dubai"              },
+  { label: "UAE to Oman Chauffeur",          href: "/services/uae-to-oman-chauffeur-services"   },
   { label: "Event Transport Dubai",          href: "/services/event-transport-dubai"            },
   { label: "Wedding Limo Dubai",             href: "/services/wedding-limo-dubai"               },
   { label: "Private Driver Sightseeing",     href: "/services/private-driver-sightseeing-dubai" },

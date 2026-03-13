@@ -213,7 +213,7 @@ export default async function AdminPage() {
                 >
                   View
                 </Link>
-                <AdminDelete slug={post!.slug} sha={post!.sha} />
+<AdminDelete slug={post!.slug} />
               </div>
             </div>
           ))}

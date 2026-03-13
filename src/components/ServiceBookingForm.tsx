@@ -193,7 +193,7 @@ export default function ServiceBookingForm({ service, ctaLabel }: Props) {
 
   function buildMessage() {
     return [
-      `🚘 *New Booking Request - Chauffeur Dubai*`,
+      `*New Booking Request - Chauffeur Dubai*`,
       ``,
       `*Service:* ${service}`,
       selectedClass

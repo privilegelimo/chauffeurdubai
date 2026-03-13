@@ -10,7 +10,7 @@
     "price5hr": "AED 600 / 5 Hr",
     "price10hr": "AED 900 / 10 Hr",
     "images": [
-      "/images/vehicles/lexus-es300-1.webp",
+      "/images/vehicles/lexus-es300-new.webp",
       "/images/vehicles/lexus-es300-2.webp",
       "/images/vehicles/lexus-es300-3.webp",
       "/images/vehicles/lexus-es300-4.webp"
@@ -68,7 +68,10 @@
     "transferPrice": "AED 300",
     "price5hr": "AED 600 / 5 Hr",
     "price10hr": "AED 900 / 10 Hr",
-    "images": [],
+    "images": [
+      "/images/vehicles/byd-han-ev-1.webp",
+      "/images/vehicles/byd-han-ev-2.webp"
+    ],
     "metaDesc": "Book a BYD Han EV chauffeur in Dubai, Abu Dhabi & Sharjah. Premium all-electric executive sedan with professional driver. From AED 350.",
     "seoKeywords": "BYD Han EV chauffeur Dubai, electric car hire Dubai, eco luxury sedan Dubai",
     "desc": "The BYD Han EV is a premium all-electric sedan blending cutting-edge technology with executive comfort for the eco-conscious traveller.",

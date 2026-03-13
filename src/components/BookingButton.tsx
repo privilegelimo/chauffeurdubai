@@ -88,7 +88,7 @@ export default function BookingButton({
 
   function handleSend() {
     const msg = [
-      `🚘 *New Booking Request*`,
+      `*New Booking Request*`,
       ``,
       `*Vehicle:* ${carName} (${carCategory})`,
       `*Booking Type:* ${bookingTypeLabel}`,

@@ -1,12 +1,11 @@
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import "./globals.css";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-import Script from "next/script";
-import ChatWidget from "@/components/ChatWidget";
+// app/layout.tsx
+import type { Metadata } from "next"
+import { Inter } from "next/font/google"
+import "./globals.css"
+import Script from "next/script"
+import ConditionalLayout from "@/components/ConditionalLayout"
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://chauffeurdubai.ae"),
@@ -72,13 +71,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://chauffeurdubai.ae",
   },
-};
+}
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
       <head>
@@ -116,11 +111,8 @@ export default function RootLayout({
           `}
         </Script>
 
-        <Header />
-        <main>{children}</main>
-        <ChatWidget />
-        <Footer />
+        <ConditionalLayout>{children}</ConditionalLayout>
       </body>
     </html>
-  );
+  )
 }

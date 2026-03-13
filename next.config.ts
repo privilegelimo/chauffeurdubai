@@ -20,7 +20,22 @@ const nextConfig: NextConfig = {
       { source: "/index.html", destination: "/",  permanent: true },
       { source: "/home.html",  destination: "/",  permanent: true },
 
-      // ── Services — old indexed Google URLs → actual current slugs ─────────
+      // ── Old WordPress flat vehicle pages (new 404s) ──────────────────────
+      { source: "/mercedes-benz-s450",                      destination: "/fleet/first-class/mercedes-s500",                                          permanent: true },
+      { source: "/mercedes-s-500",                          destination: "/fleet/first-class/mercedes-s500",                                          permanent: true },
+      { source: "/mercedes-v-300-tiffany",                  destination: "/fleet/business-van/mercedes-v300-tiffany",                                 permanent: true },
+      { source: "/chauffeur-service-in-dubai",              destination: "/services",                                                                 permanent: true },
+      { source: "/50-seater-luxury-bus",                    destination: "/fleet/luxury-coach-bus/50-seater-luxury-coach",                            permanent: true },
+      { source: "/luxury-bus-rental-in-uae",                destination: "/fleet/luxury-coach-bus/50-seater-luxury-coach",                            permanent: true },
+      { source: "/mercedes-sprinter-ultra-luxury-van",      destination: "/fleet/mercedes-sprinter-luxury-van/mercedes-sprinter-ultra-luxury",        permanent: true },
+      { source: "/mercedes-benz-sprinter-19-seats",         destination: "/fleet/mercedes-sprinter-luxury-van/mercedes-sprinter-19",                  permanent: true },
+      { source: "/mercedes-sprinter-avant-garde-vip",       destination: "/fleet/mercedes-sprinter-luxury-vip/mercedes-sprinter-avant-garde",         permanent: true },
+      { source: "/luxury-van-rental-in-uae",                destination: "/fleet/mercedes-sprinter-luxury-van/mercedes-sprinter-ultra-luxury",        permanent: true },
+      { source: "/rent-a-car-with-driver-in-dubai-chauffeur-service-dubai",                                               destination: "/services/corporate-chauffeur-dubai",  permanent: true },
+      { source: "/mercedes-sprinter-rental-in-dubai-experience-the-luxury-with-privilege-travel-llc",                    destination: "/fleet/mercedes-sprinter-luxury-van/mercedes-sprinter-ultra-luxury", permanent: true },
+      { source: "/airport-transfers-in-uae-a-convenient-and-reliable-service-by-privilege-travel-llc-dubai",             destination: "/services/airport-transfer-dubai",     permanent: true },
+
+      // ── Services — old indexed Google URLs → actual current slugs ────────
       { source: "/services/airport-transfer",       destination: "/services/airport-transfer-dubai",            permanent: true },
       { source: "/services/corporate-chauffeur",    destination: "/services/corporate-chauffeur-dubai",         permanent: true },
       { source: "/services/vip-chauffeur",          destination: "/services/vip-chauffeur-dubai",               permanent: true },
@@ -32,7 +47,7 @@ const nextConfig: NextConfig = {
       { source: "/services/shopping-chauffeur",     destination: "/services/private-driver-sightseeing-dubai",  permanent: true },
       { source: "/services/uae-to-oman-chauffeur",  destination: "/landing-page/uae-to-oman-chauffeur-services", permanent: true },
 
-      // ── Services — old flat WordPress URLs ───────────────────────────────
+      // ── Services — old flat WordPress URLs ──────────────────────────────
       { source: "/service",              destination: "/services",                              permanent: true },
       { source: "/our-services",         destination: "/services",                              permanent: true },
       { source: "/chauffeur-service",    destination: "/services",                              permanent: true },
@@ -57,7 +72,7 @@ const nextConfig: NextConfig = {
       { source: "/dubai-to-oman",        destination: "/landing-page/uae-to-oman-chauffeur-services", permanent: true },
       { source: "/uae-to-oman",          destination: "/landing-page/uae-to-oman-chauffeur-services", permanent: true },
 
-      // ── Locations — no pages exist, redirect to homepage ─────────────────
+      // ── Locations ────────────────────────────────────────────────────────
       { source: "/locations",              destination: "/",  permanent: false },
       { source: "/locations/:path*",       destination: "/",  permanent: false },
       { source: "/location",               destination: "/",  permanent: false },
@@ -69,7 +84,7 @@ const nextConfig: NextConfig = {
       { source: "/chauffeur-rak",          destination: "/",  permanent: false },
       { source: "/chauffeur-fujairah",     destination: "/",  permanent: false },
 
-      // ── Routes — redirect to UAE to Oman landing page ─────────────────────
+      // ── Routes ───────────────────────────────────────────────────────────
       { source: "/routes/dubai-to-muscat",          destination: "/landing-page/uae-to-oman-chauffeur-services", permanent: true },
       { source: "/routes/abu-dhabi-to-muscat",      destination: "/landing-page/uae-to-oman-chauffeur-services", permanent: true },
       { source: "/routes/sharjah-to-muscat",        destination: "/landing-page/uae-to-oman-chauffeur-services", permanent: true },
@@ -85,20 +100,18 @@ const nextConfig: NextConfig = {
       { source: "/abudhabi-muscat",                 destination: "/landing-page/uae-to-oman-chauffeur-services", permanent: true },
       { source: "/sharjah-muscat",                  destination: "/landing-page/uae-to-oman-chauffeur-services", permanent: true },
 
-      // ── Blog — no page exists ─────────────────────────────────────────────
-      { source: "/blog",        destination: "/",  permanent: false },
-      { source: "/blog/:path*", destination: "/",  permanent: false },
-      { source: "/blogs",       destination: "/",  permanent: false },
-      { source: "/news",        destination: "/",  permanent: false },
-      { source: "/articles",    destination: "/",  permanent: false },
+      // ── Blog ─────────────────────────────────────────────────────────────
+      { source: "/blogs",    destination: "/blog", permanent: false },
+      { source: "/news",     destination: "/blog", permanent: false },
+      { source: "/articles", destination: "/blog", permanent: false },
 
-      // ── Fleet index ───────────────────────────────────────────────────────
+      // ── Fleet index ──────────────────────────────────────────────────────
       { source: "/cars",        destination: "/fleet", permanent: true },
       { source: "/vehicles",    destination: "/fleet", permanent: true },
       { source: "/our-fleet",   destination: "/fleet", permanent: true },
       { source: "/luxury-cars", destination: "/fleet", permanent: true },
 
-      // ── FLEET VEHICLES — old flat URLs → /fleet/[slug]/[car] ─────────────
+      // ── FLEET VEHICLES ───────────────────────────────────────────────────
 
       // Business Class
       { source: "/lexus-es300",                  destination: "/fleet/business-class/lexus-es300",              permanent: true },
@@ -195,21 +208,21 @@ const nextConfig: NextConfig = {
       { source: "/luxury-coach",                  destination: "/fleet/luxury-coach-bus/50-seater-luxury-coach", permanent: true },
       { source: "/coach-bus",                     destination: "/fleet/luxury-coach-bus/50-seater-luxury-coach", permanent: true },
 
-      // ── About / Contact ───────────────────────────────────────────────────
+      // ── About / Contact ──────────────────────────────────────────────────
       { source: "/about-us",     destination: "/about",   permanent: true },
       { source: "/who-we-are",   destination: "/about",   permanent: true },
       { source: "/contact-us",   destination: "/contact", permanent: true },
       { source: "/get-in-touch", destination: "/contact", permanent: true },
       { source: "/reach-us",     destination: "/contact", permanent: true },
 
-      // ── Booking ───────────────────────────────────────────────────────────
+      // ── Booking ──────────────────────────────────────────────────────────
       { source: "/book",      destination: "/contact", permanent: true },
       { source: "/booking",   destination: "/contact", permanent: true },
       { source: "/reserve",   destination: "/contact", permanent: true },
       { source: "/quote",     destination: "/contact", permanent: true },
       { source: "/get-quote", destination: "/contact", permanent: true },
 
-      // ── Trailing slash cleanup ────────────────────────────────────────────
+      // ── Trailing slash cleanup ───────────────────────────────────────────
       { source: "/services/", destination: "/services", permanent: true },
       { source: "/fleet/",    destination: "/fleet",    permanent: true },
       { source: "/about/",    destination: "/about",    permanent: true },

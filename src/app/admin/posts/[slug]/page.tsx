@@ -41,7 +41,7 @@ export default async function PostPreviewPage({ params }: { params: { slug: stri
           >
             Edit Post
           </Link>
-          <AdminDelete slug={params.slug} sha={file.sha} />
+          <AdminDelete slug={params.slug} />
         </div>
       </header>
 

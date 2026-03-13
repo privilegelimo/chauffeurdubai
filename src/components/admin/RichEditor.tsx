@@ -300,7 +300,7 @@ function htmlToMdx(html: string): string {
     .replace(/<code[^>]*>(.*?)<\/code>/gi,(_, c) => `\`${strip(c)}\``)
     .replace(/<a[^>]*href="([^"]*)"[^>]*>(.*?)<\/a>/gi, (_, href, c) => `[${strip(c)}](${href})`)
     .replace(/<img[^>]*src="([^"]*)"[^>]*\/?>/gi, (_, src) => `![image](${src})\n\n`)
-    .replace(/<blockquote[^>]*>(.*?)<\/blockquote>/gis,(_, c) => `> ${strip(c).trim()}\n\n`)
+    .replace(/<blockquote[^>]*>([\s\S]*?)<\/blockquote>/gi, (_, c) => `> ${strip(c).trim()}\n\n`)
     .replace(/<li[^>]*>(.*?)<\/li>/gi,   (_, c) => `- ${strip(c)}\n`)
     .replace(/<\/ul>|<\/ol>/gi,          () => "\n")
     .replace(/<ul[^>]*>|<ol[^>]*>/gi,    () => "")

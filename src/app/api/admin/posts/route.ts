@@ -1,41 +1,44 @@
-import { NextRequest, NextResponse } from "next/server";
-import { requireAuth } from "@/lib/auth";
-import { listFiles, getFile, upsertFile } from "@/lib/github";
-import matter from "gray-matter";
+import { NextRequest, NextResponse } from "next/server"
+import fs from "fs"
+import path from "path"
+import matter from "gray-matter"
 
-// GET — list all posts
-export async function GET() {
-  if (!await requireAuth()) return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+const BLOG_DIR = path.join(process.cwd(), "src/content/blog")
 
-  const files = await listFiles("src/content/blog");
-  const posts = await Promise.all(
-    files
-      .filter((f) => f.name.endsWith(".mdx"))
-      .map(async (f) => {
-        const file = await getFile(f.path);
-        if (!file) return null;
-        const { data } = matter(file.content);
-        return { slug: f.name.replace(".mdx", ""), ...data };
-      })
-  );
-
-  return NextResponse.json(posts.filter(Boolean));
-}
-
-// POST — create new post
 export async function POST(req: NextRequest) {
-  if (!await requireAuth()) return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+  const body = await req.json()
 
-  const { slug, frontmatter, content } = await req.json();
-  const path = `src/content/blog/${slug}.mdx`;
+  if (!body.title || !body.slug || !body.content) {
+    return NextResponse.json({ error: "Title, slug, and content are required" }, { status: 400 })
+  }
 
-  const existing = await getFile(path);
-  if (existing) return NextResponse.json({ error: "Post already exists" }, { status: 409 });
+  const filepath = path.join(BLOG_DIR, `${body.slug}.mdx`)
+  if (fs.existsSync(filepath)) {
+    return NextResponse.json({ error: "A post with this slug already exists" }, { status: 409 })
+  }
 
-  const mdx = matter.stringify(content, frontmatter);
-  const ok = await upsertFile(path, mdx, `Add blog post: ${slug}`);
+  const frontmatter = {
+    title:           body.title,
+    slug:            body.slug,
+    date:            body.date || new Date().toISOString().split("T")[0],
+    description:     body.description,
+    excerpt:         body.description,
+    category:        body.category || "General",
+    tags:            Array.isArray(body.tags) ? body.tags : [],
+    image:           body.image || "",
+    coverImage:      body.image || "",
+    author:          body.author || "Chauffeur Dubai",
+    published:       body.published ?? false,
+    metaTitle:       body.metaTitle || body.title,
+    metaDescription: body.metaDescription || body.description,
+    canonicalUrl:    body.canonicalUrl || `https://chauffeurdubai.ae/blog/${body.slug}`,
+    focusKeyword:    body.focusKeyword || "",
+  }
 
-  return ok
-    ? NextResponse.json({ success: true })
-    : NextResponse.json({ error: "Failed to create post" }, { status: 500 });
+  if (!fs.existsSync(BLOG_DIR)) fs.mkdirSync(BLOG_DIR, { recursive: true })
+
+  const fileContent = matter.stringify(body.content, frontmatter)
+  fs.writeFileSync(filepath, fileContent, "utf8")
+
+  return NextResponse.json({ success: true, slug: body.slug })
 }

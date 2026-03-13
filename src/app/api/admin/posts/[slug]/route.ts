@@ -1,44 +1,76 @@
-import { NextRequest, NextResponse } from "next/server";
-import { requireAuth } from "@/lib/auth";
-import { getFile, upsertFile, deleteFile } from "@/lib/github";
-import matter from "gray-matter";
+import { NextRequest, NextResponse } from "next/server"
+import fs from "fs"
+import path from "path"
+import matter from "gray-matter"
 
-// GET — get single post
-export async function GET(_: NextRequest, { params }: { params: { slug: string } }) {
-  if (!await requireAuth()) return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+const BLOG_DIR = path.join(process.cwd(), "src/content/blog")
 
-  const path = `src/content/blog/${params.slug}.mdx`;
-  const file = await getFile(path);
-  if (!file) return NextResponse.json({ error: "Not found" }, { status: 404 });
+export async function GET(
+  _req: NextRequest,
+  { params }: { params: Promise<{ slug: string }> }
+) {
+  const { slug } = await params
+  const filepath = path.join(BLOG_DIR, `${slug}.mdx`)
 
-  const { data, content } = matter(file.content);
-  return NextResponse.json({ frontmatter: data, content, sha: file.sha });
+  if (!fs.existsSync(filepath)) {
+    return NextResponse.json({ error: "Post not found" }, { status: 404 })
+  }
+
+  const raw = fs.readFileSync(filepath, "utf8")
+  const { data, content } = matter(raw)
+
+  return NextResponse.json({
+    ...data,
+    slug,
+    content,
+    sha: "",
+    tags: Array.isArray(data.tags) ? data.tags : [],
+  })
 }
 
-// PUT — update post
-export async function PUT(req: NextRequest, { params }: { params: { slug: string } }) {
-  if (!await requireAuth()) return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+export async function PUT(
+  req: NextRequest,
+  { params }: { params: Promise<{ slug: string }> }
+) {
+  const { slug } = await params
+  const body = await req.json()
 
-  const { frontmatter, content, sha } = await req.json();
-  const path = `src/content/blog/${params.slug}.mdx`;
+  const frontmatter = {
+    title:           body.title,
+    slug:            body.slug || slug,
+    date:            body.date,
+    description:     body.description,
+    excerpt:         body.excerpt || body.description,
+    category:        body.category,
+    tags:            body.tags,
+    image:           body.image,
+    coverImage:      body.image,
+    author:          body.author || "Chauffeur Dubai",
+    published:       body.published,
+    metaTitle:       body.metaTitle,
+    metaDescription: body.metaDescription,
+    canonicalUrl:    body.canonicalUrl,
+    focusKeyword:    body.focusKeyword,
+  }
 
-  const mdx = matter.stringify(content, frontmatter);
-  const ok = await upsertFile(path, mdx, `Update blog post: ${params.slug}`, sha);
+  const fileContent = matter.stringify(body.content || "", frontmatter)
+  const filepath = path.join(BLOG_DIR, `${slug}.mdx`)
+  fs.writeFileSync(filepath, fileContent, "utf8")
 
-  return ok
-    ? NextResponse.json({ success: true })
-    : NextResponse.json({ error: "Failed to update" }, { status: 500 });
+  return NextResponse.json({ success: true })
 }
 
-// DELETE — delete post
-export async function DELETE(req: NextRequest, { params }: { params: { slug: string } }) {
-  if (!await requireAuth()) return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+export async function DELETE(
+  req: NextRequest,
+  { params }: { params: Promise<{ slug: string }> }
+) {
+  const { slug } = await params
+  const filepath = path.join(BLOG_DIR, `${slug}.mdx`)
 
-  const { sha } = await req.json();
-  const path = `src/content/blog/${params.slug}.mdx`;
-  const ok = await deleteFile(path, sha, `Delete blog post: ${params.slug}`);
+  if (!fs.existsSync(filepath)) {
+    return NextResponse.json({ error: "Post not found" }, { status: 404 })
+  }
 
-  return ok
-    ? NextResponse.json({ success: true })
-    : NextResponse.json({ error: "Failed to delete" }, { status: 500 });
+  fs.unlinkSync(filepath)
+  return NextResponse.json({ success: true })
 }

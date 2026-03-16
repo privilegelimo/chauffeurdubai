@@ -34,6 +34,8 @@ const nextConfig: NextConfig = {
       { source: "/rent-a-car-with-driver-in-dubai-chauffeur-service-dubai",                                               destination: "/services/corporate-chauffeur-dubai",  permanent: true },
       { source: "/mercedes-sprinter-rental-in-dubai-experience-the-luxury-with-privilege-travel-llc",                    destination: "/fleet/mercedes-sprinter-luxury-van/mercedes-sprinter-ultra-luxury", permanent: true },
       { source: "/airport-transfers-in-uae-a-convenient-and-reliable-service-by-privilege-travel-llc-dubai",             destination: "/services/airport-transfer-dubai",     permanent: true },
+      { source: "/mercedes-v-class-rent-with-driver-in-dubai-uae",  destination: "/fleet/business-van/mercedes-v-class",          permanent: true },
+      { source: "/corporate-event-transportation-in-uae",           destination: "/services/event-transport-dubai",               permanent: true },
 
       // ── Services — old indexed Google URLs → actual current slugs ────────
       { source: "/services/airport-transfer",       destination: "/services/airport-transfer-dubai",            permanent: true },

@@ -5,6 +5,7 @@ import Image from "next/image"
 import { ArrowLeft, ArrowRight, Calendar, Clock, Tag, ArrowUpRight } from "lucide-react"
 import { MDXRemote } from "next-mdx-remote/rsc"
 import { getAllPosts, getPostBySlug } from "@/lib/blog"
+import TableOfContents from "@/components/blog/TableOfContents"
 import type { Metadata } from "next"
 
 export const dynamic = "force-dynamic"
@@ -209,26 +210,34 @@ export default async function BlogPostPage({
 
             {/* Sidebar */}
             <aside className="md:col-span-4">
-              <div
-                className="rounded-2xl p-6 sticky top-24 text-white"
-                style={{ background: roseGold }}
-              >
-                <p className="text-[10px] uppercase tracking-[0.2em] text-white/60 mb-2">
-                  Book Now
-                </p>
-                <p className="text-white text-sm font-semibold leading-snug mb-4">
-                  Ready to experience luxury {post.category.toLowerCase()} in Dubai?
-                </p>
-                <a
-                  href="https://wa.me/971509852818?text=Hi, I want to book a chauffeur service in Dubai."
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 bg-white text-xs font-semibold px-4 py-2.5 rounded-full hover:bg-rose-50 transition-colors"
-                  style={{ color: "#b76e79" }}
+              <div className="space-y-5 sticky top-24">
+
+                {/* Table of Contents */}
+                <TableOfContents />
+
+                {/* Booking CTA */}
+                <div
+                  className="rounded-2xl p-6 text-white"
+                  style={{ background: roseGold }}
                 >
-                  WhatsApp Us
-                  <ArrowUpRight className="w-3 h-3" />
-                </a>
+                  <p className="text-[10px] uppercase tracking-[0.2em] text-white/60 mb-2">
+                    Book Now
+                  </p>
+                  <p className="text-white text-sm font-semibold leading-snug mb-4">
+                    Ready to experience luxury {post.category.toLowerCase()} in Dubai?
+                  </p>
+                  <a
+                    href="https://wa.me/971509852818?text=Hi, I want to book a chauffeur service in Dubai."
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 bg-white text-xs font-semibold px-4 py-2.5 rounded-full hover:bg-rose-50 transition-colors"
+                    style={{ color: "#b76e79" }}
+                  >
+                    WhatsApp Us
+                    <ArrowUpRight className="w-3 h-3" />
+                  </a>
+                </div>
+
               </div>
             </aside>
 

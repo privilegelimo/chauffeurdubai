@@ -553,7 +553,9 @@
     "transferPrice": "AED 2,500",
     "price5hr": "AED 4,500 / 5 Hr",
     "price10hr": "AED 7,500 / 10 Hr",
-    "images": [],
+    "images": [
+      "/images/vehicles/rolls-royce-ghost-1.webp"
+    ],
     "metaDesc": "Book a Rolls-Royce Ghost chauffeur in Dubai, Abu Dhabi & Sharjah. The ultimate ultra-luxury saloon with professional driver. From AED 2,500.",
     "seoKeywords": "Rolls-Royce Ghost Dubai, Rolls-Royce hire Dubai, ultra luxury car Dubai chauffeur",
     "desc": "The Rolls-Royce Ghost is the definitive expression of effortless luxury - a silent, serene cabin wrapped in hand-stitched leather and real wood veneers.",
@@ -671,7 +673,7 @@
     "transferPrice": "AED 850",
     "price5hr": "AED 3,500 / 5 Hr",
     "price10hr": "AED 6,500 / 10 Hr",
-    "images": [],
+    "images": ["/images/vehicles/gmc-yukon-diamond-limousine-1.webp"],
     "metaDesc": "Book a GMC Yukon Diamond Limousine in Dubai, Abu Dhabi & Sharjah. Diamond-stitched interiors and full entertainment suite. From AED 950.",
     "seoKeywords": "GMC Yukon Diamond limo Dubai, diamond limousine Dubai, luxury stretch limo Dubai",
     "desc": "The GMC Yukon Diamond Limousine is the crown jewel of our stretch fleet - opulent diamond-stitched interiors and a full entertainment suite for the most exclusive occasions.",
@@ -726,7 +728,7 @@
     "transferPrice": "AED 550",
     "price5hr": "AED 800 / 5 Hr",
     "price10hr": "AED 1,200 / 10 Hr",
-    "images": [],
+    "images": ["/images/vehicles/toyota-coaster-21-1.webp"],
     "metaDesc": "Book a Toyota Coaster 21-seater in Dubai, Abu Dhabi & Sharjah. Reliable mini-bus for corporate shuttles and group transfers. From AED 500.",
     "seoKeywords": "Toyota Coaster Dubai, 21 seater bus hire Dubai, mini bus Dubai chauffeur",
     "desc": "The Toyota Coaster 21 Seater is a reliable, comfortable mini-bus ideal for corporate shuttles, school runs and group airport transfers across Dubai.",

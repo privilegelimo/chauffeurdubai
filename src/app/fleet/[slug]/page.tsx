@@ -87,13 +87,13 @@ const classInfo: Record<string, { label: string; description: string; image: str
     label: "Standard Bus",
     description:
       "Reliable group transport for every occasion across Dubai, Abu Dhabi, and Sharjah - Toyota Coaster 21 Seater and Hiace 11 Seater for corporate events, airport transfers, and tours.",
-    image: "/images/vehicles/50-seater-luxury-coach-1.webp",
+    image: "/images/vehicles/toyota-hiace-11-1.webp",
   },
   "luxury-coach-bus": {
     label: "Luxury Coach Bus",
     description:
       "Premium luxury coaches for large group travel across Dubai, Abu Dhabi, and Sharjah - 35 Seater and 50 Seater Luxury Coaches with underfloor luggage bays, onboard Wi-Fi, and reclining seats for corporate events, exhibitions, and airport runs.",
-    image: "/images/vehicles/toyota-hiace-11-1.webp",
+    image: "/images/vehicles/50-seater-luxury-coach-1.webp",
   },
 };
 
@@ -145,7 +145,7 @@ export default async function FleetClassPage({
           className="absolute inset-0"
           style={{
             background:
-              "linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(183,110,121,0.35) 60%, transparent 100%)",
+              "linear-gradient(to top, rgba(0,0,0,0.4) 0%, rgba(220,220,220,0) 90%, transparent 100%)",
           }}
         />
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-10 w-full">

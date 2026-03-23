@@ -62,7 +62,7 @@ export default function VehicleImageCarousel({
         className="absolute inset-0 z-20 pointer-events-none"
         style={{
           background:
-            "linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(183,110,121,0.2) 60%, transparent 100%)",
+            "linear-gradient(to top, rgba(0,0,0,0.4) 0%, rgba(220,220,220,0) 90%, transparent 100%)",
         }}
       />
 

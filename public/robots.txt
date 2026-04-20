@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://chauffeurdubai.ae
+
+# Sitemaps
+Sitemap: https://chauffeurdubai.ae/sitemap.xml

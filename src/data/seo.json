@@ -1,0 +1,32 @@
+{
+  "/": {
+    "title": "Luxury Chauffeur Service in Dubai, UAE | Chauffeur Dubai",
+    "description": "Book premium chauffeur service in Dubai. Professional drivers for airport transfers, corporate travel, and city tours.",
+    "image": "/og-image.jpg",
+    "keywords": ["chauffeur service Dubai", "luxury chauffeur Dubai", "airport transfer Dubai"]
+  },
+  "/fleet": {
+    "title": "Luxury Chauffeur Fleet Dubai | Cars, SUVs, Vans & Buses UAE",
+    "description": "Browse luxury chauffeur fleet in Dubai, Abu Dhabi & Sharjah.",
+    "image": "/og-image.jpg",
+    "keywords": ["chauffeur fleet Dubai", "luxury cars Dubai"]
+  },
+  "/about": {
+    "title": "About Us | Chauffeur Dubai",
+    "description": "Learn about Chauffeur Dubai luxury chauffeur services.",
+    "image": "/og-image.jpg",
+    "keywords": ["about chauffeur Dubai"]
+  },
+  "/contact": {
+    "title": "Contact Us | Chauffeur Dubai",
+    "description": "Get in touch with Chauffeur Dubai for bookings and enquiries.",
+    "image": "/og-image.jpg",
+    "keywords": ["contact chauffeur Dubai"]
+  },
+  "/services": {
+    "title": "Chauffeur Services Dubai | Airport, Corporate & VIP Transfer UAE",
+    "description": "Explore all chauffeur services in Dubai, Abu Dhabi & Sharjah.",
+    "image": "/og-image.jpg",
+    "keywords": ["chauffeur services Dubai"]
+  }
+}

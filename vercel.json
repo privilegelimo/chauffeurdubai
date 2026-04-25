@@ -1,0 +1,10 @@
+{
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "chauffeurdubai.ae" }],
+      "destination": "https://www.chauffeurdubai.ae/:path*",
+      "permanent": true
+    }
+  ]
+}

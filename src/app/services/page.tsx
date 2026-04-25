@@ -9,7 +9,7 @@ import {
 export const metadata: Metadata = {
   title: "Chauffeur Services Dubai, Abu Dhabi & Sharjah | Airport Transfer, Corporate, Wedding Limo",
   description:
-    "Explore all luxury chauffeur services in Dubai, Abu Dhabi, and Sharjah - airport transfers, corporate chauffeur, wedding limo, VIP sightseeing, luxury van rental, and event transport. Available 24/7 across the UAE.",
+    "Luxury chauffeur services in Dubai, Abu Dhabi, and Sharjah - airport transfers, corporate chauffeur, luxury van rental event transport & more across the UAE.",
   alternates: { canonical: "https://chauffeurdubai.ae/services" },
 };
 

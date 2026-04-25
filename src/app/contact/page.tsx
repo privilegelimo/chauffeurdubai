@@ -5,7 +5,7 @@ import { Phone, Mail, MapPin, Clock, MessageCircle, Instagram, Facebook, Youtube
 export const metadata: Metadata = {
   title: "Contact Us | Book Chauffeur Service Dubai, Abu Dhabi & Sharjah - Chauffeur Dubai Luxury Travel",
   description:
-    "Contact Chauffeur Dubai Luxury Travel to book your luxury chauffeur service in Dubai, Abu Dhabi, and Sharjah. Call, WhatsApp, or email us 24/7. Airport transfers, corporate chauffeur, wedding limo, and more.",
+    "Contact Chauffeur Dubai Luxury Travel to book your luxury chauffeur service across UAE. Call, WhatsApp, or email us 24/7. Premium chauffeur services with driver",
   alternates: { canonical: "https://chauffeurdubai.ae/contact" },
 };
 

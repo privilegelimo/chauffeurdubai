@@ -19,6 +19,7 @@ type Vehicle = {
   slug: string;
   classSlug: string;
   name: string;
+  title: string;
   category: string;
   passengers: number;
   luggage: number;
@@ -34,65 +35,75 @@ type Vehicle = {
 const allVehicles = allVehiclesData as Vehicle[];
 
 // ─── Class Info ────────────────────────────────────────────────────────────
-const classInfo: Record<string, { label: string; description: string; image: string }> = {
+const classInfo: Record<string, { label: string; title: string; description: string; image: string }> = {
   "business-class": {
     label: "Business Class",
+    title: "Business Class Chauffeur Dubai | Premium Car Hire Service UAE",
     description:
-      "Executive sedans and MPVs offering premium comfort and style. Perfect for corporate transfers, business meetings, and airport pickups across Dubai, Abu Dhabi, and Sharjah.",
+      "Executive sedans and MPVs offering premium comfort. Perfect for corporate transfers, business meetings, & airport pickups across Dubai, Abu Dhabi, and Sharjah.",
     image: "/images/vehicles/audi-a6-1.webp",
   },
   "first-class": {
     label: "First Class",
+    title: "First Class Chauffeur Dubai | Premium Car Hire Service UAE",
     description:
-      "The absolute pinnacle of chauffeur-driven luxury in the UAE. Mercedes S 500 and BMW 7 Series - reserved for clients in Dubai, Abu Dhabi, and Sharjah who accept nothing but the finest.",
+      "Chauffeur-driven luxury in the UAE. Mercedes S 500 and BMW 7 Series - reserved for clients in Dubai, Abu Dhabi, and Sharjah who accept nothing but the finest.",
     image: "/images/vehicles/mercedes-s500-1.webp",
   },
   "business-van": {
     label: "Business Van",
+    title: "Business Van Chauffeur Dubai | Premium Car Hire Service UAE",
     description:
       "Spacious luxury MPVs for groups, families, and travellers with extra luggage. Comfort and class for up to 7 passengers across Dubai, Abu Dhabi, and Sharjah.",
     image: "/images/vehicles/mercedes-v300-tiffany-1.webp",
   },
   "mercedes-sprinter-luxury-van": {
     label: "Mercedes Sprinter Luxury Van",
+    title: "Mercedes Sprinter Luxury Van Chauffeur Services Dubai",
     description:
-      "Premium Mercedes Sprinter vans for large groups - Ultra Luxury Van and 19 Seater. The benchmark for group airport transfers and corporate events across Dubai, Abu Dhabi, and Sharjah.",
+      "VIP Sprinter handcrafted interiors for the most discerning clients in Dubai, Abu Dhabi, and Sharjah Premium VIP Chauffeur services. Luxurious VIP Vehicles",
     image: "/images/vehicles/mercedes-sprinter-19-1.webp",
   },
   "mercedes-sprinter-luxury-vip": {
     label: "Mercedes Sprinter Luxury VIP",
+    title: "VIP Sprinter Chauffeur Dubai | Luxury Van Hire Service UAE",
     description:
       "Bespoke VIP Sprinter interiors handcrafted for the most discerning clients in Dubai, Abu Dhabi, and Sharjah - Avant Garde VIP and Business Class VIP with starlight ceilings and champagne fridges.",
     image: "/images/vehicles/mercedes-sprinter-avant-garde-1.webp",
   },
   "luxury-suv": {
     label: "Luxury SUV",
+    title: "Luxury SUV Chauffeur Services Premium SUV Chauffeur Dubai",
     description:
-      "Bold, spacious, and commanding - GMC Yukon Denali, Cadillac Escalade, and Range Rover for families and executive groups across Dubai, Abu Dhabi, and Sharjah who need presence and practicality.",
+      "GMC Yukon Denali, Cadillac Escalade, and Range Rover for families and executive groups across Dubai, Abu Dhabi, and Sharjah who need presence and practicality.",
     image: "/images/vehicles/cadillac-escalade-1.webp",
   },
   "rolls-royce": {
     label: "Rolls-Royce",
+    title: "Rolls-Royce Chauffeur Dubai | Luxury Car Hire Service UAE",
     description:
-      "The ultimate expression of automotive prestige across the UAE. Rolls-Royce Ghost and Cullinan with a professional chauffeur in Dubai and Abu Dhabi - for occasions that demand nothing less than perfection.",
+      "The ultimate expression of automotive prestige across the UAE. Rolls-Royce Ghost and Cullinan with a professional chauffeur in Dubai, Abu Dhabi and all over UAE",
     image: "/images/vehicles/rolls-royce-cullinan-1.webp",
   },
   "stretch-limousine": {
     label: "Stretch Limousine",
+    title: "Luxury Stretch Limousine Chauffeur Services Dubai, UAE",
     description:
-      "Make the grandest of entrances in Dubai, Abu Dhabi, or Sharjah. Our stretch limousines - GMC Yukon, Diamond, Chevy Suburban, and Chrysler Emerald - are the ultimate statement for weddings, VIP events, and celebrations.",
+      "Make the grandest of entrances with our stretch limousines - GMC Yukon, Diamond, Chevy Suburban & Chrysler Emerald - for weddings, VIP events & celebrations.",
     image: "/images/vehicles/gmc-yukon-limousine-1.webp",
   },
   "standard-bus": {
     label: "Standard Bus",
+    title: "Luxury Bus Chauffeur Dubai | Group Transport Service UAE",
     description:
-      "Reliable group transport for every occasion across Dubai, Abu Dhabi, and Sharjah - Toyota Coaster 21 Seater and Hiace 11 Seater for corporate events, airport transfers, and tours.",
+      "Reliable group transport for every occasion across Dubai, Abu Dhabi, and Sharjah - Toyota Coaster and Hiace for corporate events, airport transfers, and tours.",
     image: "/images/vehicles/toyota-hiace-11-1.webp",
   },
   "luxury-coach-bus": {
     label: "Luxury Coach Bus",
+    title: "Luxury Coach Bus Chauffeur & Group Transport Services UAE",
     description:
-      "Premium luxury coaches for large group travel across Dubai, Abu Dhabi, and Sharjah - 35 Seater and 50 Seater Luxury Coaches with underfloor luggage bays, onboard Wi-Fi, and reclining seats for corporate events, exhibitions, and airport runs.",
+      "Premium luxury coaches for group travel across Dubai, Abu Dhabi, and Sharjah - 35 Seater and 50 Seater Luxury Coaches with onboard Wi-Fi, and reclining seats.",
     image: "/images/vehicles/50-seater-luxury-coach-1.webp",
   },
 };
@@ -112,7 +123,7 @@ export async function generateMetadata({
   const info = classInfo[slug];
   if (!info) return {};
   return {
-    title: `${info.label} Chauffeur Dubai, Abu Dhabi & Sharjah | Luxury Car Hire UAE`,
+    title: info.title,
     description: info.description,
     alternates: { canonical: `https://chauffeurdubai.ae/fleet/${slug}` },
   };

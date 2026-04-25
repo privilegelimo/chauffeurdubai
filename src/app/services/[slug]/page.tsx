@@ -22,7 +22,7 @@ const services = [
     image: "/images/services/airport-transfer.webp",
     imageAlt: "Luxury airport transfer Dubai Abu Dhabi Sharjah - chauffeur meet and greet DXB AUH SHJ",
     description:
-      "The most reliable airport transfer service covering DXB, DWC, Abu Dhabi International (AUH), and Sharjah (SHJ) airports. VIP meet & greet, real-time flight tracking, and fixed pricing - no surprises.",
+      "Book a professional airport transfer in Dubai, Abu Dhabi, or Sharjah with meet & greet, flight tracking and fixed pricing. Covering DXB, DWC, AUH & SHJ.",
     longDesc:
       "Whether you're arriving on a business trip in Dubai, connecting through Abu Dhabi, or departing from Sharjah, our airport transfer service ensures you travel in complete comfort and style. Our professional chauffeurs monitor your flight in real time and adjust pickup times accordingly - so even if your flight is delayed, we'll be there. No meter running, no surge pricing - just a fixed, transparent rate from the moment you book.",
     features: [
@@ -35,7 +35,7 @@ const services = [
     ],
     price: "Starting from AED 350",
     ctaLabel: "Book Airport Transfer Dubai",
-    metaTitle: "Airport Transfer Dubai, Abu Dhabi & Sharjah | Luxury Chauffeur - From AED 350",
+    metaTitle: "Airport Transfer Dubai | Luxury Chauffeur Service UAE",
     metaDesc:
       "Book a professional airport transfer in Dubai, Abu Dhabi, or Sharjah with meet & greet, flight tracking and fixed pricing. Covering DXB, DWC, AUH & SHJ. Available 24/7.",
     faq: [
@@ -52,7 +52,7 @@ const services = [
     image: "/images/services/corporate-chauffeur.webp",
     imageAlt: "Corporate chauffeur service Dubai Abu Dhabi Sharjah - executive car hire with driver UAE",
     description:
-      "Premium corporate chauffeur service across Dubai, Abu Dhabi, and Sharjah for executives, roadshows, board meetings, and corporate events. Discreet, punctual, and always immaculately presented.",
+      "Professional corporate chauffeur service in Dubai, Abu Dhabi, and Sharjah for executives and business travel. Discreet, punctual, Wi-Fi enabled vehicles.",
     longDesc:
       "From DIFC to Business Bay in Dubai, and from Abu Dhabi's financial district to Sharjah's business hubs, our corporate chauffeur service is trusted by multinationals, law firms, and C-suite executives who demand reliability and discretion. Whether it's a daily commute, a roadshow across the UAE, or ferrying clients from the airport to a board meeting, our fleet and professional drivers deliver every time.",
     features: [
@@ -65,7 +65,7 @@ const services = [
     ],
     price: "Starting from AED 350",
     ctaLabel: "Book Corporate Chauffeur Dubai",
-    metaTitle: "Corporate Chauffeur Service Dubai, Abu Dhabi & Sharjah | Executive Car Hire UAE",
+    metaTitle: "Corporate Chauffeur Dubai | Executive Car Hire Service UAE",
     metaDesc:
       "Professional corporate chauffeur service in Dubai, Abu Dhabi, and Sharjah for executives and business travel. Discreet, punctual, Wi-Fi enabled vehicles. Corporate accounts available.",
     faq: [
@@ -82,7 +82,7 @@ const services = [
     image: "/images/services/vip-chauffeur.webp",
     imageAlt: "VIP chauffeur service Dubai Abu Dhabi Sharjah - Rolls-Royce with driver luxury transport UAE",
     description:
-      "The ultimate VIP airport pick-up and executive transport experience across Dubai, Abu Dhabi, and Sharjah. Rolls-Royce, limousines, and the finest luxury vehicles with white-glove service.",
+      "VIP chauffeur service in Dubai, Abu Dhabi, and Sharjah with Rolls-Royce & stretch limousines. Perfect for executives, celebrities and special occasions.",
     longDesc:
       "For those who expect nothing but the best, our VIP chauffeur service across Dubai, Abu Dhabi, and Sharjah delivers an unmatched experience from the moment you land. Our Rolls-Royce fleet with dedicated drivers, stretch limousines, and ultra-luxury sedans are available for airport pickups, private events, galas, and high-profile occasions across the UAE.",
     features: [
@@ -95,7 +95,7 @@ const services = [
     ],
     price: "Starting from AED 850",
     ctaLabel: "Book VIP Chauffeur Dubai",
-    metaTitle: "VIP Chauffeur Service Dubai, Abu Dhabi & Sharjah | Rolls-Royce & Limo Hire UAE",
+    metaTitle: "VIP Chauffeur Dubai | Rolls-Royce & Limo Hire Service UAE",
     metaDesc:
       "VIP chauffeur service in Dubai, Abu Dhabi, and Sharjah with Rolls-Royce, stretch limousines and white-glove service. Perfect for executives, celebrities and special occasions.",
     faq: [
@@ -112,7 +112,7 @@ const services = [
     image: "/images/services/full-day-chauffeur.webp",
     imageAlt: "Full day chauffeur service Dubai Abu Dhabi Sharjah - hourly car hire with driver UAE",
     description:
-      "Maximum flexibility - book a full day chauffeur service or hire by the hour across Dubai, Abu Dhabi, and Sharjah. Perfect for shopping, meetings, events, or anything in between.",
+      "Book a full day or hourly chauffeur service in Dubai, Abu Dhabi, or Sharjah. Fixed rates, luxury vehicles, professional drivers. Hourly packages available.",
     longDesc:
       "Our hourly and full-day chauffeur packages give you complete flexibility over your schedule across Dubai, Abu Dhabi, and Sharjah. Have a luxury vehicle and professional driver at your disposal for as long as you need - whether that's 5 hours for a half-day of meetings or 10 hours for a full day of appointments, shopping, and events.",
     features: [
@@ -125,7 +125,7 @@ const services = [
     ],
     price: "Starting from AED 900 / 5 Hr",
     ctaLabel: "Book Full Day Chauffeur Dubai",
-    metaTitle: "Hourly & Full Day Chauffeur Dubai, Abu Dhabi & Sharjah | Car with Driver by the Hour",
+    metaTitle: "Hourly Chauffeur Dubai- Full Day Car with Driver Service UAE",
     metaDesc:
       "Book a full day or hourly chauffeur service in Dubai, Abu Dhabi, or Sharjah. Fixed rates, luxury vehicles, professional drivers. 5 hour and 10 hour packages available.",
     faq: [
@@ -142,7 +142,7 @@ const services = [
     image: "/images/services/event-transport.webp",
     imageAlt: "Event transport Dubai Abu Dhabi Sharjah - luxury coach group chauffeur hire GITEX UAE",
     description:
-      "Professional event transport for corporate events, exhibitions, trade shows, conferences, and private functions across Dubai, Abu Dhabi, and Sharjah. We handle all logistics so your guests arrive on time, comfortably, and in style.",
+      "Professional event transport in Dubai, Abu Dhabi, and Sharjah for events, corporate dinners and private functions. Multi-vehicle coordination, luxury fleet.",
     longDesc:
       "From GITEX to Arab Health in Dubai, Abu Dhabi ADNEC events to Sharjah Expo Centre - our event transport team specialises in seamless multi-vehicle coordination across the UAE. We work directly with event organisers to ensure every delegate, guest, or executive is collected and delivered on schedule, in the right vehicle, every time.",
     features: [
@@ -154,7 +154,7 @@ const services = [
     ],
     price: "Starting from AED 350",
     ctaLabel: "Book Event Transport Dubai",
-    metaTitle: "Event Transport Dubai, Abu Dhabi & Sharjah | Corporate & Private Event Chauffeur UAE",
+    metaTitle: "Event Transport Dubai | Chauffeur Service for Events UAE",
     metaDesc:
       "Professional event transport in Dubai, Abu Dhabi, and Sharjah for GITEX, Arab Health, ADIPEC, corporate dinners and private functions. Multi-vehicle coordination, luxury fleet.",
     faq: [
@@ -171,7 +171,7 @@ const services = [
     image: "/images/services/luxury-van-rental.webp",
     imageAlt: "Luxury van rental Dubai Abu Dhabi Sharjah - Mercedes Sprinter VIP van hire with driver UAE",
     description:
-      "Spacious, stylish, and fully equipped - our luxury van rental service is perfect for group airport transfers, corporate roadshows, family trips, and VIP events across Dubai, Abu Dhabi, and Sharjah.",
+      "Book a luxury van rental in Dubai, Abu Dhabi, or Sharjah with professional chauffeur. Airport transfers, corporate & events with premium vehicles across the UAE",
     longDesc:
       "Whether you're moving a corporate team between meetings in Dubai, transferring a family group from Abu Dhabi International Airport, or organising guest transport for a private event in Sharjah, our luxury van rental service delivers comfort and style for groups of all sizes. Choose from our Mercedes Sprinter VIP, Mercedes V-Class, or Toyota Granvia - all chauffeured by professionally trained drivers available around the clock.",
     features: [
@@ -184,7 +184,7 @@ const services = [
     ],
     price: "Starting from AED 450",
     ctaLabel: "Book Luxury Van Dubai",
-    metaTitle: "Luxury Van Rental Dubai, Abu Dhabi & Sharjah | Mercedes Sprinter & V-Class with Driver",
+    metaTitle: "Luxury Van Rental Dubai | Chauffeur Van Hire Service UAE",
     metaDesc:
       "Book a luxury van rental in Dubai, Abu Dhabi, or Sharjah with professional chauffeur. Mercedes Sprinter VIP, V-Class & Toyota Granvia. 7–19 seats, airport transfers, corporate & events.",
     faq: [
@@ -201,7 +201,7 @@ const services = [
     image: "/images/services/wedding-limo.webp",
     imageAlt: "Wedding limo Dubai Abu Dhabi Sharjah - Rolls-Royce bridal car hire with chauffeur UAE",
     description:
-      "Make your wedding day unforgettable with our wedding limo service in Dubai, Abu Dhabi, and Sharjah. From Rolls-Royce rental with driver to stretch limousines - arrive in absolute style.",
+      "Wedding limo in Dubai, Abu Dhabi, and Sharjah with Rolls-Royce, stretch limousines and luxury sedans. Professionally decorated vehicles, discreet chauffeurs.",
     longDesc:
       "Your wedding day deserves perfection - and that includes the journey, whether you're celebrating in Dubai, Abu Dhabi, or Sharjah. Our wedding limo service offers a handpicked selection of ultra-luxury vehicles including Rolls-Royce, Chrysler Emerald Limousine, and GMC Yukon Limousine, all with immaculately dressed chauffeurs. We work around your wedding timeline so you never have to worry about being late.",
     features: [
@@ -214,7 +214,7 @@ const services = [
     ],
     price: "Starting from AED 850",
     ctaLabel: "Book Wedding Limo Dubai",
-    metaTitle: "Wedding Limo Dubai, Abu Dhabi & Sharjah | Rolls-Royce & Stretch Limousine Hire UAE",
+    metaTitle: "Wedding Limo Dubai | Bridal Chauffeur Service UAE",
     metaDesc:
       "Wedding limo in Dubai, Abu Dhabi, and Sharjah with Rolls-Royce, stretch limousines and luxury sedans. Professionally decorated vehicles, discreet chauffeurs. Book your wedding car today.",
     faq: [
@@ -231,7 +231,7 @@ const services = [
     image: "/images/services/private-driver.webp",
     imageAlt: "Private driver sightseeing Dubai Abu Dhabi - Burj Khalifa Sheikh Zayed Mosque tour chauffeur",
     description:
-      "Explore Dubai and Abu Dhabi's most iconic landmarks with a private sightseeing driver. Burj Khalifa, Palm Jumeirah, Dubai Marina, Sheikh Zayed Grand Mosque, and more - at your own pace.",
+      "Explore UAE with a private sightseeing driver. Burj Khalifa, Palm Jumeirah, Sheikh Zayed Grand Mosque and more at your own pace. Hourly and full-day packages.",
     longDesc:
       "Dubai and Abu Dhabi are two of the world's most spectacular cities - and the best way to experience them is with your own private driver. Our sightseeing chauffeur service lets you explore at your own pace, stopping wherever you wish. Our knowledgeable drivers can suggest the best spots, photo opportunities, and hidden gems across both cities.",
     features: [
@@ -244,7 +244,7 @@ const services = [
     ],
     price: "Starting from AED 350",
     ctaLabel: "Book Sightseeing Driver Dubai",
-    metaTitle: "Private Driver for Sightseeing Dubai & Abu Dhabi | City Tour Chauffeur UAE",
+    metaTitle: "Private Driver Dubai | Sightseeing Chauffeur Service UAE",
     metaDesc:
       "Explore Dubai and Abu Dhabi with a private sightseeing driver. Burj Khalifa, Palm Jumeirah, Sheikh Zayed Grand Mosque and more at your own pace. Hourly and full-day packages.",
     faq: [
@@ -274,9 +274,9 @@ const services = [
     ],
     price: "Custom Monthly Rates",
     ctaLabel: "Enquire Monthly Driver Dubai",
-    metaTitle: "Monthly Car with Driver Dubai, Abu Dhabi & Sharjah | Dedicated Chauffeur Service UAE",
+    metaTitle: "Monthly Car with Driver Dubai | Chauffeur Service UAE",
     metaDesc:
-      "Hire a dedicated monthly car with driver in Dubai, Abu Dhabi, or Sharjah. Fixed monthly rates, background-checked chauffeurs, flexible schedules for commutes, school runs and errands.",
+      "Hire a monthly car with driver in Dubai, Abu Dhabi, or Sharjah. Fixed monthly rates, background-checked chauffeurs, flexible schedules for commutes & schools.",
     faq: [
       { q: "How does the monthly package work?", a: "You'll be assigned a dedicated chauffeur for the month across Dubai, Abu Dhabi, or Sharjah. We agree on your schedule upfront and the driver is available as needed." },
       { q: "Can I change my schedule mid-month?", a: "Yes, we're flexible. Just let us know in advance and we'll adjust your chauffeur's schedule accordingly." },

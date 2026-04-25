@@ -14,6 +14,7 @@ type Vehicle = {
   slug: string;
   classSlug: string;
   name: string;
+  title: string;
   category: string;
   passengers: number;
   luggage: number;
@@ -46,14 +47,14 @@ export async function generateMetadata({
   const vehicle = allVehicles.find((v) => v.slug === car && v.classSlug === slug);
   if (!vehicle) return {};
   return {
-    title: `${vehicle.name} Chauffeur Dubai, Abu Dhabi & Sharjah | Hire with Driver from ${vehicle.transferPrice}`,
+    title: vehicle.title,
     description: vehicle.metaDesc,
     keywords: vehicle.seoKeywords,
     alternates: {
       canonical: `https://chauffeurdubai.ae/fleet/${vehicle.classSlug}/${vehicle.slug}`,
     },
     openGraph: {
-      title: `${vehicle.name} - Luxury Chauffeur Dubai, Abu Dhabi & Sharjah`,
+      title: vehicle.title,
       description: vehicle.metaDesc,
       url: `https://chauffeurdubai.ae/fleet/${vehicle.classSlug}/${vehicle.slug}`,
       images: [{ url: vehicle.images[0], alt: `${vehicle.name} chauffeur hire Dubai Abu Dhabi Sharjah` }],

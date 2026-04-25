@@ -3,9 +3,9 @@ import Image from "next/image";
 import { CheckCircle, Shield, Award, Users, Car, ThumbsUp, Phone, MessageCircle } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "About Us | Chauffeur Dubai Luxury Travel - Chauffeur Service Dubai, Abu Dhabi & Sharjah",
+  title: "About Chauffeur Dubai | Luxury Travel Service Dubai, UAE",
   description:
-    "20 years of luxury chauffeur service in Dubai, Abu Dhabi, and Sharjah. Chauffeur Dubai Luxury Travel is the UAE's most trusted private driver and limousine company - serving airports, corporates, and VIP clients across the UAE.",
+    "Chauffeur Dubai Luxury Travel is the UAE's most trusted private driver and limousine company with over 20 years - serving airports, corporates, and VIP clients",
   alternates: { canonical: "https://chauffeurdubai.ae/about" },
 };
 

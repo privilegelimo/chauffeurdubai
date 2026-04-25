@@ -20,7 +20,7 @@ export async function generateMetadata({
   const post = getPostBySlug(slug)
   if (!post) return {}
   return {
-    title: `${post.title} | Chauffeur Dubai Blog`,
+    title: `${post.title}`,
     description: post.description,
     openGraph: {
       title: post.title,

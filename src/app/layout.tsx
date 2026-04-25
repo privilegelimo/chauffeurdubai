@@ -9,12 +9,9 @@ const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://chauffeurdubai.ae"),
-  title: {
-    default: "Chauffeur Dubai | Luxury Chauffeur Service in Dubai, UAE",
-    template: "%s | Chauffeur Dubai",
-  },
+title: "Luxury Chauffeur Service in Dubai, UAE | Chauffeur Dubai",
   description:
-    "Book premium chauffeur service in Dubai. Professional drivers for airport transfers, corporate travel, and city tours. Luxury cars with chauffeur available 24/7 in Dubai, UAE.",
+    "Book premium chauffeur service in Dubai. Professional drivers for airport transfers, corporate travel, and city tours. Luxury cars with chauffeur in Dubai, UAE.",
   keywords: [
     "chauffeur service Dubai",
     "luxury chauffeur Dubai",

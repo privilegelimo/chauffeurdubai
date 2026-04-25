@@ -13,12 +13,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE_URL}/fleet`,    lastModified: new Date(), changeFrequency: "weekly",  priority: 0.8 },
     { url: `${BASE_URL}/services`, lastModified: new Date(), changeFrequency: "weekly",  priority: 0.9 },
     // Landing pages
-    {
+    /*{
       url: `${BASE_URL}/landing-page/uae-to-oman-chauffeur-services`,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.9,
-    },
+    },*/
   ];
 
   // ── Service pages — exact slugs from services/[slug]/page.tsx ─────────

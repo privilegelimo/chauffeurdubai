@@ -7,7 +7,7 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Chauffeur Services Dubai, Abu Dhabi & Sharjah | Airport Transfer, Corporate, Wedding Limo",
+  title: "Chauffeur Services Dubai | Airport & Corporate Travel UAE",
   description:
     "Luxury chauffeur services in Dubai, Abu Dhabi, and Sharjah - airport transfers, corporate chauffeur, luxury van rental event transport & more across the UAE.",
   alternates: { canonical: "https://chauffeurdubai.ae/services" },

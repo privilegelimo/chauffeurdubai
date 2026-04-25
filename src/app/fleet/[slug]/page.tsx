@@ -68,7 +68,7 @@ const classInfo: Record<string, { label: string; title: string; description: str
     label: "Mercedes Sprinter Luxury VIP",
     title: "VIP Sprinter Chauffeur Dubai | Luxury Van Hire Service UAE",
     description:
-      "Bespoke VIP Sprinter interiors handcrafted for the most discerning clients in Dubai, Abu Dhabi, and Sharjah - Avant Garde VIP and Business Class VIP with starlight ceilings and champagne fridges.",
+      "VIP Sprinter handcrafted interiors for the most discerning clients in Dubai, Abu Dhabi, and Sharjah Premium VIP Chauffeur services. Luxurious VIP Vehicles",
     image: "/images/vehicles/mercedes-sprinter-avant-garde-1.webp",
   },
   "luxury-suv": {
@@ -125,7 +125,27 @@ export async function generateMetadata({
   return {
     title: info.title,
     description: info.description,
-    alternates: { canonical: `https://chauffeurdubai.ae/fleet/${slug}` },
+    alternates: {
+      canonical: `https://chauffeurdubai.ae/fleet/${slug}`,
+    },
+    openGraph: {
+      title: info.title,
+      description: info.description,
+      url: `https://chauffeurdubai.ae/fleet/${slug}`,
+      images: [
+        {
+          url: `https://chauffeurdubai.ae${info.image}`,
+          alt: `${info.label} Chauffeur Dubai Abu Dhabi Sharjah`,
+        },
+      ],
+      type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: info.title,
+      description: info.description,
+      images: [`https://chauffeurdubai.ae${info.image}`],
+    },
   };
 }
 

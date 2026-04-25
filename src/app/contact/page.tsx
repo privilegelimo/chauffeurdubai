@@ -3,7 +3,7 @@ import Image from "next/image";
 import { Phone, Mail, MapPin, Clock, MessageCircle, Instagram, Facebook, Youtube } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Contact Us | Book Chauffeur Service Dubai, Abu Dhabi & Sharjah - Chauffeur Dubai Luxury Travel",
+  title: "Contact Chauffeur Dubai | Book Luxury Car Hire Service UAE",
   description:
     "Contact Chauffeur Dubai Luxury Travel to book your luxury chauffeur service across UAE. Call, WhatsApp, or email us 24/7. Premium chauffeur services with driver",
   alternates: { canonical: "https://chauffeurdubai.ae/contact" },

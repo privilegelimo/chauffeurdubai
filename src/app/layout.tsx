@@ -9,7 +9,7 @@ const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://chauffeurdubai.ae"),
-title: "Luxury Chauffeur Service in Dubai, UAE | Chauffeur Dubai",
+  title: "Luxury Chauffeur Service in Dubai, UAE | Chauffeur Dubai",
   description:
     "Book premium chauffeur service in Dubai. Professional drivers for airport transfers, corporate travel, and city tours. Luxury cars with chauffeur in Dubai, UAE.",
   keywords: [
@@ -30,30 +30,6 @@ title: "Luxury Chauffeur Service in Dubai, UAE | Chauffeur Dubai",
   creator: "Chauffeur Dubai",
   publisher: "Chauffeur Dubai",
   formatDetection: { email: false, address: false, telephone: false },
-  openGraph: {
-    type: "website",
-    locale: "en_AE",
-    url: "https://chauffeurdubai.ae",
-    siteName: "Chauffeur Dubai",
-    title: "Chauffeur Dubai | Luxury Chauffeur Service in Dubai, UAE",
-    description:
-      "Premium chauffeur service in Dubai for airport transfers, corporate travel & city tours. Professional drivers. 24/7 availability.",
-    images: [
-      {
-        url: "/og-image.jpg",
-        width: 1200,
-        height: 630,
-        alt: "Chauffeur Dubai - Luxury Car Service",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Chauffeur Dubai | Luxury Chauffeur Service",
-    description:
-      "Book a luxury chauffeur in Dubai for airport transfers, corporate rides, and VIP travel.",
-    images: ["/og-image.jpg"],
-  },
   robots: {
     index: true,
     follow: true,

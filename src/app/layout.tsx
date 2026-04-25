@@ -41,9 +41,6 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
-  alternates: {
-    canonical: "https://chauffeurdubai.ae",
-  },
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

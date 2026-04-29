@@ -9,8 +9,8 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ["/api/", "/_next/", "/admin/"],
       },
     ],
-    sitemap: "https://chauffeurdubai.ae/sitemap.xml",
-    host: "https://chauffeurdubai.ae",
+    sitemap: "https://www.chauffeurdubai.ae/sitemap.xml",
+    host: "https://www.chauffeurdubai.ae",
   };
 }
 

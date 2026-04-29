@@ -1,7 +1,7 @@
 import { MetadataRoute } from "next";
 import vehicles from "@/data/vehicles.json";
 
-const BASE_URL = "https://chauffeurdubai.ae";
+const BASE_URL = "https://www.chauffeurdubai.ae";
 
 export default function sitemap(): MetadataRoute.Sitemap {
 

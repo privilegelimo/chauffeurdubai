@@ -1,6 +1,6 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-  siteUrl: "https://chauffeurdubai.ae",
+  siteUrl: "https://www.chauffeurdubai.ae",
   generateRobotsTxt: true,
   changefreq: "weekly",
   priority: 0.8,

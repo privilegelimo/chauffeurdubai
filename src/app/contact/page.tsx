@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: "Contact Chauffeur Dubai | Book Luxury Car Hire Service UAE",
   description:
     "Contact Chauffeur Dubai Luxury Travel to book your luxury chauffeur service across UAE. Call, WhatsApp, or email us 24/7. Premium chauffeur services with driver",
-  alternates: { canonical: "https://chauffeurdubai.ae/contact" },
+  alternates: { canonical: "https://www.chauffeurdubai.ae/contact" },
 };
 
 const roseGoldGradient = "linear-gradient(135deg, #b76e79, #e8a4a0, #c9956c)";

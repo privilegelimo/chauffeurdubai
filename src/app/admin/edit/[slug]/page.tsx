@@ -1,9 +1,10 @@
-// app/admin/edit/[slug]/page.tsx
 "use client"
 
 import { useState, useEffect } from "react"
 import { useRouter } from "next/navigation"
 import dynamic from "next/dynamic"
+import ImageUploader from "@/components/admin/ImageUploader"
+import { createClient } from "@/lib/supabase/client"
 import {
   AlertCircle, CheckCircle, Loader2,
   ChevronDown, ChevronUp, Eye, EyeOff, Trash2,
@@ -32,14 +33,19 @@ function generateSchema(form: {
     publisher: {
       "@type": "Organization",
       name: "Chauffeur Dubai",
-      logo: { "@type": "ImageObject", url: "https://chauffeurdubai.ae/logo.png" },
+      logo: { "@type": "ImageObject", url: "https://www.chauffeurdubai.ae/logo.png" },
     },
     datePublished: form.date || new Date().toISOString().split("T")[0],
     mainEntityOfPage: {
       "@type": "WebPage",
-      "@id": `https://chauffeurdubai.ae/blog/${form.slug}`,
+      "@id": `https://www.chauffeurdubai.ae/blog/${form.slug}`,
     },
   }, null, 2)
+}
+
+function calcReadingTime(content: string): string {
+  const words = content?.trim().split(/\s+/).length ?? 0
+  return `${Math.max(1, Math.round(words / 200))} min read`
 }
 
 const inputClass =
@@ -52,68 +58,75 @@ export default function EditPostPage({
 }: {
   params: Promise<{ slug: string }>
 }) {
-  const router = useRouter()
-  const [slug, setSlug] = useState("")
-  const [sha, setSha] = useState("")
-  const [isLoading, setIsLoading] = useState(true)
-  const [isSubmitting, setIsSubmitting] = useState(false)
-  const [isDeleting, setIsDeleting] = useState(false)
-  const [error, setError] = useState("")
-  const [success, setSuccess] = useState("")
-  const [seoOpen, setSeoOpen] = useState(true)
-  const [schemaOpen, setSchemaOpen] = useState(false)
-  const [showSlug, setShowSlug] = useState(true)
+  const router   = useRouter()
+  const supabase = createClient()
+
+  const [slug, setSlug]                         = useState("")
+  const [rowId, setRowId]                       = useState<string>("")
+  const [isLoading, setIsLoading]               = useState(true)
+  const [isSubmitting, setIsSubmitting]         = useState(false)
+  const [isDeleting, setIsDeleting]             = useState(false)
+  const [error, setError]                       = useState("")
+  const [success, setSuccess]                   = useState("")
+  const [seoOpen, setSeoOpen]                   = useState(true)
+  const [schemaOpen, setSchemaOpen]             = useState(false)
+  const [showSlug, setShowSlug]                 = useState(true)
   const [showDeleteConfirm, setShowDeleteConfirm] = useState(false)
 
   const [form, setForm] = useState({
-    title: "",
-    slug: "",
-    description: "",
-    excerpt: "",
-    category: "",
-    tags: "",
-    image: "",
-    content: "",
-    date: new Date().toISOString().split("T")[0],
-    published: false,
-    metaTitle: "",
+    title:           "",
+    slug:            "",
+    description:     "",
+    category:        "",
+    tags:            "",
+    image:           "",
+    content:         "",
+    date:            new Date().toISOString().split("T")[0],
+    published:       false,
+    metaTitle:       "",
     metaDescription: "",
-    canonicalUrl: "",
-    focusKeyword: "",
+    canonicalUrl:    "",
+    focusKeyword:    "",
   })
 
-  // Resolve params and fetch post
+  // ── Load post from Supabase ─────────────────────────────────────────────────
   useEffect(() => {
     async function load() {
       const { slug: resolvedSlug } = await params
       setSlug(resolvedSlug)
 
-      try {
-        const res = await fetch(`/api/admin/posts/${resolvedSlug}`)
-        if (!res.ok) throw new Error("Post not found")
-        const data = await res.json()
-        setSha(data.sha || "")
-        setForm({
-          title:           data.title        || "",
-          slug:            data.slug         || resolvedSlug,
-          description:     data.description  || data.excerpt || "",
-          excerpt:         data.excerpt      || data.description || "",
-          category:        data.category     || "",
-          tags:            Array.isArray(data.tags) ? data.tags.join(", ") : data.tags || "",
-          image:           data.image        || data.coverImage || "",
-          content:         data.content      || "",
-          date:            data.date         || new Date().toISOString().split("T")[0],
-          published:       data.published    ?? false,
-          metaTitle:       data.metaTitle    || data.title || "",
-          metaDescription: data.metaDescription || data.excerpt || data.description || "",
-          canonicalUrl:    data.canonicalUrl || `https://chauffeurdubai.ae/blog/${resolvedSlug}`,
-          focusKeyword:    data.focusKeyword || "",
-        })
-      } catch (err) {
+      const { data, error: sbError } = await supabase
+        .from("blogs")
+        .select("*")
+        .eq("slug", resolvedSlug)
+        .single()
+
+      if (sbError || !data) {
         setError("Failed to load post. Please go back and try again.")
-      } finally {
         setIsLoading(false)
+        return
       }
+
+      setRowId(data.id)
+      setForm({
+        title:           data.title        || "",
+        slug:            data.slug         || resolvedSlug,
+        description:     data.excerpt      || data.meta_desc || "",
+        category:        data.category     || "",
+        tags:            Array.isArray(data.tags) ? data.tags.join(", ") : "",
+        image:           data.cover_image  || "",
+        content:         data.content      || "",
+        date:            data.published_at
+                           ? data.published_at.split("T")[0]
+                           : new Date().toISOString().split("T")[0],
+        published:       data.published    ?? false,
+        metaTitle:       data.title        || "",
+        metaDescription: data.meta_desc    || data.excerpt || "",
+        canonicalUrl:    `https://www.chauffeurdubai.ae/blog/${resolvedSlug}`,
+        focusKeyword:    data.seo_keywords || "",
+      })
+
+      setIsLoading(false)
     }
     load()
   }, [params])
@@ -127,8 +140,7 @@ export default function EditPostPage({
     if (name === "description") {
       setForm((prev) => ({
         ...prev,
-        description: value,
-        excerpt: value,
+        description:     value,
         metaDescription: value,
       }))
     } else {
@@ -139,6 +151,7 @@ export default function EditPostPage({
     }
   }
 
+  // ── Update ──────────────────────────────────────────────────────────────────
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsSubmitting(true)
@@ -151,44 +164,54 @@ export default function EditPostPage({
       return
     }
 
-    try {
-      const res = await fetch(`/api/admin/posts/${slug}`, {
-        method: "PUT",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          ...form,
-          sha,
-          tags: form.tags.split(",").map((t) => t.trim()).filter(Boolean),
-          excerpt: form.description,
-          coverImage: form.image,
-        }),
+    const { error: sbError } = await supabase
+      .from("blogs")
+      .update({
+        slug:         form.slug,
+        title:        form.metaTitle || form.title,
+        meta_desc:    form.metaDescription || form.description,
+        seo_keywords: form.focusKeyword,
+        excerpt:      form.description,
+        content:      form.content,
+        cover_image:  form.image,
+        cover_alt:    form.title,
+        category:     form.category,
+        tags:         form.tags.split(",").map((t) => t.trim()).filter(Boolean),
+        published:    form.published,
+        published_at: form.published ? new Date(form.date).toISOString() : null,
+        reading_time: calcReadingTime(form.content),
+        updated_at:   new Date().toISOString(),
       })
-      const data = await res.json()
-      if (!res.ok) throw new Error(data.error || "Failed to update post")
-      setSuccess("Post updated successfully!")
-      setTimeout(() => router.push("/admin"), 1500)
-    } catch (err: unknown) {
-      setError(err instanceof Error ? err.message : "Something went wrong")
-    } finally {
-      setIsSubmitting(false)
+      .eq("id", rowId)
+
+    setIsSubmitting(false)
+
+    if (sbError) {
+      setError(sbError.message)
+      return
     }
+
+    setSuccess("Post updated successfully!")
+    setTimeout(() => router.push("/admin/blogs"), 1500)
   }
 
+  // ── Delete ──────────────────────────────────────────────────────────────────
   const handleDelete = async () => {
     setIsDeleting(true)
-    try {
-      const res = await fetch(`/api/admin/posts/${slug}`, {
-        method: "DELETE",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ sha }),
-      })
-      if (!res.ok) throw new Error("Failed to delete post")
-      router.push("/admin")
-    } catch (err: unknown) {
-      setError(err instanceof Error ? err.message : "Failed to delete")
+
+    const { error: sbError } = await supabase
+      .from("blogs")
+      .delete()
+      .eq("id", rowId)
+
+    if (sbError) {
+      setError(sbError.message)
       setIsDeleting(false)
       setShowDeleteConfirm(false)
+      return
     }
+
+    router.push("/admin/blogs")
   }
 
   if (isLoading) {
@@ -209,24 +232,15 @@ export default function EditPostPage({
         <div className="flex items-center gap-2 text-xs text-zinc-400">
           <span
             className="hover:text-rose-400 cursor-pointer transition-colors"
-            onClick={() => router.push("/admin")}
+            onClick={() => router.push("/admin/blogs")}
           >
-            Dashboard
-          </span>
-          <span>/</span>
-          <span
-            className="hover:text-rose-400 cursor-pointer transition-colors"
-            onClick={() => router.push("/admin/posts")}
-          >
-            Posts
+            Blog Manager
           </span>
           <span>/</span>
           <span style={{ color: "#b76e79" }} className="font-medium truncate max-w-xs">
             {form.title || slug}
           </span>
         </div>
-
-        {/* View live */}
         <a
           href={`/blog/${slug}`}
           target="_blank"
@@ -294,12 +308,10 @@ export default function EditPostPage({
             {/* Rich Editor */}
             <div>
               <label className={labelClass}>Content</label>
-              {!isLoading && (
-                <RichEditor
-                  value={form.content}
-                  onChange={(val) => setForm((prev) => ({ ...prev, content: val }))}
-                />
-              )}
+              <RichEditor
+                value={form.content}
+                onChange={(val) => setForm((prev) => ({ ...prev, content: val }))}
+              />
             </div>
 
             {/* Excerpt */}
@@ -420,20 +432,19 @@ export default function EditPostPage({
                       name="canonicalUrl"
                       value={form.canonicalUrl}
                       onChange={handleChange}
-                      placeholder={`https://chauffeurdubai.ae/blog/${form.slug}`}
+                      placeholder={`https://www.chauffeurdubai.ae/blog/${form.slug}`}
                       className={inputClass}
                     />
                   </div>
 
-                  {/* Internal Links */}
                   <div className="p-4 bg-rose-50/50 rounded-xl border border-rose-100">
                     <p className="text-[10px] uppercase tracking-wider text-zinc-400 mb-2">
                       Internal Link Suggestions
                     </p>
                     {[
-                      { label: "Airport Transfer Dubai", href: "/services/airport-transfer" },
+                      { label: "Airport Transfer Dubai",    href: "/services/airport-transfer" },
                       { label: "Corporate Chauffeur Dubai", href: "/services/corporate-chauffeur" },
-                      { label: "Contact Us", href: "/contact" },
+                      { label: "Contact Us",                href: "/contact" },
                     ].map(({ label, href }) => (
                       <div key={href} className="flex items-center justify-between py-1">
                         <span className="text-xs text-zinc-600">{label}</span>
@@ -471,11 +482,11 @@ export default function EditPostPage({
                     style={{ background: "#09090b", color: "#a1a1aa" }}
                   >
                     {generateSchema({
-                      title: form.title,
+                      title:       form.title,
                       description: form.metaDescription || form.description,
-                      image: form.image,
-                      date: form.date,
-                      slug: form.slug,
+                      image:       form.image,
+                      date:        form.date,
+                      slug:        form.slug,
                     })}
                   </pre>
                 </div>
@@ -489,18 +500,13 @@ export default function EditPostPage({
             {/* Publish Box */}
             <div className="bg-white rounded-2xl border border-rose-100 shadow-sm p-6">
               <p className={labelClass}>Publish</p>
-
               <div className="space-y-3 mb-5">
                 <div>
                   <label className="text-xs text-zinc-500 mb-1 block">Status</label>
                   <label className="flex items-center gap-3 cursor-pointer">
                     <div
-                      className={`relative w-10 h-5 rounded-full transition-all ${
-                        form.published ? "" : "bg-zinc-200"
-                      }`}
-                      style={form.published
-                        ? { background: "linear-gradient(135deg, #b76e79, #c9956c)" }
-                        : {}}
+                      className={`relative w-10 h-5 rounded-full transition-all ${form.published ? "" : "bg-zinc-200"}`}
+                      style={form.published ? { background: roseGold } : {}}
                     >
                       <input
                         type="checkbox"
@@ -539,15 +545,13 @@ export default function EditPostPage({
                 className="w-full inline-flex items-center justify-center gap-2 px-6 py-3 text-white font-semibold rounded-xl shadow-md hover:shadow-lg transition-all text-sm disabled:opacity-60 disabled:cursor-not-allowed"
                 style={{ background: roseGold }}
               >
-                {isSubmitting ? (
-                  <><Loader2 size={16} className="animate-spin" /> Saving...</>
-                ) : (
-                  "Save Changes"
-                )}
+                {isSubmitting
+                  ? <><Loader2 size={16} className="animate-spin" /> Saving...</>
+                  : "Save Changes"}
               </button>
               <button
                 type="button"
-                onClick={() => router.push("/admin")}
+                onClick={() => router.push("/admin/blogs")}
                 className="w-full mt-2 px-6 py-2.5 bg-white border border-rose-100 hover:border-rose-300 text-zinc-500 hover:text-zinc-900 font-medium rounded-xl transition-all text-sm"
               >
                 Cancel
@@ -599,34 +603,13 @@ export default function EditPostPage({
             </div>
 
             {/* Featured Image */}
-            <div className="bg-white rounded-2xl border border-rose-100 shadow-sm p-6">
-              <label className={labelClass}>Featured Image</label>
-              <input
-                type="text"
-                name="image"
-                value={form.image}
-                onChange={handleChange}
-                placeholder="/images/blog/my-image.webp"
-                className={inputClass}
-              />
-              {form.image && (
-                <div className="mt-3 rounded-xl overflow-hidden border border-rose-100 aspect-[16/9] bg-zinc-50">
-                  <img
-                    src={form.image}
-                    alt="Featured"
-                    className="w-full h-full object-cover"
-                    onError={(e) => {
-                      (e.target as HTMLImageElement).style.display = "none"
-                    }}
-                  />
-                </div>
-              )}
-              <p className="text-[10px] text-zinc-400 mt-2">
-                Place images in{" "}
-                <code className="text-rose-400">public/images/blog/</code>
-              </p>
-            </div>
-
+<div className="bg-white rounded-2xl border border-rose-100 shadow-sm p-6">
+  <label className={labelClass}>Featured Image</label>
+  <ImageUploader
+    value={form.image}
+    onChange={(url) => setForm((prev) => ({ ...prev, image: url }))}
+  />
+</div>
             {/* Danger Zone */}
             <div className="bg-white rounded-2xl border border-red-100 shadow-sm p-6">
               <p className="text-xs font-semibold uppercase tracking-wider text-red-400 mb-3">
@@ -652,11 +635,9 @@ export default function EditPostPage({
                     disabled={isDeleting}
                     className="w-full flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-red-500 text-white hover:bg-red-600 transition-all text-sm font-semibold disabled:opacity-60"
                   >
-                    {isDeleting ? (
-                      <><Loader2 size={14} className="animate-spin" /> Deleting...</>
-                    ) : (
-                      <><Trash2 size={14} /> Yes, Delete</>
-                    )}
+                    {isDeleting
+                      ? <><Loader2 size={14} className="animate-spin" /> Deleting...</>
+                      : <><Trash2 size={14} /> Yes, Delete</>}
                   </button>
                   <button
                     type="button"

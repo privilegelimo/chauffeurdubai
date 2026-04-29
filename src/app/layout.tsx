@@ -8,7 +8,7 @@ import ConditionalLayout from "@/components/ConditionalLayout"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://chauffeurdubai.ae"),
+  metadataBase: new URL("https://www.chauffeurdubai.ae"),
   title: "Luxury Chauffeur Service in Dubai, UAE | Chauffeur Dubai",
   description:
     "Book premium chauffeur service in Dubai. Professional drivers for airport transfers, corporate travel, and city tours. Luxury cars with chauffeur in Dubai, UAE.",

@@ -31,14 +31,14 @@ const WA_BASE                = "https://wa.me/971509852818";
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Service",
-  "@id": "https://chauffeurdubai.ae/services/uae-to-oman-chauffeur",
+  "@id": "https://www.chauffeurdubai.ae/services/uae-to-oman-chauffeur",
   name: "UAE to Oman Chauffeur Service",
   description:
     "Premium chauffeur service from Dubai, Abu Dhabi, and Sharjah to Muscat, Salalah, and all Oman destinations. Luxury cars with professional drivers for intercity transfers across UAE and Oman.",
   provider: {
     "@type": "LocalBusiness",
     name: "Chauffeur Dubai Luxury Travel",
-    url: "https://chauffeurdubai.ae",
+    url: "https://www.chauffeurdubai.ae",
     telephone: "+971509852818",
     address: {
       "@type": "PostalAddress",

@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   title: "Chauffeur Services Dubai | Airport & Corporate Travel UAE",
   description:
     "Luxury chauffeur services in Dubai, Abu Dhabi, and Sharjah - airport transfers, corporate chauffeur, luxury van rental event transport & more across the UAE.",
-  alternates: { canonical: "https://chauffeurdubai.ae/services" },
+  alternates: { canonical: "https://www.chauffeurdubai.ae/services" },
 };
 
 const roseGoldGradient       = "linear-gradient(135deg, #b76e79, #e8a4a0, #c9956c)";

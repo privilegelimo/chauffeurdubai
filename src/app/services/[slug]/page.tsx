@@ -303,12 +303,12 @@ export async function generateMetadata({
     title: service.metaTitle,
     description: service.metaDesc,
     alternates: {
-      canonical: `https://chauffeurdubai.ae/services/${service.slug}`,
+      canonical: `https://www.chauffeurdubai.ae/services/${service.slug}`,
     },
     openGraph: {
       title: service.metaTitle,
       description: service.metaDesc,
-      url: `https://chauffeurdubai.ae/services/${service.slug}`,
+      url: `https://www.chauffeurdubai.ae/services/${service.slug}`,
       images: [{ url: service.image, alt: service.imageAlt }],
       type: "website",
     },
@@ -399,7 +399,7 @@ export default async function ServicePage({
             "@type": "Service",
             name: title,
             description: service.metaDesc,
-            url: `https://chauffeurdubai.ae/services/${slug}`,
+            url: `https://www.chauffeurdubai.ae/services/${slug}`,
             provider: {
               "@type": "LocalBusiness",
               name: "Chauffeur Dubai Luxury Travel",

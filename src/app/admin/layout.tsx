@@ -1,6 +1,7 @@
 // app/admin/layout.tsx
 import type { Metadata } from "next";
 import AdminLayoutClient from "@/components/admin/AdminLayoutClient";
+import SeoEditFab from "@/components/admin/SeoEditFab";
 
 export const metadata: Metadata = {
   title: "Admin | Chauffeur Dubai",
@@ -8,5 +9,10 @@ export const metadata: Metadata = {
 };
 
 export default function AdminLayout({ children }: { children: React.ReactNode }) {
-  return <AdminLayoutClient>{children}</AdminLayoutClient>;
+  return (
+    <AdminLayoutClient>
+      {children}
+      <SeoEditFab />
+    </AdminLayoutClient>
+  );
 }

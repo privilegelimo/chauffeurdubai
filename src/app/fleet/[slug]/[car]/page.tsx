@@ -5,6 +5,7 @@ import { ArrowLeft, UserRound, Luggage, CheckCircle, Phone, MessageCircle, Star 
 import BookingButton from "@/components/BookingButton";
 import VehicleImageCarousel from "@/components/VehicleImageCarousel";
 import allVehiclesData from "@/data/vehicles.json";
+import { generateSEO } from "@/lib/seo";
 
 const roseGoldGradient       = "linear-gradient(135deg, #b76e79, #e8a4a0, #c9956c)";
 const roseGoldGradientSubtle = "linear-gradient(135deg, #f9eded, #fdf4f0)";
@@ -37,7 +38,7 @@ export async function generateStaticParams() {
   return allVehicles.map((v) => ({ slug: v.classSlug, car: v.slug }));
 }
 
-// ─── Metadata ──────────────────────────────────────────────────────────────────
+// ─── Metadata ──────────────────────────────────────────────────────────────
 export async function generateMetadata({
   params,
 }: {
@@ -46,19 +47,35 @@ export async function generateMetadata({
   const { car, slug } = await params;
   const vehicle = allVehicles.find((v) => v.slug === car && v.classSlug === slug);
   if (!vehicle) return {};
+
+  // Try DB first, fall back to vehicle JSON static data
+  const seo = await generateSEO(`/fleet/${slug}/${car}`);
+  if (Object.keys(seo).length > 0) return seo;
+
   return {
     title: vehicle.title,
     description: vehicle.metaDesc,
     keywords: vehicle.seoKeywords,
     alternates: {
-      canonical: `https://chauffeurdubai.ae/fleet/${vehicle.classSlug}/${vehicle.slug}`,
+      canonical: `https://www.chauffeurdubai.ae/fleet/${vehicle.classSlug}/${vehicle.slug}`,
     },
     openGraph: {
       title: vehicle.title,
       description: vehicle.metaDesc,
-      url: `https://chauffeurdubai.ae/fleet/${vehicle.classSlug}/${vehicle.slug}`,
-      images: [{ url: vehicle.images[0], alt: `${vehicle.name} chauffeur hire Dubai Abu Dhabi Sharjah` }],
+      url: `https://www.chauffeurdubai.ae/fleet/${vehicle.classSlug}/${vehicle.slug}`,
+      images: [
+        {
+          url: vehicle.images[0],
+          alt: `${vehicle.name} chauffeur hire Dubai Abu Dhabi Sharjah`,
+        },
+      ],
       type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: vehicle.title,
+      description: vehicle.metaDesc,
+      images: [vehicle.images[0]],
     },
   };
 }
@@ -85,7 +102,7 @@ export default async function CarPage({
             name: `${vehicle.name} Chauffeur Dubai Abu Dhabi Sharjah`,
             description: vehicle.metaDesc,
             image: vehicle.images[0],
-            url: `https://chauffeurdubai.ae/fleet/${vehicle.classSlug}/${vehicle.slug}`,
+            url: `https://www.chauffeurdubai.ae/fleet/${vehicle.classSlug}/${vehicle.slug}`,
             brand: { "@type": "Brand", name: "Chauffeur Luxury Travel" },
             offers: {
               "@type": "AggregateOffer",

@@ -2,7 +2,7 @@
 
 import Link from "next/link"
 import { usePathname, useRouter } from "next/navigation"
-import { LayoutDashboard, FileText, FilePlus, ExternalLink, LogOut } from "lucide-react"
+import { LayoutDashboard, FileText, FilePlus, ExternalLink, LogOut, Car, Tag, } from "lucide-react"
 
 const roseGoldGradient = "linear-gradient(135deg, #b76e79, #e8a4a0, #c9956c)"
 
@@ -10,6 +10,9 @@ const navItems = [
   { label: "Dashboard", href: "/admin", icon: LayoutDashboard },
   { label: "All Posts", href: "/admin/posts", icon: FileText },
   { label: "New Post", href: "/admin/new", icon: FilePlus },
+  { label: "Blog Manager", href: "/admin/blogs", icon: FilePlus },
+  { label: "Fleet",      href: "/admin/fleet",      icon: Car  },
+{ label: "Categories", href: "/admin/categories",  icon: Tag  },
 ]
 
 export default function AdminSidebar() {

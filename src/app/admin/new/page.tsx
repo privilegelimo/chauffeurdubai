@@ -3,6 +3,8 @@
 import { useState } from "react"
 import { useRouter } from "next/navigation"
 import dynamic from "next/dynamic"
+import ImageUploader from "@/components/admin/ImageUploader"
+import { createClient } from "@/lib/supabase/client"
 import {
   AlertCircle, CheckCircle, Loader2,
   ChevronDown, ChevronUp, Eye, EyeOff,
@@ -31,12 +33,12 @@ function generateSchema(form: {
     publisher: {
       "@type": "Organization",
       name: "Chauffeur Dubai",
-      logo: { "@type": "ImageObject", url: "https://chauffeurdubai.ae/logo.png" },
+      logo: { "@type": "ImageObject", url: "https://www.chauffeurdubai.ae/logo.png" },
     },
     datePublished: form.date || new Date().toISOString().split("T")[0],
     mainEntityOfPage: {
       "@type": "WebPage",
-      "@id": `https://chauffeurdubai.ae/blog/${form.slug}`,
+      "@id": `https://www.chauffeurdubai.ae/blog/${form.slug}`,
     },
   }, null, 2)
 }
@@ -46,30 +48,38 @@ const inputClass =
 const labelClass =
   "block text-xs font-semibold uppercase tracking-wider text-zinc-400 mb-2"
 
+function calcReadingTime(content: string): string {
+  const words = content?.trim().split(/\s+/).length ?? 0
+  const mins  = Math.max(1, Math.round(words / 200))
+  return `${mins} min read`
+}
+
 export default function NewPostPage() {
-  const router = useRouter()
+  const router    = useRouter()
+  const supabase  = createClient()
+
   const [isSubmitting, setIsSubmitting] = useState(false)
-  const [error, setError] = useState("")
-  const [success, setSuccess] = useState("")
-  const [seoOpen, setSeoOpen] = useState(true)
-  const [schemaOpen, setSchemaOpen] = useState(false)
-  const [showSlug, setShowSlug] = useState(true)
+  const [error, setError]               = useState("")
+  const [success, setSuccess]           = useState("")
+  const [seoOpen, setSeoOpen]           = useState(true)
+  const [schemaOpen, setSchemaOpen]     = useState(false)
+  const [showSlug, setShowSlug]         = useState(true)
 
   const [form, setForm] = useState({
-    title: "",
-    slug: "",
-    description: "",
-    excerpt: "",
-    category: "",
-    tags: "",
-    image: "",
-    content: "",
-    date: new Date().toISOString().split("T")[0],
-    published: false,
-    metaTitle: "",
+    title:           "",
+    slug:            "",
+    description:     "",
+    excerpt:         "",
+    category:        "",
+    tags:            "",
+    image:           "",
+    content:         "",
+    date:            new Date().toISOString().split("T")[0],
+    published:       false,
+    metaTitle:       "",
     metaDescription: "",
-    canonicalUrl: "",
-    focusKeyword: "",
+    canonicalUrl:    "",
+    focusKeyword:    "",
   })
 
   const handleChange = (
@@ -85,17 +95,12 @@ export default function NewPostPage() {
         .replace(/\s+/g, "-")
         .replace(/-+/g, "-")
         .trim()
-      setForm((prev) => ({
-        ...prev,
-        title: value,
-        slug,
-        metaTitle: value,
-      }))
+      setForm((prev) => ({ ...prev, title: value, slug, metaTitle: value }))
     } else if (name === "description") {
       setForm((prev) => ({
         ...prev,
-        description: value,
-        excerpt: value,
+        description:     value,
+        excerpt:         value,
         metaDescription: value,
       }))
     } else {
@@ -118,25 +123,32 @@ export default function NewPostPage() {
       return
     }
 
-    try {
-      const res = await fetch("/api/admin/posts", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          ...form,
-          tags: form.tags.split(",").map((t) => t.trim()).filter(Boolean),
-          excerpt: form.description,
-        }),
-      })
-      const data = await res.json()
-      if (!res.ok) throw new Error(data.error || "Failed to create post")
-      setSuccess("Post published successfully!")
-      setTimeout(() => router.push("/admin"), 1500)
-    } catch (err: unknown) {
-      setError(err instanceof Error ? err.message : "Something went wrong")
-    } finally {
-      setIsSubmitting(false)
+    const { error: sbError } = await supabase.from("blogs").insert({
+      slug:         form.slug,
+      title:        form.metaTitle || form.title,
+      meta_desc:    form.metaDescription || form.description,
+      seo_keywords: form.focusKeyword,
+      excerpt:      form.description,
+      content:      form.content,
+      cover_image:  form.image,
+      cover_alt:    form.title,
+      author:       "Chauffeur Dubai",
+      category:     form.category,
+      tags:         form.tags.split(",").map((t) => t.trim()).filter(Boolean),
+      published:    form.published,
+      published_at: form.published ? new Date(form.date).toISOString() : null,
+      reading_time: calcReadingTime(form.content),
+    })
+
+    setIsSubmitting(false)
+
+    if (sbError) {
+      setError(sbError.message)
+      return
     }
+
+    setSuccess("Post saved successfully!")
+    setTimeout(() => router.push("/admin/blogs"), 1500)
   }
 
   return (
@@ -145,9 +157,9 @@ export default function NewPostPage() {
       <div className="flex items-center gap-2 text-xs text-zinc-400 mb-6">
         <span
           className="hover:text-rose-400 cursor-pointer transition-colors"
-          onClick={() => router.push("/admin")}
+          onClick={() => router.push("/admin/blogs")}
         >
-          Dashboard
+          Blog Manager
         </span>
         <span>/</span>
         <span style={{ color: "#b76e79" }} className="font-medium">New Post</span>
@@ -215,7 +227,7 @@ export default function NewPostPage() {
               />
             </div>
 
-            {/* Excerpt / Description */}
+            {/* Excerpt */}
             <div className="bg-white rounded-2xl border border-rose-100 shadow-sm p-6">
               <label className={labelClass}>
                 Excerpt{" "}
@@ -259,7 +271,6 @@ export default function NewPostPage() {
 
               {seoOpen && (
                 <div className="px-6 pb-6 space-y-4 border-t border-rose-50">
-
                   {/* Google Preview */}
                   <div className="mt-4 p-4 bg-zinc-50 rounded-xl border border-zinc-100">
                     <p className="text-[10px] uppercase tracking-wider text-zinc-400 mb-3">Google Preview</p>
@@ -275,9 +286,7 @@ export default function NewPostPage() {
                   </div>
 
                   <div>
-                    <label className={labelClass}>
-                      Focus Keyword
-                    </label>
+                    <label className={labelClass}>Focus Keyword</label>
                     <input
                       type="text"
                       name="focusKeyword"
@@ -329,7 +338,7 @@ export default function NewPostPage() {
                       name="canonicalUrl"
                       value={form.canonicalUrl}
                       onChange={handleChange}
-                      placeholder={`https://chauffeurdubai.ae/blog/${form.slug}`}
+                      placeholder={`https://www.chauffeurdubai.ae/blog/${form.slug}`}
                       className={inputClass}
                     />
                   </div>
@@ -381,11 +390,11 @@ export default function NewPostPage() {
                     style={{ background: "#09090b", color: "#a1a1aa" }}
                   >
                     {generateSchema({
-                      title: form.title,
+                      title:       form.title,
                       description: form.metaDescription || form.description,
-                      image: form.image,
-                      date: form.date,
-                      slug: form.slug,
+                      image:       form.image,
+                      date:        form.date,
+                      slug:        form.slug,
                     })}
                   </pre>
                 </div>
@@ -399,16 +408,13 @@ export default function NewPostPage() {
             {/* Publish Box */}
             <div className="bg-white rounded-2xl border border-rose-100 shadow-sm p-6">
               <p className={labelClass}>Publish</p>
-
               <div className="space-y-3 mb-5">
                 <div>
                   <label className="text-xs text-zinc-500 mb-1 block">Status</label>
                   <label className="flex items-center gap-3 cursor-pointer">
                     <div
-                      className={`relative w-10 h-5 rounded-full transition-all ${
-                        form.published ? "" : "bg-zinc-200"
-                      }`}
-                      style={form.published ? { background: "linear-gradient(135deg, #b76e79, #c9956c)" } : {}}
+                      className={`relative w-10 h-5 rounded-full transition-all ${form.published ? "" : "bg-zinc-200"}`}
+                      style={form.published ? { background: roseGold } : {}}
                     >
                       <input
                         type="checkbox"
@@ -448,14 +454,14 @@ export default function NewPostPage() {
                 style={{ background: roseGold }}
               >
                 {isSubmitting ? (
-                  <><Loader2 size={16} className="animate-spin" /> Publishing...</>
+                  <><Loader2 size={16} className="animate-spin" /> Saving...</>
                 ) : (
                   form.published ? "Publish Post" : "Save Draft"
                 )}
               </button>
               <button
                 type="button"
-                onClick={() => router.push("/admin")}
+                onClick={() => router.push("/admin/blogs")}
                 className="w-full mt-2 px-6 py-2.5 bg-white border border-rose-100 hover:border-rose-300 text-zinc-500 hover:text-zinc-900 font-medium rounded-xl transition-all text-sm"
               >
                 Cancel
@@ -507,32 +513,13 @@ export default function NewPostPage() {
             </div>
 
             {/* Featured Image */}
-            <div className="bg-white rounded-2xl border border-rose-100 shadow-sm p-6">
-              <label className={labelClass}>Featured Image</label>
-              <input
-                type="text"
-                name="image"
-                value={form.image}
-                onChange={handleChange}
-                placeholder="/images/blog/my-image.webp"
-                className={inputClass}
-              />
-              {form.image && (
-                <div className="mt-3 rounded-xl overflow-hidden border border-rose-100 aspect-[16/9] bg-zinc-50">
-                  <img
-                    src={form.image}
-                    alt="Featured"
-                    className="w-full h-full object-cover"
-                    onError={(e) => {
-                      (e.target as HTMLImageElement).style.display = "none"
-                    }}
-                  />
-                </div>
-              )}
-              <p className="text-[10px] text-zinc-400 mt-2">
-                Place images in <code className="text-rose-400">public/images/blog/</code>
-              </p>
-            </div>
+<div className="bg-white rounded-2xl border border-rose-100 shadow-sm p-6">
+  <label className={labelClass}>Featured Image</label>
+  <ImageUploader
+    value={form.image}
+    onChange={(url) => setForm((prev) => ({ ...prev, image: url }))}
+  />
+</div>
 
           </div>
         </div>

@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: "About Chauffeur Dubai | Luxury Travel Service Dubai, UAE",
   description:
     "Chauffeur Dubai Luxury Travel is the UAE's most trusted private driver and limousine company with over 20 years - serving airports, corporates, and VIP clients",
-  alternates: { canonical: "https://chauffeurdubai.ae/about" },
+  alternates: { canonical: "https://www.chauffeurdubai.ae/about" },
 };
 
 const roseGoldGradient       = "linear-gradient(135deg, #b76e79, #e8a4a0, #c9956c)";

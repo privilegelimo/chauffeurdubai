@@ -1,11 +1,14 @@
-// app/layout.tsx
-import type { Metadata } from "next"
+import type { Metadata, Viewport } from "next"
 import { Inter } from "next/font/google"
 import "./globals.css"
 import Script from "next/script"
 import ConditionalLayout from "@/components/ConditionalLayout"
 
 const inter = Inter({ subsets: ["latin"] })
+
+export const viewport: Viewport = {
+  themeColor: "#b76e79",
+}
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.chauffeurdubai.ae"),
@@ -26,9 +29,9 @@ export const metadata: Metadata = {
     "chauffeur hire Dubai",
     "executive car service Dubai",
   ],
-  authors: [{ name: "Chauffeur Dubai" }],
-  creator: "Chauffeur Dubai",
-  publisher: "Chauffeur Dubai",
+  authors:         [{ name: "Chauffeur Dubai" }],
+  creator:         "Chauffeur Dubai",
+  publisher:       "Chauffeur Dubai",
   formatDetection: { email: false, address: false, telephone: false },
   robots: {
     index: true,
@@ -41,13 +44,11 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
-
   manifest: "/manifest.json",
-  themeColor: "#b76e79",
   appleWebApp: {
-    capable: true,
+    capable:        true,
     statusBarStyle: "default",
-    title: "CD Admin",
+    title:          "Chauffeur Dubai",
   },
 }
 
@@ -64,22 +65,23 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           })(window,document,'script','dataLayer','GTM-PP63MWX7');`}
         </Script>
 
+        {/* PWA */}
         <link rel="apple-touch-icon" href="/icons/icon-192.png" />
-<meta name="mobile-web-app-capable" content="yes" />
-<meta name="apple-mobile-web-app-status-bar-style" content="default" />
+        <meta name="mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
       </head>
+
       <body className={inter.className}>
-        {/* Google Tag Manager (noscript) */}
+        {/* GTM noscript */}
         <noscript>
           <iframe
             src="https://www.googletagmanager.com/ns.html?id=GTM-PP63MWX7"
-            height="0"
-            width="0"
+            height="0" width="0"
             style={{ display: "none", visibility: "hidden" }}
           />
         </noscript>
 
-        {/* Google Ads Tag */}
+        {/* Google Ads */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=AW-10996946200"
           strategy="afterInteractive"
@@ -90,6 +92,17 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
             gtag('config', 'AW-10996946200');
+          `}
+        </Script>
+
+        {/* PWA Service Worker */}
+        <Script id="sw-register" strategy="afterInteractive">
+          {`
+            if ('serviceWorker' in navigator) {
+              window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js');
+              });
+            }
           `}
         </Script>
 

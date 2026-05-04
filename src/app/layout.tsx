@@ -41,6 +41,14 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
+
+  manifest: "/manifest.json",
+  themeColor: "#b76e79",
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: "default",
+    title: "CD Admin",
+  },
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -55,6 +63,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
           })(window,document,'script','dataLayer','GTM-PP63MWX7');`}
         </Script>
+
+        <link rel="apple-touch-icon" href="/icons/icon-192.png" />
+<meta name="mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="default" />
       </head>
       <body className={inter.className}>
         {/* Google Tag Manager (noscript) */}

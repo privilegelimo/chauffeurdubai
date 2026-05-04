@@ -1,11 +1,13 @@
 import type { NextConfig } from "next";
+import withPWA from "next-pwa";
 
 const nextConfig: NextConfig = {
   images: {
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "images.unsplash.com",
+        hostname: "prlwwmtibaszzyvmciyu.supabase.co",
+        pathname: "/storage/v1/object/public/**",
       },
     ],
   },
@@ -233,4 +235,9 @@ const nextConfig: NextConfig = {
   },
 };
 
-export default nextConfig;
+export default withPWA({
+  dest:        "public",
+  register:    true,
+  skipWaiting: true,
+  disable:     false,
+})(nextConfig);
